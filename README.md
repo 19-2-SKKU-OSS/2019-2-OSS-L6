@@ -23,8 +23,8 @@ We're on [Gitter](https://gitter.im/TheAlgorithms)! Please join us.
 See our [directory](DIRECTORY.md).
 
 ## Team Members
-표세승(컴퓨터공학/16) : PYO-SE-SEUNG
-김도현(소프트웨어/19) : bidulki
-박지훈(소프트웨어/19) : qkrwlgns0605
-유재민(소프트웨어/18) : yjm7455
-이대희(소프트웨어/19) : L2dulgi
+표세승(컴퓨터공학/16) : PYO-SE-SEUNG  
+김도현(소프트웨어/19) : bidulki  
+박지훈(소프트웨어/19) : qkrwlgns0605  
+유재민(소프트웨어/18) : yjm7455  
+이대희(소프트웨어/19) : L2dulgi  
