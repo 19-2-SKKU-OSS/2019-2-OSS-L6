@@ -12,7 +12,7 @@
 ### Bubble(버블 정렬)
 ![alt text][bubble-image]
 
-From [Wikipedia][bubble-wiki]: 버블 정렬(sinking sort 라고도 불림)은 리스트를 반복적인 단계로 접근하여 정렬한다. 각각의 짝을 비교하며, 순서가 잘못된 경우 그접한 아이템들을 스왑하는 알고리즘이다. 더 이상 스왑할 것이 없을 때까지 반복하며, 반복이 끝났다는 것은 리스트가 정렬되었음을 의미한다.
+From [Wikipedia][bubble-wiki]: 버블 정렬(sinking sort 라고도 불림)은 리스트를 반복적인 단계로 접근하여 정렬한다. 각각의 짝을 비교하며, 순서가 잘못된 경우 근접한 아이템들을 스왑하는 알고리즘이다. 더 이상 스왑할 것이 없을 때까지 반복하며, 반복이 끝났다는 것은 리스트가 정렬되었음을 의미한다.
 
 __속성__
 * 최악의 성능    O(n^2)
@@ -52,7 +52,7 @@ __속성__
 ### Quick(퀵 정렬)
 ![alt text][quick-image]
 
-From [Wikipedia][quick-wiki]: 퀵 정렬sometimes called partition-exchange sort)은 효율적인 정렬 알고리즘으로, 배열의 요소를 순서대로 정렬하는 체계적인 방법 역활을 한다.
+From [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 배열의 요소를 순서대로 정렬하는 체계적인 방법 역활을 한다.
 
 __속성__
 * 최악의 성능    O(n^2)
