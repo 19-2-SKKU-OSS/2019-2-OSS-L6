@@ -99,7 +99,7 @@ __속성__
 ![alt text][linear-image]
 
 From [Wikipedia][linear-wiki]: 선형 탐색 또는 순차 탐색은 리스트 내에서 목표값을 찾는 방법이다. 일치 항목이 발견되거나 모든 요소가 탐색될 때까지 목록의 각 요소에 대해 목표값을 순차적으로 검사한다.
-  선형 검색은 최악의 선형 시간으로 실행되며 최대 n개의 비교에서 이루어진다. 여기서 n은 리스ㅡ의 길이다.
+  선형 검색은 최악의 선형 시간으로 실행되며 최대 n개의 비교에서 이루어진다. 여기서 n은 리스트의 길이다.
 
 __속성__
 * 최악의 성능    O(n)
@@ -110,7 +110,7 @@ __속성__
 ### Binary (이진 탐색)
 ![alt text][binary-image]
 
-From [Wikipedia][binary-wiki]: 이진 탐색, (also known as half-interval search or logarithmic search), 은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘이다. 목표값을 배열의 중간 요소와 비교한다; 만약 목표값이 동일하지 않으면, 목표물의 절반이 제거되고 검색이 성공할 때까지 나머지 절반에서 게속된다.
+From [Wikipedia][binary-wiki]: 이진 탐색, (also known as half-interval search or logarithmic search), 은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘이다. 목표값을 배열의 중간 요소와 비교한다; 만약 목표값이 동일하지 않으면, 목표물의 절반이 제거되고 검색이 성공할 때까지 나머지 절반에서 이 과정을 반복한다.
 
 __속성__
 * 최악의 성능    O(log n)
