@@ -52,8 +52,7 @@ __속성__
 ### Quick(퀵 정렬)
 ![alt text][quick-image]
 
-From [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 배열의 요소를 순서대로 정렬하는 체계적인 방법 역활을 한다.
-
+From [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용된다.
 __속성__
 * 최악의 성능    O(n^2)
 * 최고의 성능    O(n log n) or O(n) with three-way partition
