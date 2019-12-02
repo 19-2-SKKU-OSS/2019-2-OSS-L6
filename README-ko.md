@@ -81,7 +81,7 @@ From [Wikipedia][shell-wiki]:  쉘 정렬은 멀리 떨어져 있는 항목의 �
 __속성__
 * 최악의 성능 O(nlog2 2n)
 * 최고의 성능 O(n log n)
-* Average case performance depends on gap sequence
+* 평균 사례의 성능은 갭 시퀀스에 따라 다르다
 
 ###### View the algorithm in [action][shell-toptal]
 
