@@ -12,7 +12,7 @@
 ### Bubble(버블 정렬)
 ![alt text][bubble-image]
 
-From [Wikipedia][bubble-wiki]: 버블 소트(sinking sor라고도 불리움)는 리스트를 반복적인 단계로 접근하여 정렬한다. 각각의 짝을 비교하며, 순서가 잘못된 경우 그접한 아이템들을 스왑하는 알고리즘이다. 더 이상 스왑할 것이 없을 때까지 반복하며, 반복이 끝났다는 것은 리스트가 정렬되었음을 의미한다.
+From [Wikipedia][bubble-wiki]: 버블 정렬(sinking sort 라고도 불림)은 리스트를 반복적인 단계로 접근하여 정렬한다. 각각의 짝을 비교하며, 순서가 잘못된 경우 근접한 아이템들을 스왑하는 알고리즘이다. 더 이상 스왑할 것이 없을 때까지 반복하며, 반복이 끝났다는 것은 리스트가 정렬되었음을 의미한다.
 
 __속성__
 * 최악의 성능    O(n^2)
@@ -52,8 +52,7 @@ __속성__
 ### Quick(퀵 정렬)
 ![alt text][quick-image]
 
-From [Wikipedia][quick-wiki]: 퀵 정렬sometimes called partition-exchange sort)은 효율적인 정렬 알고리즘으로, 배열의 요소를 순서대로 정렬하는 체계적인 방법 역활을 한다.
-
+From [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용된다. 1959 년 영국 컴퓨터 과학자 토니 호아 (Tony Hoare)가 개발하고 1961 년에 출판 한 이 알고리즘은 여전히 ​​일반적으로 사용되는 정렬 알고리즘이다.
 __속성__
 * 최악의 성능    O(n^2)
 * 최고의 성능    O(n log n) or O(n) with three-way partition
@@ -81,7 +80,7 @@ From [Wikipedia][shell-wiki]:  쉘 정렬은 멀리 떨어져 있는 항목의 �
 __속성__
 * 최악의 성능 O(nlog2 2n)
 * 최고의 성능 O(n log n)
-* Average case performance depends on gap sequence
+* 평균 사례의 성능은 갭 시퀀스에 따라 다르다
 
 ###### View the algorithm in [action][shell-toptal]
 
@@ -99,7 +98,7 @@ __속성__
 ![alt text][linear-image]
 
 From [Wikipedia][linear-wiki]: 선형 탐색 또는 순차 탐색은 리스트 내에서 목표값을 찾는 방법이다. 일치 항목이 발견되거나 모든 요소가 탐색될 때까지 목록의 각 요소에 대해 목표값을 순차적으로 검사한다.
-  선형 검색은 최악의 선형 시간으로 실행되며 최대 n개의 비교에서 이루어진다. 여기서 n은 리스ㅡ의 길이다.
+  선형 검색은 최악의 선형 시간으로 실행되며 최대 n개의 비교에서 이루어진다. 여기서 n은 리스트의 길이다.
 
 __속성__
 * 최악의 성능    O(n)
@@ -110,7 +109,7 @@ __속성__
 ### Binary (이진 탐색)
 ![alt text][binary-image]
 
-From [Wikipedia][binary-wiki]: 이진 탐색, (also known as half-interval search or logarithmic search), 은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘이다. 목표값을 배열의 중간 요소와 비교한다; 만약 목표값이 동일하지 않으면, 목표물의 절반이 제거되고 검색이 성공할 때까지 나머지 절반에서 게속된다.
+From [Wikipedia][binary-wiki]: 이진 탐색, (also known as half-interval search or logarithmic search), 은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘이다. 목표값을 배열의 중간 요소와 비교한다; 만약 목표값이 동일하지 않으면, 목표물의 절반이 제거되고 검색이 성공할 때까지 나머지 절반에서 이 과정을 반복한다.
 
 __속성__
 * 최악의 성능    O(log n)
