@@ -3,7 +3,7 @@ package Conversions;
 import java.util.Scanner;
 
 /**
- * This class converts Decimal numbers to Octal Numbers
+ * 10진수의 숫자를 8진수의 숫자로 변환하는 클래스
  *
  * @author Unknown
  */
@@ -29,3 +29,4 @@ public class DecimalToOctal {
         sc.close();
     }
 }
+// 10진수의 숫자를 8진수의 숫자로 변환하는 클래스이다.
