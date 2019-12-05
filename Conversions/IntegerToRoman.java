@@ -27,4 +27,4 @@ public class IntegerToRoman {
         System.out.println(IntegerToRoman.integerToRoman(2131));
     }
 }
-// 10진수의 입력값은 로마문자를 이용한 숫자형태로 표현한다.
+// 10진수의 입력값을 로마문자를 이용한 숫자형태로 표현한다.
