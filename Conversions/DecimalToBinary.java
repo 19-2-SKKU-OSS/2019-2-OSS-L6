@@ -3,7 +3,7 @@ package Conversions;
 import java.util.Scanner;
 
 /**
- * This class converts a Decimal number to a Binary number
+ * 10진수를 2진수로 변환하는 클래스
  *
  * @author Unknown
  */
@@ -20,9 +20,8 @@ class DecimalToBinary {
     }
 
     /**
-     * This method converts a decimal number
-     * to a binary number using a conventional
-     * algorithm.
+     * 아래의 함수는 전통적인 알고리즘으로, 10진수를 2진수로 변환시키는 함수이다.
+     *
      */
     public static void conventionalConversion() {
         int n, b = 0, c = 0, d;
@@ -38,9 +37,8 @@ class DecimalToBinary {
     }
 
     /**
-     * This method converts a decimal number
-     * to a binary number using a bitwise
-     * algorithm
+     * 아래의 함수는 비트단위의 연산을 사용하는 알고리즘을 통해 10진수를 2진수로 변환하는 함수이다.
+     *
      */
     public static void bitwiseConversion() {
         int n, b = 0, c = 0, d;
@@ -56,3 +54,4 @@ class DecimalToBinary {
     }
 
 }
+// 10진수를 2진수로 변환하는 아주 전통적인 변환 알고리즘
