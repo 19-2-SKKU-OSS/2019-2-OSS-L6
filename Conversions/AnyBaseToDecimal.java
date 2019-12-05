@@ -15,7 +15,7 @@ public class AnyBaseToDecimal {
     }
 
     /**
-     * Convert any radix to decimal number
+     * 특정 진법의 수를 10진법의 수로 변환한다.
      *
      * @param s     the string to be convert
      * @param radix the radix
@@ -38,7 +38,7 @@ public class AnyBaseToDecimal {
     }
 
     /**
-     * Convert character to integer
+     * 숫자 표현에 사용되는 아스키 문자를 정수로 변환한다.(0-9, A-Z)
      *
      * @param c the character
      * @return represented digit of given character
@@ -48,6 +48,6 @@ public class AnyBaseToDecimal {
         if (!(Character.isUpperCase(c) || Character.isDigit(c))) {
             throw new NumberFormatException("invalid character :" + c);
         }
-        return Character.isDigit(c) ? c - '0' : c - 'A' + 10;
+        return Character.isDigit(c) ? c - '0' : c - 'A' + 10; //c가 숫자일 경우(0-9)와 알파벳일 경우(A-Z) 처리 방식이 다름
     }
 }
