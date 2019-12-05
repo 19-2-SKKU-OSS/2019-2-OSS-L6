@@ -36,4 +36,4 @@ public class HexaDecimalToDecimal {
 
     }
 }
-// 16진수를 10진수로 변환
+// 16진수를 10진수로 변환하는 함수이다.
