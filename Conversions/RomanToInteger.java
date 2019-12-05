@@ -56,4 +56,4 @@ public class RomanToInteger {
         System.out.println(sum);
     }
 } 
-// 로마숫자로 표현된 숫자를 정수 형태의 숫자로 변환
+// 로마숫자로 표현된 숫자를 정수 형태의 숫자로 변환하는 함수이다.
