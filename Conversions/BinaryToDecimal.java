@@ -3,7 +3,7 @@ package Conversions;
 import java.util.Scanner;
 
 /**
- * This class converts a Binary number to a Decimal number
+ * 2진수를 10진수로 변환하는 클래스
  *
  */
 class BinaryToDecimal {
@@ -28,3 +28,4 @@ class BinaryToDecimal {
         sc.close();
     }
 }
+// 매우 정석적인 코드이고, 알고리즘을 처음 접하는 사람들에게 천천히 코드를 읽어보면서 변환되는 과정을 음미해볼 것을 권한다.
