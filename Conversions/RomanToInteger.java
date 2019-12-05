@@ -15,7 +15,7 @@ public class RomanToInteger {
     }};
 
     /**
-     * This function convert Roman number into Integer
+     * 이 함수는 로마숫자를 정수형태의 숫자로 변환한다.
      *
      * @param A Roman number string
      * @return integer
@@ -31,17 +31,17 @@ public class RomanToInteger {
             char c = A.charAt(i);
 
             if (prev != ' ') {
-                // checking current Number greater then previous or not
+                // 현재의 숫자가 이전의 숫자보다 큰지 크지 않은지를 체크한다.
                 newPrev = map.get(prev) > newPrev ? map.get(prev) : newPrev;
             }
 
             int currentNum = map.get(c);
 
-            // if current number greater then prev max previous then add
+            // 만약 현재 숫자가 이전의 최대 숫자보다 크다면 더한다.
             if (currentNum >= newPrev) {
                 sum += currentNum;
             } else {
-                // subtract upcoming number until upcoming number not greater then prev max
+                // 새로 들어오는 숫자가 이전 최대 숫자보다 크지 않다면 뺀다.
                 sum -= currentNum;
             }
 
@@ -56,3 +56,4 @@ public class RomanToInteger {
         System.out.println(sum);
     }
 } 
+// 로마
