@@ -7,7 +7,7 @@ class DecimalToHexaDecimal {
 	private static final char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E',
 			'F' };
 
-	// Returns the hex value of the dec entered in the parameter.
+	// 10진수를 16진수로 변환하여 반환한다.
 	public static String decToHex(int dec) {
 		StringBuilder hexBuilder = new StringBuilder(sizeOfIntInHalfBytes);
 		hexBuilder.setLength(sizeOfIntInHalfBytes);
@@ -29,3 +29,5 @@ class DecimalToHexaDecimal {
 		System.out.println("Result decToHex method : " + decToHex);
 	}
 }
+
+//10진수의 숫자를 16진
