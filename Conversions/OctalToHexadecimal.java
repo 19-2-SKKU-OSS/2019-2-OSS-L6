@@ -3,14 +3,14 @@ package Conversions;
 import java.util.Scanner;
 
 /**
- * Converts any Octal Number to HexaDecimal
+ * 8진수를 16진수로 변환한다.
  *
  * @author Tanmay Joshi
  */
 public class OctalToHexadecimal {
 
     /**
-     * This method converts a Octal number to a decimal number
+     * 아래의 함수는 8진수의 숫자를 10진수의 숫자로 변환하는 함수이다.
      *
      * @param s The Octal Number
      * @return The Decimal number
@@ -27,7 +27,7 @@ public class OctalToHexadecimal {
     }
 
     /**
-     * This method converts a Decimal number to a Hexadecimal number
+     * 아래의 함수는 10진수의 숫자를 16진수의 숫자로 변환하는 함수이다.
      *
      * @param d The Decimal Number
      * @return The Hexadecimal number
@@ -50,15 +50,16 @@ public class OctalToHexadecimal {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the Octal number: ");
-        // Take octal number as input from user in a string
+        // 사용자로부터 8진수를 문자열의 형태로 입력받는다.
         String oct = input.next();
 
-        // Pass the octal number to function and get converted deciaml form
+        // 문자열 형태의 8진수를 함수의 입력값으로 전달하여 정수형태의 10진수로 변환한다.
         int decimal = OctToDec(oct);
 
-        // Pass the decimla number to function and get converted Hex form of the number
+        // 정수 형태의 10진수를 함수의 입력값으로 전달하여 문자열 형태의 16진수로 변환한다.
         String hex = DecimalToHex(decimal);
         System.out.println("The Hexadecimal equivalant is: " + hex);
     }
 }
 
+// 8진수를 16진수로 변환
