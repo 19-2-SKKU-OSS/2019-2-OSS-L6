@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  */
 
-// Driver Program
+
 public class DecimalToAnyBase {
     public static void main (String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,7 +29,7 @@ public class DecimalToAnyBase {
     }
 
     /**
-     * This method produces a String value of any given input decimal in any base
+     * 아래의 함수는 10진수의 정수를 입력받아 원하는 진법의 수로 변환하여 문자열의 형태로 생성한다.
      * @param inp Decimal of which we need the value in base in String format
      * @return string format of the converted value in the given base
      */
@@ -53,7 +53,7 @@ public class DecimalToAnyBase {
     }
 
     /**
-     * This method produces character value of the input integer and returns it
+     * 아래의 함수는 정수형태의 입력값을 문자열 형태로 나타내기 위해 (0-9) 와 (A-Z)로 변환하여 반환한다.
      * @param num integer of which we need the character value of
      * @return character value of input integer
      */
@@ -65,3 +65,4 @@ public class DecimalToAnyBase {
             return (char)(num - 10 + 'A');
     }
 }
+// 10진수를 원하는 진수의 형태로 변환한다. 0-9 와 A-Z로 나타낼 수 있는 
