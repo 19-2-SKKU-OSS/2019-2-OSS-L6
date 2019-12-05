@@ -36,3 +36,4 @@ public class HexaDecimalToDecimal {
 
     }
 }
+// 16진수를 10진수로 변환
