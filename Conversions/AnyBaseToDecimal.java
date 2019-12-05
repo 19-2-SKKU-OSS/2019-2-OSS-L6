@@ -51,4 +51,4 @@ public class AnyBaseToDecimal {
         return Character.isDigit(c) ? c - '0' : c - 'A' + 10; //c가 숫자일 경우(0-9)와 알파벳일 경우(A-Z) 처리 방식이 다름
     }
 }
-/*사용자가 원하는 진법의 수를 10진수로 변환한다. */
+/* 사용자가 원하는 진법의 수를 10진수로 변환한다. */
