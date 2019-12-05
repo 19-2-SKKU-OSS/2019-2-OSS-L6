@@ -6,17 +6,18 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Class for converting from "any" base to "any" other base, when "any" means from 2-36.
+ * 특정 진법에서 또다른 특정 진법으로 수를 변환하는데 사용할 수 있는 클래스이다. 여기서 '특정 진법'이란 2에서 36까지를 말한다.
  * Works by going from base 1 to decimal to base 2. Includes auxiliary method for
  * determining whether a number is valid for a given base.
  *
  * @author Michael Rolland
  * @version 2017.10.10
  */
+ 
 public class AnyBaseToAnyBase {
 
     /**
-     * Smallest and largest base you want to accept as valid input
+     * 사용자가 허용할 최소 진법(MIN)과 최대 진법(MAX)
      */
     static final int MINIMUM_BASE = 2;
     static final int MAXIMUM_BASE = 36;
@@ -27,35 +28,35 @@ public class AnyBaseToAnyBase {
         int b1, b2;
         while (true) {
             try {
-                System.out.print("Enter number: ");
+                System.out.print("Enter number: "); //사용자로부터 진법을 변환할 숫자를 입력받음
                 n = in.next();
-                System.out.print("Enter beginning base (between " + MINIMUM_BASE + " and " + MAXIMUM_BASE + "): ");
+                System.out.print("Enter beginning base (between " + MINIMUM_BASE + " and " + MAXIMUM_BASE + "): "); //초기 진법 결정
                 b1 = in.nextInt();
                 if (b1 > MAXIMUM_BASE || b1 < MINIMUM_BASE) {
                     System.out.println("Invalid base!");
                     continue;
                 }
-                if (!validForBase(n, b1)) {
+                if (!validForBase(n, b1)) { //입력받은 숫자가 시작 진법으로 표현이 가능한 수인지 판별
                     System.out.println("The number is invalid for this base!");
                     continue;
                 }
-                System.out.print("Enter end base (between " + MINIMUM_BASE + " and " + MAXIMUM_BASE + "): ");
+                System.out.print("Enter end base (between " + MINIMUM_BASE + " and " + MAXIMUM_BASE + "): "); //변환될 진법 결정
                 b2 = in.nextInt();
-                if (b2 > MAXIMUM_BASE || b2 < MINIMUM_BASE) {
+                if (b2 > MAXIMUM_BASE || b2 < MINIMUM_BASE) { 
                     System.out.println("Invalid base!");
                     continue;
                 }
                 break;
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException e) { //nextInt에 입력받은 값이 정수가 아닐 경우의 예외처리
                 System.out.println("Invalid input.");
                 in.next();
             }
         }
-        System.out.println(base2base(n, b1, b2));
+        System.out.println(base2base(n, b1, b2)); //최종적으로 변환된 숫자를 출력
     }
 
     /**
-     * Checks if a number (as a String) is valid for a given base.
+     * 문자열로 입력받은 숫자가 주어진 진법으로 표현이 가능한 숫자인지를 판별한다.
      */
     public static boolean validForBase(String n, int base) {
         char[] validDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E',
