@@ -5,11 +5,11 @@ public class HexaDecimalToBinary {
     private final int LONG_BITS = 8;
 
     public void convert(String numHex) {
-        // String a HexaDecimal:
+        // 16진수는 문자열의 형태로 표현되어있다.
         int conHex = Integer.parseInt(numHex, 16);
-        // Hex a Binary:
+        // 문자열 형태의 16진수를 2진수의 형태로 변환한다.
         String binary = Integer.toBinaryString(conHex);
-        // Presentation:
+    
         System.out.println(numHex + " = " + completeDigits(binary));
     }
 
@@ -32,3 +32,4 @@ public class HexaDecimalToBinary {
         }
     }
 }
+// 문자열 형태의 16진수를 입력값으로 받아 2진수의 형태로 변환
