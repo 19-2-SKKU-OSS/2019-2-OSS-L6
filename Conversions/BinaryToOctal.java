@@ -3,7 +3,7 @@ package Conversions;
 import java.util.Scanner;
 
 /**
- * Converts any Binary number to an Octal Number
+ * 2진수를 8진수로 변환한다.
  *
  * @author Zachary Jones
  */
@@ -24,8 +24,7 @@ public class BinaryToOctal {
     }
 
     /**
-     * This method converts a binary number to
-     * an octal number.
+     * 아래의 함수는 2진수를 8진수로 변환하는 방법에 관한 것이다.
      *
      * @param binary The binary number
      * @return The octal number
@@ -48,3 +47,4 @@ public class BinaryToOctal {
     }
 
 }
+//2진수를 8진수로 변환하는 프로그램으로 2진수는 0
