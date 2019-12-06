@@ -71,7 +71,7 @@ public class EditDistance {
         s1 = input.nextLine();
         System.out.println("Enter the Second String");
         s2 = input.nextLine();
-        //ans stores the final Edit Distance between the two strings
+        // ans는 두 문자열 사이의 최종적으로 편집된 거리를 저장합니다
         int ans = minDistance(s1, s2);
         System.out.println("The minimum Edit Distance between \"" + s1 + "\" and \"" + s2 + "\" is " + ans);
     }
