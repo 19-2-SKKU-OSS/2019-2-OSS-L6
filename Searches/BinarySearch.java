@@ -33,7 +33,7 @@ class BinarySearch implements SearchAlgorithm {
     /**
      *
      * @param array 요소를 찾아야하는 배열입니다.
-     * @param key is an element which should be found
+     * @param key 는 우리가 찾을 값입니다.
      * @param <T> is any comparable type
      * @return index of the element
      */
