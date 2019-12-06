@@ -17,9 +17,9 @@ public class CoinChange {
     }
 
     /**
-     * This method finds the number of combinations of getting change for a given amount and change coins
+     * 이 방법은 주어진 금액과 변화 동전에 대한 변화를 얻는 조합의 수를 찾습니다.
      *
-     * @param coins  The list of coins
+     * @param coins  동전 목록
      * @param amount The amount for which we need to find the change
      *               Finds the number of combinations of change
      **/
