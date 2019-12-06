@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class KadaneAlgorithm {
 
     /**
-     * This method implements Kadane's Algorithm
+     * 이 방법은 Kadane의 알고리즘을 구현하는 것입니다.
      *
      * @param arr 입력 어레이
      * @return 배열의 최대 연속 하위 배열 합
