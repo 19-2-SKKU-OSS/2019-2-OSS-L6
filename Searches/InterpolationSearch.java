@@ -22,7 +22,7 @@ class InterpolationSearch {
     /**
      * @param array 는 정렬된 array이다.
      * @param key   는 어레이 내에서 찾게 될 값이다.
-     * @return an index if the array contains the key unless -1
+     * @return 배열에 키가 포함되어있는 경우는 -1을 반환한다.
      */
     public int find(int array[], int key) {
         // Find indexes of two corners
