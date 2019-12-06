@@ -42,9 +42,9 @@ public class EditDistance {
             char c1 = word1.charAt(i);
             for (int j = 0; j < len2; j++) {
                 char c2 = word2.charAt(j);
-                //if last two chars equal
+                // 마지막 두 문자가 같으면
                 if (c1 == c2) {
-                    //update dp value for +1 length
+                    //+1 길이에 대한 dp 값 업데이트
                     dp[i + 1][j + 1] = dp[i][j];
                 } else {
 			/* if two characters are different ,
