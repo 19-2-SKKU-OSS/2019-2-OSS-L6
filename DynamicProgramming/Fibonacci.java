@@ -26,8 +26,8 @@ public class Fibonacci {
     /**
      * 이 방법은 메모 기술을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     * @param n 피보나치 수를 결정해야하는 입력 n
-     * n 번째 피보나치 수를 출력합니다
+     * @param n 피보나치 수를 결정해야하는 입력 n 하고
+     *           n 번째 피보나치 수를 출력합니다
      **/
     public static int fibMemo(int n) {
         if (map.containsKey(n)) {
@@ -48,7 +48,7 @@ public class Fibonacci {
     /**
      * 이 방법은 상향식을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     *  @param n 피보나치 수를 결정해야하는 입력 n
+     *  @param n 피보나치 수를 결정해야하는 입력 n 하고
      *         n 번째 피보나치 수를 출력합니다
      **/
     public static int fibBotUp(int n) {
