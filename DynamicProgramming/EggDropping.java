@@ -22,7 +22,7 @@ public class EggDropping {
         for (int j = 1; j <= m; j++)
             eggFloor[1][j] = j;
 
-        // Using bottom-up approach in DP
+        // DP에서 상향식 접근법 사용
 
         for (int i = 2; i <= n; i++) {
             for (int j = 2; j <= m; j++) {
