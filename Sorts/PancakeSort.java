@@ -7,6 +7,8 @@ import static Sorts.SortUtils.*;
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @since 2018-04-10
+ * 팬케이크 정렬: 배열을 팬케이크가 쌓여있다고 생각하고 가장 큰 값의 지점에 주걱을 넣어 뒤집으면서 정렬.
+ * 시간복잡도: O(n^2)
  **/
 public class PancakeSort implements SortAlgorithm {
 
@@ -15,17 +17,17 @@ public class PancakeSort implements SortAlgorithm {
         int size = array.length;
 
         for (int i = 0; i < size; i++) {
-            T max = array[0];
+            T max = array[0]; //첫번째 인덱스 값을 max에 저장
             int index = 0;
-            for (int j = 0; j < size - i; j++) {
-                if (less(max, array[j])) {
-                    max = array[j];
-                    index = j;
+            for (int j = 0; j < size - i; j++) { //처음부터 size-i까지 돌면서
+                if (less(max, array[j])) { //max와 배열의 값들을 비교하여
+                    max = array[j]; //max값을 찾고
+                    index = j; //그 인덱스를 저장
                 }
             }
-            flip(array, index, array.length - 1 - i);
+            flip(array, index, array.length - 1 - i); //그 인덱스 값을 기준으로 뒤집음
         }
-        return array;
+        return array; //정렬된 배열 리턴
     }
 
 
