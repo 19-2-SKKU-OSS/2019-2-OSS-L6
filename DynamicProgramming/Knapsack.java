@@ -1,7 +1,7 @@
 package DynamicProgramming;
 
 /**
- * A DynamicProgramming based solution for 0-1 Knapsack problem
+ * Dynamic progeaming을 기반으로한 0-1 Knapsack problem 솔루션
  */
 
 public class Knapsack {
