@@ -74,13 +74,13 @@ public class Fibonacci {
      *
      * @ @param n 피보나치 수를 결정해야하는 입력 n 하고
      *         n 번째 피보나치 수를 출력합니다
-     *          <p>
-     *          This is optimized version of Fibonacci Program. Without using Hashmap and recursion.
-     *          It saves both memory and time.
-     *          Space Complexity will be O(1)
-     *          Time Complexity will be O(n)
-     *          <p>
-     *          Whereas , the above functions will take O(n) Space.
+     * 
+     * 이것은 피보나치 프로그램의 최적화 된 버전입니다. 해시 맵과 재귀를 사용하지 않습니다.
+     * 메모리와 시간을 모두 절약합니다.
+     * 공간 복잡도는 O (1)입니다.
+     * 시간 복잡도는 O (n)입니다.
+     * <p>
+     * 위의 함수는 O (n) 공간을 차지합니다.
      * @author Shoaib Rayeen (https://github.com/shoaibrayeen)
      **/
     public static int fibOptimized(int n) {
