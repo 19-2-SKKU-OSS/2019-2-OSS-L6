@@ -27,8 +27,8 @@ public class EditDistance {
         int len2 = word2.length();
         // len1+1, len2+1, because finally return dp[len1][len2]
         int[][] dp = new int[len1 + 1][len2 + 1];
-     	/* If second string is empty, the only option is to
-   	  insert all characters of first string into second*/
+     	/* 두 번째 문자열이 비어 있으면 유일한 옵션은
+   첫 번째 문자열의 모든 문자를 두 번째에 삽입*/
         for (int i = 0; i <= len1; i++) {
             dp[i][0] = i;
         }
