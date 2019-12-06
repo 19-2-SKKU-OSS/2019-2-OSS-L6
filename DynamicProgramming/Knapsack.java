@@ -10,7 +10,7 @@ public class Knapsack {
         if(wt == null || val == null)
             throw new IllegalArgumentException();
         int i, w;
-        int rv[][] = new int[n + 1][W + 1];    //rv means return value
+        int rv[][] = new int[n + 1][W + 1];    //rv 는 retrun 값을 의마한다
 
         // Build table rv[][] in bottom up manner
         for (i = 0; i <= n; i++) {
