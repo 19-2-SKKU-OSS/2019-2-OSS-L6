@@ -28,16 +28,16 @@ public class EditDistance {
         // len1+1, len2+1, because finally return dp[len1][len2]
         int[][] dp = new int[len1 + 1][len2 + 1];
      	/* 두 번째 문자열이 비어 있으면 유일한 옵션은
-   첫 번째 문자열의 모든 문자를 두 번째에 삽입*/
+        첫 번째 문자열의 모든 문자를 두 번째에 삽입*/
         for (int i = 0; i <= len1; i++) {
             dp[i][0] = i;
         }
-     	/* If first string is empty, the only option is to
-   	  insert all characters of second string into first*/
+     	/* 두 번째 문자열이 비어 있으면 유일한 옵션은
+        첫 번째 문자열의 모든 문자를 두 번째에 삽입*/
         for (int j = 0; j <= len2; j++) {
             dp[0][j] = j;
         }
-        //iterate though, and check last char
+        //반복하고 마지막 문자를 확인하십시오.
         for (int i = 0; i < len1; i++) {
             char c1 = word1.charAt(i);
             for (int j = 0; j < len2; j++) {
