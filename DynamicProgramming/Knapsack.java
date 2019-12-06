@@ -28,7 +28,7 @@ public class Knapsack {
     }
 
 
-    // Driver program to test above function
+    // 위의 기능을 테스트하는 드라이버 프로그램
     public static void main(String args[]) {
         int val[] = new int[]{50, 100, 130};
         int wt[] = new int[]{10, 20, 40};
