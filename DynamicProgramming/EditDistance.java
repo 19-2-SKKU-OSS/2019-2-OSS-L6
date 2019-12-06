@@ -47,8 +47,8 @@ public class EditDistance {
                     //+1 길이에 대한 dp 값 업데이트
                     dp[i + 1][j + 1] = dp[i][j];
                 } else {
-			/* if two characters are different ,
-			then take the minimum of the various operations(i.e insertion,removal,substitution)*/
+			/* 두 문자가 다른 경우
+            그런 다음 다양한 작업 ( 삽입, 제거, 대체)을 최소화하십시오*/
                     int replace = dp[i][j] + 1;
                     int insert = dp[i][j + 1] + 1;
                     int delete = dp[i + 1][j] + 1;
@@ -59,7 +59,7 @@ public class EditDistance {
                 }
             }
         }
-        /* return the final answer , after traversing through both the strings*/
+        /* 두 문자열을 전부 탐색 한 후, 최종 결과값을 반환하십시오.*/
         return dp[len1][len2];
     }
 
