@@ -47,7 +47,7 @@ public class CoinChange {
      *               변화의 조합의 수를 찾습니다.
      **/
     public static int minimumCoins(int[] coins, int amount) {
-        //minimumCoins[i] will store the minimum coins needed for amount i
+        //minimumCoins[i]은 금액 i에 필요한 최소 코인을 저장합니다
         int[] minimumCoins = new int[amount + 1];
 
         minimumCoins[0] = 0;
