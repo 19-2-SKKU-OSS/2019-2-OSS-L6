@@ -7,7 +7,7 @@ import static Sorts.SortUtils.*;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @see SortAlgorithm
  * 버블 정렬: 서로 인접한 두 원소를 검사하여 크기가 순서대로 되어있지 않다면 서로 교환하는 정렬.
- * 시간복잡도: O(n^2), 최악의 경우: O(n^2)
+ * 시간복잡도: O(n^2), 최악의 경우: O(n^2), 최선의 경우: O(n^2)
  */
 
 class BubbleSort implements SortAlgorithm { //BubbleSort 클래스 정의
