@@ -3,9 +3,9 @@ package DynamicProgramming;
 import java.util.Scanner;
 
 /**
- * Program to implement Kadane’s Algorithm to
- * calculate maximum contiguous subarray sum of an array
- * Time Complexity: O(n)
+ * Kadane의 알고리즘을 구현하는 프로그램
+ * 배열의 최대 연속 서브 어레이 합 계산
+ * 시간 복잡도 : O (n)
  *
  * @author Nishita Aggarwal
  */
@@ -20,7 +20,7 @@ public class KadaneAlgorithm {
      */
     static int largestContiguousSum(int arr[]) {
         int i, len = arr.length, cursum = 0, maxsum = Integer.MIN_VALUE;
-        if (len == 0)    //empty array
+        if (len == 0)    //비어있는 어레이
             return 0;
         for (i = 0; i < len; i++) {
             cursum += arr[i];
