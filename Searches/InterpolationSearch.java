@@ -21,7 +21,7 @@ class InterpolationSearch {
 
     /**
      * @param array 는 정렬된 array이다.
-     * @param key   is a value what shoulb be found in the array
+     * @param key   는 어레이 내에서 찾게 될 값이다.
      * @return an index if the array contains the key unless -1
      */
     public int find(int array[], int key) {
