@@ -9,7 +9,7 @@ import java.util.Random;
  * 보고 정렬: 이름 그대로 멍청한 정렬. 랜덤으로 데이터들을 재배열한 후, 정렬되었는지 검사한다. 정렬이 되지 않았으면 다시 랜덤으로 정렬될 때까지 재배열한다.
  * 평균 시간복잡도: O(n*n!), 최악의 경우: O(∞)
  */
-public class BogoSort implements SortAlgorithm { //BogoSort Class 생성
+public class BogoSort implements SortAlgorithm { //BogoSort Class 정의
 
     private static final Random random = new Random(); //랜덤 변수 생성
 
@@ -43,14 +43,14 @@ public class BogoSort implements SortAlgorithm { //BogoSort Class 생성
         // Integer Input
         Integer[] integers = {4, 23, 6, 78, 1, 54, 231, 9, 12};
 
-        BogoSort bogoSort = new BogoSort();
+        BogoSort bogoSort = new BogoSort(); //BogoSort 객체 생성
 
         // print a sorted array
-        SortUtils.print(bogoSort.sort(integers));
+        SortUtils.print(bogoSort.sort(integers)); //Integer 배열 정렬
 
         // String Input
         String[] strings = {"c", "a", "e", "b", "d"};
 
-        SortUtils.print(bogoSort.sort(strings));
+        SortUtils.print(bogoSort.sort(strings)); //String 배열 정렬
     }
 }
