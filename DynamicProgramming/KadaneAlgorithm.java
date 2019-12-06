@@ -15,8 +15,8 @@ public class KadaneAlgorithm {
     /**
      * This method implements Kadane's Algorithm
      *
-     * @param arr The input array
-     * @return The maximum contiguous subarray sum of the array
+     * @param arr 입력 어레이
+     * @return 배열의 최대 연속 하위 배열 합
      */
     static int largestContiguousSum(int arr[]) {
         int i, len = arr.length, cursum = 0, maxsum = Integer.MIN_VALUE;
