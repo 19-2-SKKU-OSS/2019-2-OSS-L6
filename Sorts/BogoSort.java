@@ -19,7 +19,7 @@ public class BogoSort implements SortAlgorithm { //BogoSort Class 생성
             if (SortUtils.less(array[i + 1], array[i])) return false; //정렬이 안되었으면 false 리턴
         }
         return true; //정렬이 되었으면 true 리턴
-    }수
+    }
 
     // Randomly shuffles the array
     private static <T> void nextPermutation(T array[]) { //랜덤으로 재배열하는 함수
