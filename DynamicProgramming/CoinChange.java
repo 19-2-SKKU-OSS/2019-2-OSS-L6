@@ -64,12 +64,12 @@ public class CoinChange {
                 }
             }
         }
-        // Uncomment the below line to see the state of combinations for each coin
+        // 아래 줄을 주석 해제하여 각 동전의 조합 상태를 확인하십시오.
         //printAmount(minimumCoins);
         return minimumCoins[amount];
     }
 
-    // A basic print method which prints all the contents of the array
+    // 배열의 모든 내용을 표시하는 기본 방법
     public static void printAmount(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
