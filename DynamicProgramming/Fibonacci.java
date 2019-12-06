@@ -24,7 +24,7 @@ public class Fibonacci {
     }
 
     /**
-     * This method finds the nth fibonacci number using memoization technique
+     * 이 방법은 메모 기술을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
      * @param n The input n for which we have to determine the fibonacci number
      *          Outputs the nth fibonacci number
