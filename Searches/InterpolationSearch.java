@@ -25,7 +25,7 @@ class InterpolationSearch {
      * @return 배열에 키가 포함되어있는 경우는 -1을 반환한다.
      */
     public int find(int array[], int key) {
-        // Find indexes of two corners
+        // 두 코너의 인덱스 찾기
         int start = 0, end = (array.length - 1);
 
         // Since array is sorted, an element present
