@@ -12,7 +12,7 @@ public class Knapsack {
         int i, w;
         int rv[][] = new int[n + 1][W + 1];    //rv 는 retrun 값을 의마한다
 
-        // Build table rv[][] in bottom up manner
+        // 상향식으로 테이블 rv [] [] 빌드한다
         for (i = 0; i <= n; i++) {
             for (w = 0; w <= W; w++) {
                 if (i == 0 || w == 0)
