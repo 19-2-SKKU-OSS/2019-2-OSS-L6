@@ -30,7 +30,7 @@ public class EggDropping {
                 for (x = 1; x <= j; x++) {
                     result = 1 + Math.max(eggFloor[i - 1][x - 1], eggFloor[i][j - x]);
 
-                    // choose min of all values for particular x
+                    // 특정 x에 대한 모든 값의 최소값을 선택하기
                     if (result < eggFloor[i][j])
                         eggFloor[i][j] = result;
                 }
@@ -42,7 +42,7 @@ public class EggDropping {
 
     public static void main(String args[]) {
         int n = 2, m = 4;
-        // result outputs min no. of trials in worst case for n eggs and m floors
+        // 결과 출력 최소 번호 n 개의 계란과 m 층에 대한 최악의 경우 시험
         int result = minTrials(n, m);
         System.out.println(result);
     }
