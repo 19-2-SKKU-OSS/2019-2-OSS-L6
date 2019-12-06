@@ -1,11 +1,11 @@
 package DynamicProgramming;
 
 /**
- * DynamicProgramming solution for the Egg Dropping Puzzle
+ * Egg Dropping Puzzle을위한 DynamicProgramming 솔루션
  */
 public class EggDropping {
 
-    // min trials with n eggs and m floors 
+    // n 개의 계란과 m 개의 층으로 시험
 
     private static int minTrials(int n, int m) {
 
@@ -13,11 +13,11 @@ public class EggDropping {
         int result, x;
 
         for (int i = 1; i <= n; i++) {
-            eggFloor[i][0] = 0;   // Zero trial for zero floor.
-            eggFloor[i][1] = 1;   // One trial for one floor 
+            eggFloor[i][0] = 0;   // 0층의 0번째시도
+            eggFloor[i][1] = 1;   // 한 층당 1번의 시도 
         }
 
-        // j trials for only 1 egg
+        // 계란 1개에 대해서 j회 시도
 
         for (int j = 1; j <= m; j++)
             eggFloor[1][j] = j;
