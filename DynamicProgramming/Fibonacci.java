@@ -15,8 +15,7 @@ public class Fibonacci {
 
     public static void main(String[] args) {
 
-        // Methods all returning [0, 1, 1, 2, 3, 5, ...] for n = [0, 1, 2, 3, 4, 5, ...]
-        Scanner sc = new Scanner(System.in);
+        // n = [0, 1, 2, 3, 4, 5, ...]에 대해 모두 [0, 1, 1, 2, 3, 5, ...]를 반환하는 메소드        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         
         System.out.println(fibMemo(n));
