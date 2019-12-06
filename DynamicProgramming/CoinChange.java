@@ -32,7 +32,7 @@ public class CoinChange {
             for (int i = coin; i < amount + 1; i++) {
                 combinations[i] += combinations[i - coin];
             }
-            // Uncomment the below line to see the state of combinations for each coin
+            // 아래 줄을 주석 해제하여 각 동전의 조합 상태를 확인하십시오.
             // printAmount(combinations);
         }
 
@@ -40,7 +40,7 @@ public class CoinChange {
     }
 
     /**
-     * This method finds the minimum number of coins needed for a given amount.
+     * 이 방법은 주어진 금액에 필요한 최소 코인 수를 찾을 수 있습니다.
      *
      * @param coins  The list of coins
      * @param amount The amount for which we need to find the minimum number of coins.
