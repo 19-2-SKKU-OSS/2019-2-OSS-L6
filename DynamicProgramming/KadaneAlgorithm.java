@@ -35,7 +35,7 @@ public class KadaneAlgorithm {
     }
 
     /**
-     * Main method
+     * 메인 메소드
      *
      * @param args Command line arguments
      */
