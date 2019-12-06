@@ -48,8 +48,8 @@ public class Fibonacci {
     /**
      * 이 방법은 상향식을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     * @param n The input n for which we have to determine the fibonacci number
-     *          Outputs the nth fibonacci number
+     *  @param n 피보나치 수를 결정해야하는 입력 n
+     *         n 번째 피보나치 수를 출력합니다
      **/
     public static int fibBotUp(int n) {
 
