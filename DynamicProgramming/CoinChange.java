@@ -42,9 +42,9 @@ public class CoinChange {
     /**
      * 이 방법은 주어진 금액에 필요한 최소 코인 수를 찾을 수 있습니다.
      *
-     * @param coins  The list of coins
-     * @param amount The amount for which we need to find the minimum number of coins.
-     *               Finds the the minimum number of coins that make a given value.
+     * @param coins  동전 목록
+     * @param amount 변화를 찾아야 할 금액
+     *               변화의 조합의 수를 찾습니다.
      **/
     public static int minimumCoins(int[] coins, int amount) {
         //minimumCoins[i] will store the minimum coins needed for amount i
