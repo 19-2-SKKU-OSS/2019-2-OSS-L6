@@ -18,7 +18,7 @@ import static Sorts.SortUtils.*;
  * @see SortAlgorithm
  * 빗질 정렬: 버블정렬에서 인덱스의 비교를 일정 칸 띄워서 하는 정렬.gap을 계속 줄이면서 비교횟수를 줄이고 시간을 절약한다.
  * 시간복잡도: O(n^2/2^p) (여기서 p는 증가 수), 최악의 경우: O(n^2), 최선의 경우: O(n*logn)
- * /
+ */
 class CombSort implements SortAlgorithm {
 
     // To find gap between elements
