@@ -4,6 +4,7 @@ import java.util.Arrays;
 /*
  * 기수 정렬: 데이터를 낮은 자릿수부터 같은 자릿수끼리 비교하며 정렬하며 전체 데이터를 정렬.
  * 시간복잡도: O(k*n) (k는 데이터 중 최대 자릿수)
+ */
 class RadixSort { //RadixSort 클래스 정의
 
     private static int getMax(int arr[], int n) { //최대값을 구하는 함수
