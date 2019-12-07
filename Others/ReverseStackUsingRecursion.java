@@ -1,7 +1,8 @@
 package Others;
 
-/* Program to reverse a Stack using Recursion*/
-
+/* Program to reverse a Stack using Recursion
+ * 스택 뒤집기 알고리즘: 재귀함수를 이용하여 스택을 뒤집는 알고리즘.
+ * */
 
 import java.util.Stack;
 
@@ -36,7 +37,7 @@ public class ReverseStackUsingRecursion {
     }
 
     //Function Used to reverse Stack Using Recursion
-    private static void reverseUsingRecursion(Stack<Integer> stack) {
+    private static void reverseUsingRecursion(Stack<Integer> stack) { //재귀함수를 이용하여 스택을 뒤집는 함수
         if (stack.isEmpty()) // If stack is empty then return
         {
             return;
@@ -50,7 +51,7 @@ public class ReverseStackUsingRecursion {
     }
 
     //Function used to insert element at the end of stack
-    private static void insertAtEnd(int temptop) {
+    private static void insertAtEnd(int temptop) { //원소를 스택의 끝에 삽입하는 함수
         if (stack.isEmpty()) {
             stack.push(temptop); // If stack is empty push the element
         } else {
