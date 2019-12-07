@@ -1,2 +1,18 @@
-Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. 
-It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.
+# 2019-2-OSS-L6
+# The Algorithms - Java - ciphers - Caesar
+
+## Caesar(카이사르) 암호란?
+카이사르 암호(Caesar cipher) 또는 시저 암호는 암호학에서 다루는 간단한 치환암호의 일종이다. 카이사르 암호는 약 기원전 100년경에 만들어져 로마의 장군인 카이사르가 동맹군들과 소통하기 위해 만든 암호이다. 실제로 로마의 황제 카이사르는 이 카이사르 암호를 사용하기도 했다. 카이사르 암호는 암호화하고자 하는 내용을 알파벳별로 일정한 거리만큼 밀어서 다른 알파벳으로 치환하는 방식이다. 
+
+예를 들어 3글자씩 밀어내는 카이사르 암호로 'COME TO ROME'을 암호화하면 'FRPH WR URPH'가 된다. 여기서 밀어내는 글자 수는 암호를 보내는 사람과 함께 정해 더 어려운 암호를 만들 수 있다. 이런 카이사르 암호는 순환암호라고 한다. 카이사르는 'RUSQHUVKBVEHQIIQIYDQJEH' 라는 암호를 받았다. 해독하면 BECAREFULFORASSASINATOR, 암살자를 조심하라는 뜻이된다. 카이사르는 이 암호를 해독하지 못해 암살자에게 암살당했다는 여담이 있다.
+
+카이사르 암호는 단순하고 간단하여 일반인도 쉽게 사용할 수 있지만, 철자의 빈도와 자주 사용되는 단어와 형태를 이용하면 쉽게 풀 수 있다는 단점이 있다.
+
+## Caesar(카이사르) 암호 암호화 개요 및 과정
+A...Z를 1~26에 대응한 후 무작위의 숫자를 키로 정하면, 암호문의 각 글자는 평문의 A+key(mod 26)이 된다. 쉽게 말해 키가 2라면 두 자씩 밀어서 읽어야 하니 A→C, B→D...Y→A, Z→B가 되는 식. 꼭 뒤로 밀 필요는 없고, 앞으로 밀어서 A→Y, B→Z...로도 가능하다. 카이사르가 실제로 사용했을 때는 키가 3이었다고 한다. 글자 하나 당 다른 문자 하나를 치환하므로 암호학적으로는 단일치환 암호의 일종이다.
+
+예를 들어, 카이사르 암호의 키가 2라고 할 때, I Love You = K Nqxg Aqw 이다.
+문장의 각각 알파벳은 키에 의해 I -> K, L -> N, o -> q, v -> x, e -> g, Y -> A, o -> q, u -> w 로 치환된다.
+
+## 파트 담당자
+- 표세승(컴퓨터공학/16) : **PYO-SE-SEUNG**  
