@@ -13,7 +13,7 @@ import static Sorts.SortUtils.print;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * 계수 정렬: 원소간 비교하지 않고 각 원소가 몇 개 등장하는지 개수를 세어 정렬. 원소의 크기가 시간 복잡도에 영향을 미친다.
  * 시간 복잡도: O(n+k) (k는 원소 중 최댓값)
- * /
+ */
 class CountingSort implements SortAlgorithm { //CountingSort 클래스 정의
 
     @Override
