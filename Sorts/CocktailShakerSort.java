@@ -5,7 +5,7 @@ package Sorts;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * 칵테일 쉐이커 정렬: 양방향 버블 정렬이다. 가장 큰 값을 찾고, 가장 작은 값을 찾고, 2번째로 큰 값을 찾고 2번째로 작은 값을 찾는 식의 작업을 반복하는 정렬이다.
  * 시간복잡도: O(n^2), 최악의 경우: O(n^2), 최선의 경우: O(n)(버블 정렬은 O(n^2))
- * /
+ */
 
 class CocktailShakerSort implements SortAlgorithm { //CocktailShakerSort 클래스 정의
 
