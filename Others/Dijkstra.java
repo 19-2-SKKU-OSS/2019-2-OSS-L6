@@ -11,16 +11,15 @@ package Others;
  * <p>
  * Original source of code: https://rosettacode.org/wiki/Dijkstra%27s_algorithm#Java
  * Also most of the comments are from RosettaCode.
+ * 다익스트라 알고리즘: 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로
+를 찾는 알고리즘.
  */
 
 import java.util.*;
 
 public class Dijkstra {
     private static final Graph.Edge[] GRAPH = {
-            // Distance from node "a" to node "b" is 7.
-            // In the current Graph there is no way to move the other way (e,g, from "b" to "a"),
-            // a new edge would be needed for that
-            new Graph.Edge("a", "b", 7),
+            new Graph.Edge("a", "b", 7), //노드 a와 b의 거리가 7이다.
             new Graph.Edge("a", "c", 9),
             new Graph.Edge("a", "f", 14),
             new Graph.Edge("b", "c", 10),
@@ -33,25 +32,16 @@ public class Dijkstra {
     private static final String START = "a";
     private static final String END = "e";
 
-    /**
-     * main function
-     * Will run the code with "GRAPH" that was defined above.
-     */
     public static void main(String[] args) {
         Graph g = new Graph(GRAPH);
         g.dijkstra(START);
         g.printPath(END);
-        //g.printAllPaths();
     }
 }
 
 class Graph {
-    // mapping of vertex names to Vertex objects, built from a set of Edges
     private final Map<String, Vertex> graph;
 
-    /**
-     * One edge of the graph (only used by Graph constructor)
-     */
     public static class Edge {
         public final String v1, v2;
         public final int dist;
@@ -63,12 +53,8 @@ class Graph {
         }
     }
 
-    /**
-     * One vertex of the graph, complete with mappings to neighbouring vertices
-     */
     public static class Vertex implements Comparable<Vertex> {
         public final String name;
-        // MAX_VALUE assumed to be infinity
         public int dist = Integer.MAX_VALUE;
         public Vertex previous = null;
         public final Map<Vertex, Integer> neighbours = new HashMap<>();
@@ -107,22 +93,18 @@ class Graph {
     public Graph(Edge[] edges) {
         graph = new HashMap<>(edges.length);
 
-        // one pass to find all vertices
+        //모든 노드
         for (Edge e : edges) {
             if (!graph.containsKey(e.v1)) graph.put(e.v1, new Vertex(e.v1));
             if (!graph.containsKey(e.v2)) graph.put(e.v2, new Vertex(e.v2));
         }
 
-        // another pass to set neighbouring vertices
+        //다른 노드
         for (Edge e : edges) {
             graph.get(e.v1).neighbours.put(graph.get(e.v2), e.dist);
-            // graph.get(e.v2).neighbours.put(graph.get(e.v1), e.dist); // also do this for an undirected graph
         }
     }
 
-    /**
-     * Runs dijkstra using a specified source vertex
-     */
     public void dijkstra(String startName) {
         if (!graph.containsKey(startName)) {
             System.err.printf("Graph doesn't contain start vertex \"%s\"\n", startName);
@@ -131,7 +113,6 @@ class Graph {
         final Vertex source = graph.get(startName);
         NavigableSet<Vertex> q = new TreeSet<>();
 
-        // set-up vertices
         for (Vertex v : graph.values()) {
             v.previous = v == source ? source : null;
             v.dist = v == source ? 0 : Integer.MAX_VALUE;
@@ -141,23 +122,17 @@ class Graph {
         dijkstra(q);
     }
 
-    /**
-     * Implementation of dijkstra's algorithm using a binary heap.
-     */
     private void dijkstra(final NavigableSet<Vertex> q) {
         Vertex u, v;
         while (!q.isEmpty()) {
-            // vertex with shortest distance (first iteration will return source)
             u = q.pollFirst();
             if (u.dist == Integer.MAX_VALUE)
-                break; // we can ignore u (and any other remaining vertices) since they are unreachable
-
-            // look at distances to each neighbour
+                break;
             for (Map.Entry<Vertex, Integer> a : u.neighbours.entrySet()) {
-                v = a.getKey(); // the neighbour in this iteration
+                v = a.getKey(); //이웃
 
                 final int alternateDist = u.dist + a.getValue();
-                if (alternateDist < v.dist) { // shorter path to neighbour found
+                if (alternateDist < v.dist) { //이웃에게서의 최단 경로
                     q.remove(v);
                     v.dist = alternateDist;
                     v.previous = u;
@@ -167,9 +142,6 @@ class Graph {
         }
     }
 
-    /**
-     * Prints a path from the source to the specified vertex
-     */
     public void printPath(String endName) {
         if (!graph.containsKey(endName)) {
             System.err.printf("Graph doesn't contain end vertex \"%s\"\n", endName);
@@ -180,9 +152,6 @@ class Graph {
         System.out.println();
     }
 
-    /**
-     * Prints the path from the source to every vertex (output order is not guaranteed)
-     */
     public void printAllPaths() {
         for (Vertex v : graph.values()) {
             v.printPath();
