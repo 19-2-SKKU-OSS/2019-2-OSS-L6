@@ -1,7 +1,9 @@
 package Others;
 
 import java.util.Scanner;
-
+/*
+ * 문자열 세기 알고리즘: 문자열의 문자 개수를 세는 알고리즘.
+ */ 
 public class CountChar {
 
     public static void main(String[] args) {
@@ -19,6 +21,6 @@ public class CountChar {
      * @return number of character in the specified string
      */
     private static int CountCharacters(String str) {
-        return str.replaceAll("\\s", "").length();
+        return str.replaceAll("\\s", "").length(); //.length() 함수를 이용하였다.
     }
 }
