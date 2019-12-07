@@ -13,7 +13,7 @@ import static Sorts.SortUtils.*;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * 힙 정렬: 완전 이진 트리를 기반으로 한 최대 힙 트리나 최소 힙 트리를 구성해 정렬.
  * 시간복잡도: O(nlogn), 최악의 경우: O(nlogn), 최선의 경우: O(nlogn)
- * /
+ */
 public class HeapSort implements SortAlgorithm {
 
 
