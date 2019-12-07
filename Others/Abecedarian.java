@@ -2,9 +2,9 @@ package Others;
 
 /**
  * An Abecadrian is a word where each letter is in alphabetical order
- * Abecedarian 알고리즘: 문자열이 알파벳 순이면 true, 그것이 아니면 false를 반환하는 알고리즘.
  * @author Oskar Enmalm
- */
+ * Abecedarian 알고리즘: 문자열이 알파벳 순이면 true, 그것이 아니면 false를 반>환하는 알고리즘.
+ * /
 class Abecedarian {
 
     public static boolean isAbecedarian(String s) {
