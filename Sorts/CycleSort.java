@@ -7,7 +7,7 @@ import static Sorts.SortUtils.print;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * 사이클 정렬: 자료들 중 cycle 관계에 있는 그룹을 찾아내어 정렬 기준에 맞게 자료들을 회전시켜서 정렬.
  * 시간복잡도: O(n^2)
- * /
+ */
 class CycleSort implements SortAlgorithm { //CycleSort 클래스 정의
 
     @Override
