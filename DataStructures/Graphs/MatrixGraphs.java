@@ -81,12 +81,10 @@ class AdjacencyMatrixGraph {
     }
 
     /**
-     * This method adds an edge to the graph between two specified
-     * vertices
-     *
-     * @param from the data of the vertex the edge is from
-     * @param to   the data of the vertex the edge is going to
-     * @return returns true if the edge did not exist, return false if it already did
+      * 특정한 두 정점 사이의 edge를 추가하는 메소드     
+     * @param from edge가 시작하는 정점의 데이터
+     * @param to   edge가 끝나는 정점의 데이터
+     * @return edge가 존재하지 않을 경우 참을 반환, 아닐 경우 거짓을 반환
      */
     public boolean addEdge(int from, int to) {
         if (this.vertexDoesExist(from) && this.vertexDoesExist(to)) {
@@ -102,12 +100,10 @@ class AdjacencyMatrixGraph {
     }
 
     /**
-     * this method removes an edge from the graph between two specified
-     * vertices
-     *
-     * @param from the data of the vertex the edge is from
-     * @param to   the data of the vertex the edge is going to
-     * @return returns false if the edge doesn't exist, returns true if the edge exists and is removed
+     * 특정한 두 정점 사이의 edge를 삭제하는 메소드     
+     * @param from edge가 시작하는 vertex의 데이터
+     * @param to   edge가 끝나는 vertex의 데이터
+     * @return edge가 존재하지 않으면 거짓을 반환, 존재한다면 참을 반환하고 삭제
      */
     public boolean removeEdge(int from, int to) {
         if (!this.vertexDoesExist(from) || !this.vertexDoesExist(to)) {
@@ -122,9 +118,9 @@ class AdjacencyMatrixGraph {
     }
 
     /**
-     * this gives a list of vertices in the graph and their adjacencies
+     * 이것은 정점의 목록과 이웃들을 제공한다
      *
-     * @return returns a string describing this graph
+     * @return 이 그래프를 나타내는 문자열 반환
      */
     public String toString() {
         String s = new String();
