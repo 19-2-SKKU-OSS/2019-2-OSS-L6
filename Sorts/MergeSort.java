@@ -10,7 +10,7 @@ import static Sorts.SortUtils.print;
  * @see SortAlgorithm
  * 병합 정렬: 원소 개수가 1또는 0이 될 때까지 두 부분으로 쪼갠 뒤, 역순으로 크기를 비교하며 재조합하면서 정렬. 쪼개는 작업과 역순 병합 작업은 재귀함수를 이용.
  * 시간복잡도: O(nlogn), 최악의 경우: O(nlogn), 최선의 경우: O(nlogn)
- * /
+ */
 
 class MergeSort implements SortAlgorithm { //MergeSort 클래스 정의
 
