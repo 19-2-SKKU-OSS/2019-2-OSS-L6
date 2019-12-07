@@ -6,6 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author dimgrichr
+ * CRC 알고리즘: 파일에 훼손이 없는지 검사하는 알고리즘.
  */
 public class CRCAlgorithm {
 
