@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * For detailed info and implementation see: <a href="http://devmag.org.za/2009/04/25/perlin-noise/">Perlin-Noise</a>
+ * 펄린 노이즈 알고리즘: 보다 유기적인 의사 난수 생성기 알고리즘.
  */
 public class PerlinNoise {
     /**
