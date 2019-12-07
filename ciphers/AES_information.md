@@ -1,5 +1,5 @@
 # 2019-2-OSS-L6
-# The Algorithms - Java - ciphers
+# The Algorithms - Java - ciphers/AES
 
 ## AES란?
 고급 암호화 표준(Advanced Encryption Standard, AES)은 2001년 미국 표준 기술 연구소(NIST)에 의해 제정된 암호화 방식이다. AES는 두 명의 벨기에 암호학자인 존 대먼과 빈센트 라이먼에 의해 개발된 Rijndael(레인달)에 기반하며 AES 공모전에서 선정되었다.
