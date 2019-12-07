@@ -54,8 +54,8 @@ public class Bag<Element> implements Iterable<Element> {
     /**
      * bag에 특정한 요소가 들어있는지 체크한다.
      *
-     * @찾고싶은 param 요소
-     * @bag가 요소를 포함하면 참을 반환, 아니면 거짓을 반환
+     * @param 찾고싶은 요소
+     * @return bag가 요소를 포함하면 참을 반환, 아니면 거짓을 반환
      */
     public boolean contains(Element element) {
         Iterator<Element> iterator = this.iterator();
@@ -68,7 +68,7 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * @ bag안의 요소를 임의적인 순서로 반복하는 interator를 반환
+     * @return bag안의 요소를 임의적인 순서로 반복하는 interator를 반환
      */
     public Iterator<Element> iterator() {
         return new ListIterator<>(firstElement);
