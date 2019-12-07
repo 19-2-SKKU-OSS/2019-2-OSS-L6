@@ -1,6 +1,9 @@
 package Others;
 
 import java.util.Scanner;
+/*
+ * 서브 시퀀스 알고리즘: 재귀함수를 이용하여 주어진 문자열의 서브 시퀀스 문자열을 구하는 알고리즘.
+ */ 
 
 public class ReturnSubsequence {
     public static void main(String[] args) {
@@ -27,15 +30,15 @@ public class ReturnSubsequence {
             return ans;
 
         }
-        String[] SmallAns = returnSubsequence(givenString.substring(1)); //recursive call to get subsequences of substring starting from index position=1
+        String[] SmallAns = returnSubsequence(givenString.substring(1)); //재귀 함수 호출
 
         String[] ans = new String[2 * SmallAns.length];// Our answer will be an array off string of size=2*SmallAns
         int i = 0;
         for (; i < SmallAns.length; i++) {
-            ans[i] = SmallAns[i]; //Copying all the strings present in SmallAns to ans string array
+            ans[i] = SmallAns[i]; //모든 문자열 복사
         }
         for (int k = 0; k < SmallAns.length; k++) {
-            ans[k + SmallAns.length] = givenString.charAt(0) + SmallAns[k]; // Insert character at index=0 of the given substring in front of every string in SmallAns
+            ans[k + SmallAns.length] = givenString.charAt(0) + SmallAns[k]; //모든 SmallAns 앞에 서브 문자열의 인덱스 0의 값을 삽입
         }
         return ans;
     }
