@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class MatrixChainMultiplication {
     private static Scanner scan = new Scanner(System.in);
     private static ArrayList<Matrix> mArray = new ArrayList<>();
