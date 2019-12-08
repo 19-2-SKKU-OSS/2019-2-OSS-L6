@@ -14,24 +14,22 @@ package DataStructures.Heaps;
 public interface Heap {
 
     /**
-     * @return the top element in the heap, the one with lowest key for min-heap or with
-     * the highest key for max-heap
-     * @throws EmptyHeapException if heap is empty
+     * @return 최소 힙을 위한 최소 키 또는 최대 힙을 위한 최대 키를 가진 힙의 상단 요소
+     * @throws EmptyHeapException 힙이 비어있는 경우 
      */
     HeapElement getElement() throws EmptyHeapException;
 
     /**
-     * Inserts an element in the heap. Adds it to then end and toggle it until it finds its
-     * right position.
+     * 요소를 힙에 추가한다. 그 다음 끝까지 추가하고 그 위치를 찾을 때까지 넣었다 뺏다 한다.
      *
-     * @param element an instance of the HeapElement class.
+     * @param HeapElement 클래스의 인스턴스 요소
      */
     void insertElement(HeapElement element);
 
     /**
-     * Delete an element in the heap.
+     * 힙에 있는 요소 삭제
      *
-     * @param elementIndex int containing the position in the heap of the element to be deleted.
+     * @param elementIndex int 삭제할 요소의 힙의 위치 포함한다.
      */
     void deleteElement(int elementIndex);
 
