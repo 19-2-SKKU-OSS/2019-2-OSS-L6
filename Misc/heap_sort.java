@@ -27,26 +27,26 @@ public class heap_sort {
         int l = 2 * i + 1;  // left = 2*i + 1
         int r = 2 * i + 2;  // right = 2*i + 2
 
-        // If left child is larger than root
+        // 왼쪽 자식이 루트보다 작다면
         if (l < n && arr[l] > arr[largest])
             largest = l;
 
-        // If right child is larger than largest so far
+        // 오른쪽 자식이 지금까지 가장 큰 자식보다 크다면
         if (r < n && arr[r] > arr[largest])
             largest = r;
 
-        // If largest is not root
+        // 가장 큰게 루트가 아닌경우
         if (largest != i) {
             int swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;
 
-            // Recursively heapify the affected sub-tree
+            // 관련된 서브 트리를 heapify합니다
             heapify(arr, n, largest);
         }
     }
 
-    /* A utility function to print array of size n */
+    /* 길이 n인 배열을 출력합니다 */
     static void printArray(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
