@@ -2,12 +2,13 @@ package DynamicProgramming;
 
 import java.util.Scanner;
 
+
 /**
- * Given a string containing just the characters '(' and ')', find the length of
- * the longest valid (well-formed) parentheses substring.
+ * 문자 '('와 ')'만 포함 된 문자열의 길이는
+ * 가장 긴 유효한 (잘 구성된) 괄호 하위 문자열.
  *
  * @author Libin Yang (https://github.com/yanglbme)
- * @since 2018/10/5
+ * @since 2018/10/5부터
  */
 
 public class LongestValidParentheses {

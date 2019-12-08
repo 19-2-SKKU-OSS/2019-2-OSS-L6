@@ -1,9 +1,8 @@
 package DynamicProgramming;
 
-/**
- * A DynamicProgramming solution for Rod cutting problem
- * Returns the best obtainable price for a rod of
- * length n and price[] as prices of different pieces
+/**로드 절단 문제를위한 동적 프로그래밍 솔루션
+ * 막대의 가장 좋은 가격을 반환합니다
+ * 길이 n과 가격 []을 다른 조각의 가격으로
  */
 public class RodCutting {
 
@@ -22,7 +21,7 @@ public class RodCutting {
         return val[n];
     }
 
-    // main function to test
+    //테스트할 main 함수
     public static void main(String args[]) {
         int[] arr = new int[]{2, 5, 13, 19, 20};
         int size = arr.length;

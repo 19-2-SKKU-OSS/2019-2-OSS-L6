@@ -6,7 +6,7 @@ import java.util.Vector;
 
 public class FordFulkerson {
     final static int INF = 987654321;
-    // edges
+    // 사용할 엣지 데이터
     static int V;
     static int[][] capacity, flow;
 
