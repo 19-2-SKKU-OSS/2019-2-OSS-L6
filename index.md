@@ -22,11 +22,13 @@ layout: default
 
 # Selected Project Info 
 ![TheAlgorithms](https://avatars2.githubusercontent.com/u/20487725?s=200&v=4)
+
 ## Project Name
    * TheAlgorithms / JAVA
 
 ## Source Project Github
    * [github.com/TheAlgorithms/Java](github.com/TheAlgorithms/Java) 
+   
 ## Project Goal
    * 이 프로젝트는 Java 표준 라이브러리의 구현보다 덜 효율적이라도 학습 목적을 위해 다양한 알고리즘을 교육용으로 작성하는 것이다.
 
@@ -43,14 +45,17 @@ layout: default
 6. 추가되지 않은 알고리즘을 제작하여 contribution guidelines 에 맞게 PR 을 한다.
 
 ## Individual Activity Contents
+
 ### PYO-SE-SEUNG
 * Contents
    * ciper 파트에 DES 암호화 알고리즘을 새로 추가하였다.
    * Conversion & Cipher 파트 주석 추가 및 번역을 하였다.
    * 암호화 알고리즘의 이해를 돕기 위해 각각 마크다운 문서를 만들어서 설명을 추가하였다.
    * 정적페이지를 제작하였다.
+
 ### YOU-JAE-MIN
 * Contents
+
 ### LEE-DAE-HEE
 * Contents
    * 알고리즘에 대한 기본적인 설명이 누락된 경우, 기본적인 설명을 추가하였다.
@@ -58,11 +63,13 @@ layout: default
    * Dynamic Programing에 Lexicographically minimal string rotation 의 booth 알고리즘과, Manacher 알고리즘을 새로 추가하였다.
    * Wiki 목차 및 페이지 생성, 구조 정렬.
    * Wiki에 개인 활동내용을 추가하는 역할을 수행함.
+
 ### KIM-DO-HYUN
 * Contents
    * Datastructure 파트의 잘못된 주석을 수정하고 번역하였다.
    * Datastructure 에 Kruskal 알고리즘을 새로 추가하였다.
    * wiki 작업을 함
+
 ### PARK-JI-HUN
 * Contents
    * Sorts에는 여러가지 정렬 알고리즘이 있는데, 코드 상단에 정렬 알고리즘에 대한 설명과 시간복잡도를 추가하고 코드에 대한 설명을 주석으로 달았다.
