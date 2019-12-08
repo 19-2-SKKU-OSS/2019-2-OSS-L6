@@ -1,15 +1,17 @@
 /**
- * This file contains an implementation of Booths algorithms which finds the lexicographically
- * smallest string rotation.
+ *
+ *이 파일에는 사전 식을 찾는 부스 알고리즘이 포함되어 있습니다.
+ * 가장 작은 문자열 회전을 찾는 알고리즘 입니다.
  */
 package com.williamfiset.algorithms.strings;
 
 public class BoothsAlgorithm {
 
-  // Performs Booths algorithm returning the earliest index of the
-  // lexicographically smallest string rotation. Note that comparisons
-  // are done using ASCII values, so mixing lowercase and uppercase
-  // letters may give you unexpected results, O(n)
+  
+  // 가장 빠른 색인을 반환하는 부스 알고리즘을 수행합니다.
+  // 사 전적으로 가장 작은 문자열 회전. 비교는
+  // ASCII 값을 사용하여 수행되므로 소문자와 대문자를 혼합
+  // 글자는 예상치 못한 결과를 줄 수 있습니다. O (n)
   public static int leastCyclicRotation(String s) {
     s += s;
     int[] f = new int[s.length()];
@@ -35,14 +37,15 @@ public class BoothsAlgorithm {
     String s = "abcde";
     int index = leastCyclicRotation(s);
 
-    // Outputs 0 since the string is already in its least rotation
+    
+    // 문자열이 이미 최소 회전 상태이므로 0을 출력합니다.
     System.out.println(index);
 
     s = "cdeab";
     index = leastCyclicRotation(s);
 
-    // Outputs 3 since rotating the string 3 times to the left makes
-    // the smallest rotation: "cdeab" -> "deabc" -> "eabcd" -> "abcde"
+    // 문자열을 왼쪽으로 3 번 돌리면 3이 출력됩니다.
+    // 가장 작은 회전 : "cdeab"-> "deabc"-> "eabcd"-> "abcde"
     System.out.println(index);
   }
 }
