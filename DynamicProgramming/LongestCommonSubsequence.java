@@ -4,18 +4,18 @@ class LongestCommonSubsequence {
 
     public static String getLCS(String str1, String str2) {
 
-        //At least one string is null
+        // 둘 중 하나의 string 이 비어있을때.
         if (str1 == null || str2 == null)
             return null;
 
-        //At least one string is empty
+        // 둘 중 하나의 string의 길이가 0일때.
         if (str1.length() == 0 || str2.length() == 0)
             return "";
 
         String[] arr1 = str1.split("");
         String[] arr2 = str2.split("");
 
-        //lcsMatrix[i][j]  = LCS of first i elements of arr1 and first j characters of arr2
+        // lcsMatrix [i] [j] = arr1의 첫 번째 i 요소와 arr2의 첫 번째 j 문자의 LCSr1 and first j characters of arr2
         int[][] lcsMatrix = new int[arr1.length + 1][arr2.length + 1];
 
         for (int i = 0; i < arr1.length + 1; i++)
@@ -57,7 +57,7 @@ class LongestCommonSubsequence {
         String str2 = "DATRGAGTSHS";
         String lcs = getLCS(str1, str2);
 
-        //Print LCS
+        //LCS 출력
         if (lcs != null) {
             System.out.println("String 1: " + str1);
             System.out.println("String 2: " + str2);
