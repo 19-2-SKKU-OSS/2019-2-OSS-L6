@@ -4,11 +4,11 @@ layout: default
 
 
 # Team Info
-## Team Leader
+## _Team Leader_
   * PYO-SE-SEUNG/ 2016314794/ [PYO-SE-SEUNG](https://github.com/PYO-SE-SEUNG)/ 97ss93sh@gmail.com
   >  : Static Page, Conversion & Cipher Section
 
-## Team Members
+## _Team Members_
   * YOU-JAE-MIN /2018312113 /[yjm7455](https://github.com/yjm7455) /email@gmail.com
   > Charge : Annotation,
   * KIM-DO-HYUN /2019310634 /[bidulki](https://github.com/bidulki) /roseehgus@gmail.com
@@ -23,20 +23,20 @@ layout: default
 # Selected Project Info 
 ![TheAlgorithms](https://avatars2.githubusercontent.com/u/20487725?s=200&v=4)
 
-## Project Name
+## _Project Name_
    * TheAlgorithms / JAVA
 
-## Source Project Github
+## _Source Project Github_
    * [github.com/TheAlgorithms/Java](github.com/TheAlgorithms/Java) 
    
-## Project Goal
+## _Project Goal_
    * 이 프로젝트는 Java 표준 라이브러리의 구현보다 덜 효율적이라도 학습 목적을 위해 다양한 알고리즘을 교육용으로 작성하는 것이다.
 
 * * *
 
 # Project Activity Content
 
-## Team Activity Contents
+## _Team Activity Contents_
 1. 코드리뷰 및 각 알고리즘의 주석 번역을 통해 국내 사용자들에게 도움을 준다.
 2. 알고리즘의 설명이 빠져있는 부분에 설명을 추가하여 사용자들의 이해를 돕는다.
 3. 이미 구현되어 있는 알고리즘을 리팩토링하여 가독성을 높인다.
@@ -44,7 +44,7 @@ layout: default
 5. 프로젝트에 포함되지 않지만 널리 알려져있는 알고리즘을 구현하여 또 다른 교육용 알고리즘 구현 예시를 제안할 수 있다.
 6. 추가되지 않은 알고리즘을 제작하여 contribution guidelines 에 맞게 PR 을 한다.
 
-## Individual Activity Contents
+## _Individual Activity Contents_
 
 ### PYO-SE-SEUNG
 * Contents
