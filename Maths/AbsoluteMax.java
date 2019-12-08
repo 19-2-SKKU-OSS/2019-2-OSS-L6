@@ -15,10 +15,10 @@ public class AbsoluteMax {
     }
 
     /**
-     * get the value, it's absolute value is max
+     * 값을 가져와서 절댓값이 최댓값인 것을 구합니다
      *
-     * @param numbers contains elements
-     * @return the absolute max value
+     * @파라미터로 원소들을 포함합니다
+     * @절댓값의 최댓값인 값을 반환합니다
      */
     public static int absMax(int[] numbers) {
         int absMaxValue = numbers[0];
