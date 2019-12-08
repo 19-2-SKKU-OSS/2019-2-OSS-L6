@@ -9,11 +9,11 @@ public class ParseInteger {
     }
 
     /**
-     * Parse a string to integer
+     * 문자열을 숫자로 바꿉시다
      *
-     * @param s the string
-     * @return the integer value represented by the argument in decimal.
-     * @throws NumberFormatException if the {@code string} does not contain a parsable integer.
+     * @문자열 s를 인자로 받습니다
+     * @인자를 숫자의 형태로 반환합니다
+     * @변환 가능한 숫자가 아닐 때 NumberFormatException을 발생시킵니다 
      */
     public static int parseInt(String s) {
         if (s == null) {
