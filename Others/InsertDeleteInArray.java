@@ -1,7 +1,9 @@
 package Others;
 
 import java.util.*;
-
+/*
+ * 배열 삽입 삭제 알고리즘: 배열에서 특정 위치에 새로운 원소를 삽입하거나 특정 위치의 원소를 삭제하는 알고리즘.
+ */ 
 public class InsertDeleteInArray {
 
     public static void main(String[] args) {
@@ -11,13 +13,13 @@ public class InsertDeleteInArray {
         int a[] = new int[size];
         int i;
 
-        // To enter the initial elements
+        //초기 배열 설정
         for (i = 0; i < size; i++) {
             System.out.println("Enter the element");
             a[i] = s.nextInt();
         }
 
-        // To insert a new element(we are creating a new array)
+        //새 원소를 지정한 위치에 삽입
         System.out.println("Enter the index at which the element should be inserted");
         int insert_pos = s.nextInt();
         System.out.println("Enter the element to be inserted");
@@ -36,7 +38,7 @@ public class InsertDeleteInArray {
             System.out.println(b[i]);
         }
 
-        // To delete an element given the index
+        //지정한 위치의 원소를 삭제
         System.out.println("Enter the index at which element is to be deleted");
         int del_pos = s.nextInt();
         for (i = del_pos; i < size2 - 1; i++) {

@@ -3,7 +3,9 @@ package Others;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
-
+/*
+ * 스카이라인 알고리즘: 직사각형들의 크기가 주어지면 직사각형들의 합집합, 즉 스카이라인을 구하는 알고리즘.
+ */ 
 public class SkylineProblem {
     Building[] building;
     int count;

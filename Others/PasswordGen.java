@@ -12,6 +12,7 @@ import java.util.ArrayList;
  *
  * @author AKS1996
  * @date 2017.10.25
+ * 패스워드 생성 알고리즘: 패스워드를 랜덤으로 생성하는 알고리즘.
  */
 class PasswordGen {
     public static void main(String args[]) {

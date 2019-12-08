@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)
+ * 문자열 중복 제거 알고리즘: 문자열에서 중복이 아닌 것만 남겨 두는 알고리즘.
  */
 
 public class RemoveDuplicateFromString {
@@ -36,11 +37,11 @@ public class RemoveDuplicateFromString {
         int n = s.length();
 
         for (int i = 0; i < n; i++) {
-            if (sb.toString().indexOf(s.charAt(i)) == -1) {
-                sb.append(String.valueOf(s.charAt(i)));
+            if (sb.toString().indexOf(s.charAt(i)) == -1) { //없었던 문자열이면
+                sb.append(String.valueOf(s.charAt(i))); //새로 만든 문자열에 추가한다.
             }
         }
 
-        return sb.toString();
+        return sb.toString(); //중복 없는 문자열 리턴
     }
 }

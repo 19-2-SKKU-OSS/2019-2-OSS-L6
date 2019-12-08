@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author RollandMichael
  * @version 2017.09.28
+ * 최하 회문 알고리즘: 최소 어떤 지점에서부터 회문인지 찾는 알고리즘.
  */
 public class LowestBasePalindrome {
 
@@ -29,7 +30,7 @@ public class LowestBasePalindrome {
         }
         System.out.println(n + " is a palindrome in base " + lowestBasePalindrome(n));
         System.out.println(base2base(Integer.toString(n), 10, lowestBasePalindrome(n)));
-    }
+   }
 
     /**
      * Given a number in base 10, returns the lowest base in which the

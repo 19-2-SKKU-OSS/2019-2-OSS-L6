@@ -15,7 +15,7 @@ import java.util.Stack;
  * New elements are added to the back/rear of the queue.
  *
  * @author sahilb2 (https://www.github.com/sahilb2)
- *
+ * 두 스택을 이용한 큐 알고리즘: 큐를 두 개의 스택을 이용하여 구현한 알고리즘. 하나는 push를 담당하고, 다른 하나는 pop을 담당한다.
  */
 class QueueWithStack {
 

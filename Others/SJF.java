@@ -10,6 +10,7 @@ package Others;
  *
  * @author shivg7706
  * @since 2018/10/27
+ * 최단 작업 우선 스케줄링 알고리즘: 작업 시간이 짧은 것부터 처리하는 알고리즘.
  */
 
 import java.util.Scanner;

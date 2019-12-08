@@ -3,12 +3,13 @@ package Others;
 /**
  * Implementation of Knuth–Morris–Pratt algorithm
  * Usage: see the main function for an example
+ * 문자열 검색 알고리즘: 문자열에서 서브 문자열을 찾는 알고리즘
  */
 public class KMP {
     //a working example
     public static void main(String[] args) {
-        final String haystack = "AAAAABAAABA";        //This is the full string
-        final String needle = "AAAA";                //This is the substring that we want to find
+        final String haystack = "AAAAABAAABA";        //본래의 문자열
+        final String needle = "AAAA";                //본래의 문자열에서 찾을 서브 문자열
         KMPmatcher(haystack, needle);
     }
 

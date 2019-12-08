@@ -1,5 +1,7 @@
 package Others;
-
+/*
+ * 회문 알고리즘: 문자열이 회문인지 아닌지 판별하는 알고리즘.
+ */ 
 class Palindrome {
 
     private String reverseString(String x) { // *helper method

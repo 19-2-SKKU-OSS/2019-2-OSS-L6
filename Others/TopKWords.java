@@ -4,7 +4,9 @@ import java.io.*;
 import java.util.*;
 
 /* display the most frequent K words in the file and the times it appear
-    in the file – shown in order (ignore case and periods) */
+    in the file – shown in order (ignore case and periods) 
+    * 빈도가 가장 큰 단어 찾기 알고리즘: 파일에서 빈도가 가장 큰 단어를 찾는 알고리즘.
+    */
 
 public class TopKWords {
     static class CountWords {

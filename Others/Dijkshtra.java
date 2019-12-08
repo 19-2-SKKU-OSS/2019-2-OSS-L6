@@ -6,6 +6,7 @@ import java.util.Stack;
 
 /**
  * @author Mayank K Jha
+ * 다익스트라 알고리즘: 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 찾는 알고리즘.
  */
 
 public class Dijkshtra {
@@ -13,35 +14,27 @@ public class Dijkshtra {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        // n = Number of nodes or vertices
-        int n = in.nextInt();
-        // m = Number of Edges
-        int m = in.nextInt();
+	int n = in.nextInt(); //노드의 개수 
+        int m = in.nextInt(); //간선의 개수
 
-        // Adjacency Matrix
-        long[][] w = new long[n + 1][n + 1];
-
-        // Initializing Matrix with Certain Maximum Value for path b/w any two vertices
+        long[][] w = new long[n + 1][n + 1]; //인접 행렬
+     
         for (long[] row : w) {
-            Arrays.fill(row, 1000000L);
+            Arrays.fill(row, 1000000L); //초기화
         }
 
-		/* From above,we Have assumed that,initially path b/w any two Pair of vertices is Infinite such that Infinite = 1000000l
-		    For simplicity , We can also take path Value = Long.MAX_VALUE , but i have taken Max Value = 1000000l */
 
-        // Taking Input as Edge Location b/w a pair of vertices
         for (int i = 0; i < m; i++) {
-            int x = in.nextInt(), y = in.nextInt();
+            int x = in.nextInt(), y = in.nextInt(); //노드 입력
             long cmp = in.nextLong();
 
-            // Comparing previous edge value with current value - Cycle Case
-            if (w[x][y] > cmp) {
+            if (w[x][y] > cmp) { //이전 노드 값과 현재 노드 값 비교
                 w[x][y] = cmp;
                 w[y][x] = cmp;
             }
         }
 
-        // Implementing Dijkshtra's Algorithm
+        //다익스트라 알고리즘
         Stack<Integer> t = new Stack<>();
         int src = in.nextInt();
 
@@ -69,15 +62,12 @@ public class Dijkshtra {
             p.push(t.elementAt(loc));
             t.removeElementAt(loc);
         }
-
-        // Printing shortest path from the given source src
         for (int i = 1; i <= n; i++) {
             if (i != src && w[src][i] != 1000000L) {
-                System.out.print(w[src][i] + " ");
+                System.out.print(w[src][i] + " "); //최단 경로 출력
             }
-            // Printing -1 if there is no path b/w given pair of edges
             else if (i != src) {
-                System.out.print("-1" + " ");
+                System.out.print("-1" + " "); //경로가 없으면 -1출력
             }
         }
     }

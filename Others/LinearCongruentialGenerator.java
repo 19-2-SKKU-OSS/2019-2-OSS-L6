@@ -5,6 +5,7 @@ package Others;
  *
  * @author Tobias Carryer
  * @date October 10, 2017
+ * 선형 합동 생성기 알고리즘: 유사 난수 생성 알고리즘으로, 간단한 난수 생성을 위해 사용하는 알고리즘.
  */
 public class LinearCongruentialGenerator {
 

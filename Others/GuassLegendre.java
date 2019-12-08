@@ -7,6 +7,7 @@ import java.lang.Math;
  * ref https://en.wikipedia.org/wiki/Gauss–Legendre_algorithm
  *
  * @author AKS1996
+ * GaussLegendre 알고리즘: 파이를 계산하기 위한 알고리즘.
  */
 public class GuassLegendre {
 
@@ -32,7 +33,6 @@ public class GuassLegendre {
 
         return Math.pow(a + b, 2) / (4 * t);
     }
-
     static double[] update(double a, double b, double t, double p) {
         double values[] = new double[4];
         values[0] = (a + b) / 2;
