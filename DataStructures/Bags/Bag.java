@@ -4,14 +4,14 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * Collection which does not allow removing elements (only collect and iterate)
+ * 요소 제거를 허용하지 않는 컬렉션(수집 과 반복만 한다)
  *
- * @param <Element> - the generic type of an element in this bag
+ * @param <Element> - bag에 들어있는 요소의 generic type
  */
 public class Bag<Element> implements Iterable<Element> {
 
-    private Node<Element> firstElement; // first element of the bag
-    private int size; // size of bag
+    private Node<Element> firstElement; // bag의 첫 요소 
+    private int size; // bag 의 크기
 
     private static class Node<Element> {
         private Element content;
@@ -19,7 +19,7 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * Create an empty bag
+     * 빈 bag 만들기
      */
     public Bag() {
         firstElement = null;
@@ -27,21 +27,21 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * @return true if this bag is empty, false otherwise
+     * @bag 가 비어있으면 참을 반환, 아니면 거짓을 반환
      */
     public boolean isEmpty() {
         return firstElement == null;
     }
 
     /**
-     * @return the number of elements
+     * @요소의 개수를 반환
      */
     public int size() {
         return size;
     }
 
     /**
-     * @param element - the element to add
+     * @param element - 추가할 요소
      */
     public void add(Element element) {
         Node<Element> oldfirst = firstElement;
@@ -52,10 +52,10 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * Checks if the bag contains a specific element
+     * bag에 특정한 요소가 들어있는지 체크한다.
      *
-     * @param element which you want to look for
-     * @return true if bag contains element, otherwise false
+     * @param 찾고싶은 요소
+     * @return bag가 요소를 포함하면 참을 반환, 아니면 거짓을 반환
      */
     public boolean contains(Element element) {
         Iterator<Element> iterator = this.iterator();
@@ -68,7 +68,7 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * @return an iterator that iterates over the elements in this bag in arbitrary order
+     * @return bag안의 요소를 임의적인 순서로 반복하는 interator를 반환
      */
     public Iterator<Element> iterator() {
         return new ListIterator<>(firstElement);
@@ -87,7 +87,7 @@ public class Bag<Element> implements Iterable<Element> {
         }
 
         /**
-         * remove is not allowed in a bag
+         * bag에서 제거는 허락되지 않는다
          */
         @Override
         public void remove() {
@@ -104,7 +104,7 @@ public class Bag<Element> implements Iterable<Element> {
     }
 
     /**
-     * main-method for testing
+     * 테스트 위한 메인 메소드
      */
     public static void main(String[] args) {
         Bag<String> bag = new Bag<>();

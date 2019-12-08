@@ -2,7 +2,7 @@ package DataStructures.Heaps;
 
 /**
  * @author Nicolas Renard
- * Exception to be thrown if the getElement method is used on an empty heap.
+ * 빈 힙에 getElement 메소드를 사용할 경우 예외처리
  */
 @SuppressWarnings("serial")
 public class EmptyHeapException extends Exception {

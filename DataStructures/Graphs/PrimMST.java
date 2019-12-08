@@ -3,17 +3,17 @@ package DataStructures.Graphs;
 import java.lang.*;
 
 /**
- * A Java program for Prim's Minimum Spanning Tree (MST) algorithm.
- * adjacency matrix representation of the graph
+ * 프림의 MST(최소 신장 트리) 알고리즘 자바 프로그램
+ * 인접행렬로 그래프를 표현
  */
 class PrimMST {
-    // Number of vertices in the graph
+    // 그래프에 있는 정점의 개수
     private static final int V = 5;
 
-    // A utility function to find the vertex with minimum key
-    // value, from the set of vertices not yet included in MST
+    // 최소 키로 정점을 찾는 유용한 함수
+    // MST에 아직 포함되지 않는 정점들의 집합으로 부터의 값
     int minKey(int key[], Boolean mstSet[]) {
-        // Initialize min value
+        // 최솟값 초기화
         int min = Integer.MAX_VALUE, min_index = -1;
 
         for (int v = 0; v < V; v++)
@@ -25,8 +25,7 @@ class PrimMST {
         return min_index;
     }
 
-    // A utility function to print the constructed MST stored in
-    // parent[]
+    // parent[]에 저장된 MST 출력하는 함수
     void printMST(int parent[], int n, int graph[][]) {
         System.out.println("Edge   Weight");
         for (int i = 1; i < V; i++)
@@ -34,46 +33,43 @@ class PrimMST {
                     graph[i][parent[i]]);
     }
 
-    // Function to construct and print MST for a graph represented
-    //  using adjacency matrix representation
+    // 그래프의 MST 구성 및 출력하는 함수
+    // 인접행렬 표현을 사용
     void primMST(int graph[][]) {
-        // Array to store constructed MST
+        // 구성한 MST를 배열에 저장
         int parent[] = new int[V];
 
-        // Key values used to pick minimum weight edge in cut
+        // 최소 가중치 edge를 고르기 위해 사용되는 키 값
         int key[] = new int[V];
 
-        // To represent set of vertices not yet included in MST
+        // 아직 MST에 포함되지 않은 정점들의 집합을 표현
         Boolean mstSet[] = new Boolean[V];
 
-        // Initialize all keys as INFINITE
+        // 모든 키들을 무한대로 초기화
         for (int i = 0; i < V; i++) {
             key[i] = Integer.MAX_VALUE;
             mstSet[i] = false;
         }
 
-        // Always include first 1st vertex in MST.
-        key[0] = 0;     // Make key 0 so that this vertex is
-        // picked as first vertex
-        parent[0] = -1; // First node is always root of MST
+        // MST의 첫 정점을 항상 포함한다
+        key[0] = 0;     //첫 정점으로 만들기 위해 키를 0으로 한다
+        parent[0] = -1; // MST의 root는 항상 첫 노드
 
-        // The MST will have V vertices
+        // MST는 V개의 정점들을 가진다
         for (int count = 0; count < V - 1; count++) {
-            // Pick thd minimum key vertex from the set of vertices
-            // not yet included in MST
+            // 아직 MST에 포함되지 않은 정점들의 집합으로 부터 최소 키 정점을 고른다
             int u = minKey(key, mstSet);
 
-            // Add the picked vertex to the MST Set
+            // 고른 정점을 MST 집합에 추가한다
             mstSet[u] = true;
 
-            // Update key value and parent index of the adjacent
-            // vertices of the picked vertex. Consider only those
-            // vertices which are not yet included in MST
+            // 키값과 인접한 부모 인덱스를 갱신
+            // 아직 MST에 포함되지 않은 정점들만 고려한다
             for (int v = 0; v < V; v++)
 
-                // graph[u][v] is non zero only for adjacent vertices of m
-                // mstSet[v] is false for vertices not yet included in MST
-                // Update the key only if graph[u][v] is smaller than key[v]
+                // graph[u][v]가 0일 때는 edge없는 경우라서 고려하지 않는다
+                // 아직 MST에 포함되지 않은 정점에 대해서 mstSet[v]는 거짓 
+                // graph[u][v]가 key[v]보다 작을 경우 graph[u][v]를 갱신
                 if (graph[u][v] != 0 && mstSet[v] == false &&
                         graph[u][v] < key[v]) {
                     parent[v] = u;
@@ -81,12 +77,12 @@ class PrimMST {
                 }
         }
 
-        // print the constructed MST
+        // 구성된 MST를 출력한다
         printMST(parent, V, graph);
     }
 
     public static void main(String[] args) {
-        /* Let us create the following graph
+        /* 다음 그래프를 
            2    3
         (0)--(1)--(2)
         |    / \   |
@@ -102,7 +98,7 @@ class PrimMST {
                 {0, 5, 7, 9, 0},
         };
 
-        // Print the solution
+        // 결과를 출력
         t.primMST(graph);
     }
 }

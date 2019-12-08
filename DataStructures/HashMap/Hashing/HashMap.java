@@ -9,7 +9,7 @@ class HashMap {
         buckets = new LinkedList[hsize];
         for (int i = 0; i < hsize; i++) {
             buckets[i] = new LinkedList();
-            // Java requires explicit initialisaton of each object
+            // Java는 각 개체의 명시적 초기화를 필요로 한다
         }
         this.hsize = hsize;
     }

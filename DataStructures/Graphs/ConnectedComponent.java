@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * A class that counts the number of different connected components in a graph
+ * 그래프에서 서로 연결된 여러 구성 요소의 수를 계산하는 클래스
  *
  * @author Lukas Keul, Florian Mercks
  */
@@ -37,11 +37,11 @@ class Graph<E extends Comparable<E>> {
     }
 
     /**
-     * Adds a new Edge to the graph. If the nodes aren't yet in nodeList, they
-     * will be added to it.
+     * 노드가 아직 nodeList에 없는 경우, 그래프에 새로운 Edge를 추가한다
+     * 
      *
-     * @param startNode the starting Node from the edge
-     * @param endNode   the ending Node from the edge
+     * @param startNode Edge의 시작 노드
+     * @param endNode   Edge의 끝 노드
      */
     public void addEdge(E startNode, E endNode) {
         Node start = null, end = null;
@@ -65,12 +65,12 @@ class Graph<E extends Comparable<E>> {
     }
 
     /**
-     * Main method used for counting the connected components. Iterates through
-     * the array of nodes to do a depth first search to get all nodes of the
-     * graph from the actual node. These nodes are added to the array
-     * markedNodes and will be ignored if they are chosen in the nodeList.
+     * 연결된 구성 요소를 세는 메인 메소드 
+     * 실제 노드에서 그래프의 모든 노드를 가져오기 위해 DFS(깊이 우선 탐색)를 수행하도록 노드 배열을 반복한다. 
+     * 이 노드들은 배열에 추가된다
+     * markedNode가 nodeList에서 선택될 때 그 노드를 무시한다 
      *
-     * @return returns the amount of unconnected graphs
+     * @return 비연결 그래프의 수를 반환
      */
     public int countGraphs() {
         int count = 0;
@@ -88,11 +88,11 @@ class Graph<E extends Comparable<E>> {
     }
 
     /**
-     * Implementation of depth first search.
+     * DFS(깊이 우선 탐색)를 실행
      *
-     * @param n       the actual visiting node
-     * @param visited A list of already visited nodes in the depth first search
-     * @return returns a set of visited nodes
+     * @param n       실제 방문하고 있는 노드
+     * @param visited DFS에서 이미 방문한 노드
+     * @return 방문한 노드들의 집합을 반환
      */
     public ArrayList<Node> depthFirstSearch(Node n, ArrayList<Node> visited) {
         visited.add(n);

@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class FloydWarshall {
     private int DistanceMatrix[][];
-    private int numberofvertices;//number of vertices in the graph
+    private int numberofvertices;// 그래프의 vertices(정점)의 개수
     public static final int INFINITY = 999;
 
     public FloydWarshall(int numberofvertices) {
-        DistanceMatrix = new int[numberofvertices + 1][numberofvertices + 1];//stores the value of distance from all the possible path form the source vertex to destination vertex
+        DistanceMatrix = new int[numberofvertices + 1][numberofvertices + 1];//소스 정점부터 목적 정점까지의 가능한 모든 경로의 거리 값 저장
         Arrays.fill(DistanceMatrix, 0);
         this.numberofvertices = numberofvertices;
     }
 
-    public void floydwarshall(int AdjacencyMatrix[][])//calculates all the distances from source to destination vertex
+    public void floydwarshall(int AdjacencyMatrix[][])//소스 정점부터 목적 정점까지의 거리 모두 계산
     {
         for (int source = 1; source <= numberofvertices; source++) {
             for (int destination = 1; destination <= numberofvertices; destination++) {
@@ -26,8 +26,7 @@ public class FloydWarshall {
                 for (int destination = 1; destination <= numberofvertices; destination++) {
                     if (DistanceMatrix[source][intermediate] + DistanceMatrix[intermediate][destination]
                             < DistanceMatrix[source][destination])
-                    // if the new distance calculated is less then the earlier shortest
-                        // calculated distance it get replaced as new shortest distance
+                    // shortest보다 작은 거리 값이 계산된 경우 그 값을 새로운 shortest로 대체
                     {
                         DistanceMatrix[source][destination] = DistanceMatrix[source][intermediate]
                                 + DistanceMatrix[intermediate][destination];

@@ -23,16 +23,14 @@ class AdjacencyListGraph<E extends Comparable<E>> {
         public boolean addAdjacentVertex(Vertex to) {
             for (Vertex v : adjacentVerticies) {
                 if (v.data.compareTo(to.data) == 0) {
-                    return false; // the edge already exists
+                    return false; // 이미 존재하는 Edge
                 }
             }
-            return adjacentVerticies.add(to); // this will return true;
+            return adjacentVerticies.add(to); // 이것은 참을 반환한다
         }
 
         public boolean removeAdjacentVertex(E to) {
-            // use indexes here so it is possible to 
-            // remove easily without implementing 
-            // equals method that ArrayList.remove(Object o) uses
+            // 여기서 인덱스를 사용하여 ArrayList.remove 메소드를 사용하지 않고 제거할 수 있다
             for (int i = 0; i < adjacentVerticies.size(); i++) {
                 if (adjacentVerticies.get(i).data.compareTo(to) == 0) {
                     adjacentVerticies.remove(i);
@@ -44,12 +42,10 @@ class AdjacencyListGraph<E extends Comparable<E>> {
     }
 
     /**
-     * this method removes an edge from the graph between two specified
-     * verticies
-     *
-     * @param from the data of the vertex the edge is from
-     * @param to   the data of the vertex the edge is going to
-     * @return returns false if the edge doesn't exist, returns true if the edge exists and is removed
+     * 특정한 두 정점 사이의 edge를 삭제하는 메소드     
+     * @param from edge가 시작하는 vertex의 데이터
+     * @param to   edge가 끝나는 vertex의 데이터
+     * @return edge가 존재하지 않으면 거짓을 반환, 존재한다면 참을 반환하고 삭제 
      */
     public boolean removeEdge(E from, E to) {
         Vertex fromV = null;
@@ -64,22 +60,20 @@ class AdjacencyListGraph<E extends Comparable<E>> {
     }
 
     /**
-     * this method adds an edge to the graph between two specified
-     * verticies
-     *
-     * @param from the data of the vertex the edge is from
-     * @param to   the data of the vertex the edge is going to
-     * @return returns true if the edge did not exist, return false if it already did
+     * 특정한 두 정점 사이의 edge를 추가하는 메소드     
+     * @param from edge가 시작하는 정점의 데이터
+     * @param to   edge가 끝나는 정점의 데이터
+     * @return edge가 존재하지 않을 경우 참을 반환, 아닐 경우 거짓을 반환
      */
     public boolean addEdge(E from, E to) {
         Vertex fromV = null, toV = null;
         for (Vertex v : verticies) {
-            if (from.compareTo(v.data) == 0) { // see if from vertex already exists
+            if (from.compareTo(v.data) == 0) { // 만약 시작 정점이 이미 있을 경우
                 fromV = v;
-            } else if (to.compareTo(v.data) == 0) { // see if to vertex already exists
+            } else if (to.compareTo(v.data) == 0) { // 만약 끝 정점이 이미 있을 경우
                 toV = v;
             }
-            if (fromV != null && toV != null) break; // both nodes exist so stop searching
+            if (fromV != null && toV != null) break; // 두 노드가 있어서 검색을 종료
         }
         if (fromV == null) {
             fromV = new Vertex(from);
@@ -93,9 +87,9 @@ class AdjacencyListGraph<E extends Comparable<E>> {
     }
 
     /**
-     * this gives a list of verticies in the graph and their adjacencies
+     * 이것은 정점의 목록과 이웃들을 제공한다
      *
-     * @return returns a string describing this graph
+     * @return 이 그래프를 나타내는 문자열 반환
      */
     @Override
     public String toString() {
