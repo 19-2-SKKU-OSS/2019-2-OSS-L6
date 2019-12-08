@@ -7,15 +7,15 @@ import java.util.stream.Stream;
 import static java.lang.String.format;
 
 /**
- * Binary search is one of the most popular algorithms
- * This class represents iterative version  {@link BinarySearch}
- * Iterative binary search is likely to have lower constant factors because it doesn't involve the overhead of manipulating the call stack.
- * But in java the recursive version can be optimized by the compiler to this version.
+ * 이진 검색은 가장 인기있는 알고리즘 중 하나입니다
+ *이 클래스는 반복 버전 {@link BinarySearch}을 나타냅니다.
+ * 반복 이진 검색은 호출 스택 조작의 오버 헤드를 포함하지 않기 때문에 상수가 더 낮을 수 있습니다.
+ * 그러나 자바에서는 재귀 버전을 컴파일러 가이 버전으로 최적화 할 수 있습니다.
  * <p>
- * Worst-case performance	O(log n)
- * Best-case performance	O(1)
- * Average performance	O(log n)
- * Worst-case space complexity	O(1)
+ * 최악의 성능 O (log n)
+ * 최고의 성능 O (1)
+ * 평균 성능 O (log n)
+ * 최악의 공간 복잡성 O (1)
  *
  * @author Gabriele La Greca : https://github.com/thegabriele97
  * @author Podshivalov Nikita (https://github.com/nikitap492)
@@ -26,11 +26,11 @@ import static java.lang.String.format;
 public final class IterativeBinarySearch implements SearchAlgorithm {
 
     /**
-     * This method implements an iterative version of binary search algorithm
+     * 이 방법은 반복적 인 버전의 이진 검색 알고리즘을 구현합니다.
      *
-     * @param array a sorted array
-     * @param key   the key to search in array
-     * @return the index of key in the array or -1 if not found
+     * @param array 정렬 된 배열
+     * @param key 배열에서 검색 할 키
+     * @ 배열의 ​​키 인덱스를 반환하거나 찾지 못하면 -1을 반환
      */
     @Override
     public <T extends Comparable<T>> int find(T[] array, T key) {
@@ -55,7 +55,7 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         return -1;
     }
 
-    //Only a main method for test purpose
+    //테스트 목적을위한 주요 방법
     public static void main(String[] args) {
         Random r = new Random();
         int size = 100;
@@ -63,7 +63,7 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //찾아야 할 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         IterativeBinarySearch search = new IterativeBinarySearch();
