@@ -2,6 +2,37 @@
 layout: default
 ---
 
+===================
+# 팀 소개
+## 팀장
+  * 표세승/ 2016314794/ [PYO-SE-SEUNG](https://github.com/PYO-SE-SEUNG)/ 97ss93sh@gmail.com
+  > 담당 : 정적 페이지 제작, Conversion & Cipher 파트
+## 팀원
+  * 유재민/ 2018312113/ [yjm7455](https://github.com/yjm7455)/ email@gmail.com
+  > 담당 : 주석 번역,
+  * 김도현/ 2019310634/ [bidulki](https://github.com/bidulki)/ roseehgus@gmail.com
+  > 담당 : 위키 제작, Data structure 파트 
+  * 이대희/ 2019312978/ [L2dulgi](https://github.com/L2dulgi)/ 2000daehee@gmail.com
+  > 담당 : 위키 제작, Dynamic Programing & Search 파트
+  * 박지훈/ 2019313392/ [qkrwlgns0605](https://github.com/qkrwlgns0605)/ qkrwlgns0605@gmail.com
+  > 담당 : Sorts & Others 파트 
+ 
+* * *
+
+# 선정 프로젝트 소개 
+![TheAlgorithms](https://avatars2.githubusercontent.com/u/20487725?s=200&v=4)
+## 프로젝트명
+   * TheAlgorithms / JAVA
+
+## 프로젝트 Github
+   * [github.com/TheAlgorithms/Java](github.com/TheAlgorithms/Java) 
+## 프로젝트 목적
+   * 이 프로젝트는 Java 표준 라이브러리의 구현보다 덜 효율적이라도 학습 목적을 위해 다양한 알고리즘을 교육용으로 작성하는 것이다.
+
+
+* * *
+
+* * *
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 [Link to another page](./another-page.html).
@@ -92,32 +123,7 @@ end
   - level 2 item
 - level 1 item
 
-### Small image
+#  Team image
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Team_Image](팀이미지파일)
 
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
