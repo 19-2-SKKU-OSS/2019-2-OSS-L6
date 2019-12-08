@@ -38,23 +38,23 @@ public class LongestIncreasingSubsequence {
 
         int[] tail = new int[N];
 
-        // always points empty slot in tail
+        // 항상 꼬리에 빈 슬롯을 가리킴
         int length = 1;
 
         tail[0] = array[0];
         for (int i = 1; i < N; i++) {
 
-            // new smallest value
+            // 새로운 가장 작은 값
             if (array[i] < tail[0])
                 tail[0] = array[i];
 
-                // array[i] extends largest subsequence
+                // array [i]는 가장 큰 하위 시퀀스를 확장합니다
             else if (array[i] > tail[length - 1])
                 tail[length++] = array[i];
 
-                // array[i] will become end candidate of an existing subsequence or
-                // Throw away larger elements in all LIS, to make room for upcoming grater elements than array[i]
-                // (and also, array[i] would have already appeared in one of LIS, identify the location and replace it)
+                // array [i]는 기존 하위 시퀀스의 최종 후보가되거나
+                // 배열보다 다가오는 강판 요소를위한 공간을 만들기 위해 모든 LIS에서 더 큰 요소를 버립니다.
+                // (그리고 array [i]는 이미 LIS 중 하나에 나타 났을 것입니다. 위치를 식별하고 교체하십시오)
             else
                 tail[upperBound(tail, -1, length - 1, array[i])] = array[i];
         }
