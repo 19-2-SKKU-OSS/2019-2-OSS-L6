@@ -77,6 +77,26 @@ layout: default
    * Others에는 실생활에 사용하는 다양한 알고리즘이 있는데, 그 알고리즘에 대한 설명을 추가하고 주석을 추가하였다.
 
 * * *
+# Weekly Activities
+
+| Week | Activity contents | 
+|:-----|:------------------|
+|  10  | OpenSource Project Investigation   | 
+|  11  | OS Project "The Algorithms" Choice | 
+|  12  | Individual Part Distribution & Schedule Fix | 
+|  13  | Individual Code Translation & Explanation Add |
+|  14  | Merge to Master Branch |
+|  15  | Project Presentation Prepare |
+
+* * *
+
+#  Team image
+
+![Team_Image](팀이미지파일)
+
+
+
+* * * 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 [Link to another page](./another-page.html).
@@ -166,8 +186,3 @@ end
   - level 2 item
   - level 2 item
 - level 1 item
-
-#  Team image
-
-![Team_Image](팀이미지파일)
-
