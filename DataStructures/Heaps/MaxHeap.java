@@ -44,7 +44,7 @@ public class MaxHeap implements Heap {
         maxHeap.set(index2 - 1, temporaryElement);
     }
 
-    // Toggle an element up to its right place as long as its key is lower than its parent's
+    // 키가 부모의 키보다 낮은 한, 원소를 그것의 윗 자리로 전환한다.
     private void toggleUp(int elementIndex) {
         double key = maxHeap.get(elementIndex - 1).getKey();
         while (getElementKey((int) Math.floor(elementIndex / 2)) < key) {
@@ -53,7 +53,7 @@ public class MaxHeap implements Heap {
         }
     }
 
-    // 키가 자식의 키보다 높은 한, 원소를 제 자리로 전환한다.
+    // 키가 자식의 키보다 높은 한, 원소를 그것의 아래 자리로 전환한다.
     private void toggleDown(int elementIndex) {
         double key = maxHeap.get(elementIndex - 1).getKey();
         boolean wrongOrder = (key < getElementKey(elementIndex * 2)) || (key < getElementKey(Math.min(elementIndex * 2, maxHeap.size())));
