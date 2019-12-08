@@ -12,10 +12,10 @@ public class FactorialRecursion {
     }
 
     /**
-     * Recursive FactorialRecursion Method
+     * 재귀형 팩토리얼입니다
      *
-     * @param n The number to factorial
-     * @return The factorial of the number
+     * @인자로 숫자 n을 받습니다
+     * @n의 팩토리얼을 반환합니다.
      */
     public static long factorial(int n) {
         if (n < 0) {
