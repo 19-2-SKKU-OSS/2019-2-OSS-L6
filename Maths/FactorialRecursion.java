@@ -15,7 +15,9 @@ public class FactorialRecursion {
      * 재귀형 팩토리얼입니다
      *
      * @인자로 숫자 n을 받습니다
-     * @n의 팩토리얼을 반환합니다.
+     * @n의 팩토리얼을 반환합니다
+     * n 팩토리얼은 1*2*3*...*(n-1)*n 입니다
+     * Factorial.java는 iterative, FactorialRecurion.java는 recursive 합니다
      */
     public static long factorial(int n) {
         if (n < 0) {
