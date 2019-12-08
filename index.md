@@ -2,7 +2,7 @@
 layout: default
 ---
 
-===================
+
 # Team Info
 ## Team Leader
   * PYO-SE-SEUNG/ 2016314794/ [PYO-SE-SEUNG](https://github.com/PYO-SE-SEUNG)/ 97ss93sh@gmail.com
@@ -30,8 +30,44 @@ layout: default
 ## Project Goal
    * 이 프로젝트는 Java 표준 라이브러리의 구현보다 덜 효율적이라도 학습 목적을 위해 다양한 알고리즘을 교육용으로 작성하는 것이다.
 
-
 * * *
+
+# Project Activity Content
+
+## Team Activity Contents
+1. 코드리뷰 및 각 알고리즘의 주석 번역을 통해 국내 사용자들에게 도움을 준다.
+2. 알고리즘의 설명이 빠져있는 부분에 설명을 추가하여 사용자들의 이해를 돕는다.
+3. 이미 구현되어 있는 알고리즘을 리팩토링하여 가독성을 높인다.
+4. 동일한 자료구조나 알고리즘을 다른 방식으로 더 좋게 구현한다.
+5. 프로젝트에 포함되지 않지만 널리 알려져있는 알고리즘을 구현하여 또 다른 교육용 알고리즘 구현 예시를 제안할 수 있다.
+6. 추가되지 않은 알고리즘을 제작하여 contribution guidelines 에 맞게 PR 을 한다.
+
+## Individual Activity Contents
+### PYO-SE-SEUNG
+* Contents
+   * ciper 파트에 DES 암호화 알고리즘을 새로 추가하였다.
+   * Conversion & Cipher 파트 주석 추가 및 번역을 하였다.
+   * 암호화 알고리즘의 이해를 돕기 위해 각각 마크다운 문서를 만들어서 설명을 추가하였다.
+   * 정적페이지를 제작하였다.
+### YOU-JAE-MIN
+* Contents
+### LEE-DAE-HEE
+* Contents
+   * 알고리즘에 대한 기본적인 설명이 누락된 경우, 기본적인 설명을 추가하였다.
+   * Dynaminc Programing 과 Search 알고리즘의 주석을 번역하였다.
+   * Dynamic Programing에 Lexicographically minimal string rotation 의 booth 알고리즘과, Manacher 알고리즘을 새로 추가하였다.
+   * Wiki 목차 및 페이지 생성, 구조 정렬.
+   * Wiki에 개인 활동내용을 추가하는 역할을 수행함.
+### KIM-DO-HYUN
+* Contents
+   * Datastructure 파트의 잘못된 주석을 수정하고 번역하였다.
+   * Datastructure 에 Kruskal 알고리즘을 새로 추가하였다.
+   * wiki 작업을 함
+### PARK-JI-HUN
+* Contents
+   * Sorts에는 여러가지 정렬 알고리즘이 있는데, 코드 상단에 정렬 알고리즘에 대한 설명과 시간복잡도를 추가하고 코드에 대한 설명을 주석으로 달았다.
+   * 또한 TimSort와 IntroSort 알고리즘을 추가하였다.
+   * Others에는 실생활에 사용하는 다양한 알고리즘이 있는데, 그 알고리즘에 대한 설명을 추가하고 주석을 추가하였다.
 
 * * *
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
