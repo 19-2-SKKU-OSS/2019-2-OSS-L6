@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 /**
  *
- * A Java implementation of Caesar Cipher. /It is a type of substitution cipher
- * in which each letter in the plaintext is replaced by a letter some fixed
- * number of positions down the alphabet. /
+ * 카이사르 암호 자바 구현 
+ * 카이사르 암호는 일종의 치환 암호로써, 평문의 각 글자를 정해진 규칙에 따라 다른 글자로 치환하는 암호입니다.
  *
  * @author FAHRI YARDIMCI
  * @author khalil2535
@@ -14,8 +13,8 @@ import java.util.Scanner;
 public class Caesar {
 
     /**
-     * Encrypt text by shifting every Latin char by add number shift for ASCII
-     * Example : A + 1 -> B
+     * 텍스트의 모든 라틴 문자를 시프트 시켜 암호화한다.
+     * 예 : A + 1 -> B
      *
      * @param message
      * @param shift
@@ -52,7 +51,7 @@ public class Caesar {
     }
 
     /**
-     * Decrypt message by shifting back every Latin char to previous the ASCII
+     * 암호화된 텍스트의 모든 문자를 역으로 시프트 시켜 복호화한다.
      * Example : B - 1 -> A
      *
      * @param encryptedMessage
