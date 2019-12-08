@@ -14,7 +14,8 @@
 
 이런 식으로 2번 줄은 2칸 이동,3번 줄은 3칸 이동 카이사르 사이퍼 알파벳과 같다.
 
-비즈네르표.png넣기 
+비즈네르 표   
+![비즈네르 표](./img/vigenere_table.png) 
 
 그러므로 예를 들어 암호화 키로 4번째 사이퍼 알파벳을 사용할 경우,
 a->E로 대체되고,
@@ -26,7 +27,8 @@ g->K로 대체된다.
 예를 들어 비즈네르 암호의 키를 sky라 하였을 때,
 'divert troops to east ridge'는 'VSTWBR LBMGZQ LY CSCR JSBYO'로 암호화된다.
 
-비즈네르암호화결과.png 넣기
+비즈네르 암호화 결과   
+![비즈네르 암호화 결과](./img/vigenere_result.png) 
 
 ## 파트 담당자
 - 표세승(컴퓨터공학/16) : **PYO-SE-SEUNG**  
