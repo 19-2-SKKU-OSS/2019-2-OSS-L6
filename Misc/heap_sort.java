@@ -4,13 +4,13 @@ public class heap_sort {
     public void sort(int[] arr) {
         int n = arr.length;
 
-        // Build heap (rearrange array)
+        // Heap을 만듭니다
         for (int i = n / 2 - 1; i >= 0; i--)
             heapify(arr, n, i);
 
-        // One by one extract an element from heap
+        // Heap에서 원소 하나씩 빼냅니다
         for (int i = n - 1; i >= 0; i--) {
-            // Move current root to end
+            // temp변수를 처음부터 끝까지 보냅니다
             int temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
@@ -20,8 +20,8 @@ public class heap_sort {
         }
     }
 
-    // To heapify a subtree rooted with node i which is
-    // an index in arr[]. n is size of heap
+    // 배열 arr의 노드 i를 루트로 하는 서브트리를 heapify합니다
+    // n은 heap의 크기입니다
     void heapify(int[] arr, int n, int i) {
         int largest = i;  // Initialize largest as root
         int l = 2 * i + 1;  // left = 2*i + 1
