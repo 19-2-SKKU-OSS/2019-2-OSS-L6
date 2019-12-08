@@ -10,12 +10,12 @@ public class FindMaxRecursion {
     }
 
     /**
-     * Get max of array using divide and conquer algorithm
+     * 분할 정복으로 배열에서 최댓값을 찾습니다 
      *
-     * @param array contains elements
-     * @param low   the index of the first element
-     * @param high  the index of the last element
-     * @return max of {@code array}
+     * @인자로 숫자를 포함한 배열을 받습니다
+     * @인자 low는 가장 낮은 색인을 갖는 원소입니다
+     * @인자 high는 가장 높은 색인을 갖는 원소입니다
+     * @배열에서 가장 큰 원소를 반환합니다
      */
     public static int max(int[] array, int low, int high) {
         if (low == high) {
