@@ -1,7 +1,7 @@
 package ciphers;
 
 /**
- * A Java implementation of Vigenere Cipher.
+ * 비즈네르 암호 자바 구현
  * @author  straiffix
  */
 
