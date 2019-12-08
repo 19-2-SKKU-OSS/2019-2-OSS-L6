@@ -4,15 +4,14 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * This class is build to demonstrate the application of the AES-algorithm on a
- * single 128-Bit block of data.
+ * 이 클래스는 AES의 알고리즘을 한 개의 128bit 데이터에 적용시키는 과정을 보여주기위해 생성되었습니다. 
  *
  */
 public class AES {
 
 	/**
-	 * Precalculated values for x to the power of 2 in Rijndaels galois field. Used
-	 * as 'RCON' during the key expansion.
+	 * 아래의 값들은 린델의 갈로아 필드 안에서 사전에 계산된 x에 대한2의 제곱수 값입니다. 
+	 * 키 확장에서 'RCON'으로 사용됩니다.
 	 */
 	private static final int[] RCON = { 0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36, 0x6c, 0xd8,
 			0xab, 0x4d, 0x9a, 0x2f, 0x5e, 0xbc, 0x63, 0xc6, 0x97, 0x35, 0x6a, 0xd4, 0xb3, 0x7d, 0xfa, 0xef, 0xc5, 0x91,
@@ -31,8 +30,8 @@ public class AES {
 			0x66, 0xcc, 0x83, 0x1d, 0x3a, 0x74, 0xe8, 0xcb, 0x8d };
 
 	/**
-	 * Rijndael S-box Substitution table used for encryption in the subBytes step,
-	 * as well as the key expansion.
+	 * 암호화를 위한 subBytes 과정을 위해 사용되는 린델 S-box 치환 테이블입니다.
+	 * 이 테이블 역시 키 확장을 위해서 사용됩니다.
 	 */
 	private static final int[] SBOX = { 0x63, 0x7C, 0x77, 0x7B, 0xF2, 0x6B, 0x6F, 0xC5, 0x30, 0x01, 0x67, 0x2B, 0xFE,
 			0xD7, 0xAB, 0x76, 0xCA, 0x82, 0xC9, 0x7D, 0xFA, 0x59, 0x47, 0xF0, 0xAD, 0xD4, 0xA2, 0xAF, 0x9C, 0xA4, 0x72,
@@ -51,8 +50,8 @@ public class AES {
 			0x68, 0x41, 0x99, 0x2D, 0x0F, 0xB0, 0x54, 0xBB, 0x16 };
 
 	/**
-	 * Inverse Rijndael S-box Substitution table used for decryption in the
-	 * subBytesDec step.
+ 	 * 복호화를 위한 subBytesDec 과정을 위해 사용되는 린델 S-box 역치환 테이블입니다.
+	 * 이 테이블 역시 키 확장을 위해서 사용됩니다.
 	 */
 	private static final int[] INVERSE_SBOX = { 0x52, 0x09, 0x6A, 0xD5, 0x30, 0x36, 0xA5, 0x38, 0xBF, 0x40, 0xA3, 0x9E,
 			0x81, 0xF3, 0xD7, 0xFB, 0x7C, 0xE3, 0x39, 0x82, 0x9B, 0x2F, 0xFF, 0x87, 0x34, 0x8E, 0x43, 0x44, 0xC4, 0xDE,
@@ -71,8 +70,7 @@ public class AES {
 			0xD6, 0x26, 0xE1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0C, 0x7D };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 2 used in the
-	 * MixColums step during encryption.
+	 * 암호화의 MixColums 과정에서 사용되는 갈로아 필드상의 2 곱셈을 미리 계산한 lookup 테이블입니다. 
 	 */
 	private static final int[] MULT2 = { 0x00, 0x02, 0x04, 0x06, 0x08, 0x0a, 0x0c, 0x0e, 0x10, 0x12, 0x14, 0x16, 0x18,
 			0x1a, 0x1c, 0x1e, 0x20, 0x22, 0x24, 0x26, 0x28, 0x2a, 0x2c, 0x2e, 0x30, 0x32, 0x34, 0x36, 0x38, 0x3a, 0x3c,
@@ -91,8 +89,7 @@ public class AES {
 			0xf5, 0xeb, 0xe9, 0xef, 0xed, 0xe3, 0xe1, 0xe7, 0xe5 };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 3 used in the
-	 * MixColums step during encryption.
+	 * 암호화의 MixColums 과정에서 사용되는 갈로아 필드상의 3 곱셈을 미리 계산한 lookup 테이블입니다.
 	 */
 	private static final int[] MULT3 = { 0x00, 0x03, 0x06, 0x05, 0x0c, 0x0f, 0x0a, 0x09, 0x18, 0x1b, 0x1e, 0x1d, 0x14,
 			0x17, 0x12, 0x11, 0x30, 0x33, 0x36, 0x35, 0x3c, 0x3f, 0x3a, 0x39, 0x28, 0x2b, 0x2e, 0x2d, 0x24, 0x27, 0x22,
@@ -111,8 +108,7 @@ public class AES {
 			0x02, 0x13, 0x10, 0x15, 0x16, 0x1f, 0x1c, 0x19, 0x1a };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 9 used in the
-	 * MixColums step during decryption.
+	 * 복호화의 MixColums 과정에서 사용되는 갈로아 필드상의 9 곱셈을 미리 계산한 lookup 테이블입니다.
 	 */
 	private static final int[] MULT9 = { 0x00, 0x09, 0x12, 0x1b, 0x24, 0x2d, 0x36, 0x3f, 0x48, 0x41, 0x5a, 0x53, 0x6c,
 			0x65, 0x7e, 0x77, 0x90, 0x99, 0x82, 0x8b, 0xb4, 0xbd, 0xa6, 0xaf, 0xd8, 0xd1, 0xca, 0xc3, 0xfc, 0xf5, 0xee,
@@ -131,8 +127,7 @@ public class AES {
 			0x0e, 0x79, 0x70, 0x6b, 0x62, 0x5d, 0x54, 0x4f, 0x46 };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 11 used in the
-	 * MixColums step during decryption.
+	 * 복호화의 MixColums 과정에서 사용되는 갈로아 필드상의 11 곱셈을 미리 계산한 lookup 테이블입니다.
 	 */
 	private static final int[] MULT11 = { 0x00, 0x0b, 0x16, 0x1d, 0x2c, 0x27, 0x3a, 0x31, 0x58, 0x53, 0x4e, 0x45, 0x74,
 			0x7f, 0x62, 0x69, 0xb0, 0xbb, 0xa6, 0xad, 0x9c, 0x97, 0x8a, 0x81, 0xe8, 0xe3, 0xfe, 0xf5, 0xc4, 0xcf, 0xd2,
@@ -151,8 +146,7 @@ public class AES {
 			0xfb, 0x92, 0x99, 0x84, 0x8f, 0xbe, 0xb5, 0xa8, 0xa3 };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 13 used in the
-	 * MixColums step during decryption.
+	 * 복호화의 MixColums 과정에서 사용되는 갈로아 필드상의 13 곱셈을 미리 계산한 lookup 테이블입니다.
 	 */
 	private static final int[] MULT13 = { 0x00, 0x0d, 0x1a, 0x17, 0x34, 0x39, 0x2e, 0x23, 0x68, 0x65, 0x72, 0x7f, 0x5c,
 			0x51, 0x46, 0x4b, 0xd0, 0xdd, 0xca, 0xc7, 0xe4, 0xe9, 0xfe, 0xf3, 0xb8, 0xb5, 0xa2, 0xaf, 0x8c, 0x81, 0x96,
@@ -171,8 +165,7 @@ public class AES {
 			0xff, 0xb4, 0xb9, 0xae, 0xa3, 0x80, 0x8d, 0x9a, 0x97 };
 
 	/**
-	 * Precalculated lookup table for galois field multiplication by 14 used in the
-	 * MixColums step during decryption.
+	 * 복호화의 MixColums 과정에서 사용되는 갈로아 필드상의 14 곱셈을 미리 계산한 lookup 테이블입니다.
 	 */
 	private static final int[] MULT14 = { 0x00, 0x0e, 0x1c, 0x12, 0x38, 0x36, 0x24, 0x2a, 0x70, 0x7e, 0x6c, 0x62, 0x48,
 			0x46, 0x54, 0x5a, 0xe0, 0xee, 0xfc, 0xf2, 0xd8, 0xd6, 0xc4, 0xca, 0x90, 0x9e, 0x8c, 0x82, 0xa8, 0xa6, 0xb4,
@@ -191,8 +184,7 @@ public class AES {
 			0xfd, 0xa7, 0xa9, 0xbb, 0xb5, 0x9f, 0x91, 0x83, 0x8d };
 
 	/**
-	 * Subroutine of the Rijndael key expansion.
-	 *
+	 * 린델 키 확장의 서브루틴
 	 * @param t
 	 * @param rconCounter
 	 * @return
@@ -200,38 +192,38 @@ public class AES {
 	public static BigInteger scheduleCore(BigInteger t, int rconCounter) {
 		String rBytes = t.toString(16);
 
-		// Add zero padding
+		// 제로 패딩을 더한다.
 		while (rBytes.length() < 8) {
 			rBytes = "0" + rBytes;
 		}
 
-		// rotate the first 16 bits to the back
+		// 첫 16비트를 뒤로 로테이션 시킨다.
 		String rotatingBytes = rBytes.substring(0, 2);
 		String fixedBytes = rBytes.substring(2);
 
 		rBytes = fixedBytes + rotatingBytes;
 
-		// apply S-Box to all 8-Bit Substrings
+		// S-box를 모든 8비트 Substring들에 적용한다.
 		for (int i = 0; i < 4; i++) {
 			String currentByteBits = rBytes.substring(i * 2, (i + 1) * 2);
 
 			int currentByte = Integer.parseInt(currentByteBits, 16);
 			currentByte = SBOX[currentByte];
 
-			// add the current RCON value to the first byte
+			// 첫번째 바이트에 현재 RCON 값을 더한다.
 			if (i == 0) {
 				currentByte = currentByte ^ RCON[rconCounter];
 			}
 
 			currentByteBits = Integer.toHexString(currentByte);
 
-			// Add zero padding
+			// 제로 패딩을 더한다.
 
 			while (currentByteBits.length() < 2) {
 				currentByteBits = '0' + currentByteBits;
 			}
 
-			// replace bytes in original string
+			// 원본 string의 바이트들을 치환한다.
 			rBytes = rBytes.substring(0, i * 2) + currentByteBits + rBytes.substring((i + 1) * 2);
 		}
 
@@ -242,8 +234,7 @@ public class AES {
 
 	/**
 	 *
-	 * Returns an array of 10 + 1 round keys that are calculated by using Rijndael
-	 * key schedule
+	 * 린델 키 스케줄을 이용하여 계산된 10 + 1 라운드 키의 배열을 반환한다.
 	 *
 	 * @param initialKey
 	 * @return array of 10 + 1 round keys
@@ -253,15 +244,15 @@ public class AES {
 				new BigInteger("0"), new BigInteger("0"), new BigInteger("0"), new BigInteger("0"), new BigInteger("0"),
 				new BigInteger("0"), new BigInteger("0"), };
 
-		// initialize rcon iteration
+		// RCON 반복과정을 초기화한다.
 		int rconCounter = 1;
 
 		for (int i = 1; i < 11; i++) {
 
-			// get the previous 32 bits the key
+			// 이전 32비트 키를 가져온다.
 			BigInteger t = roundKeys[i - 1].remainder(new BigInteger("100000000", 16));
 
-			// split previous key into 8-bit segments
+			// 이전 키를 8비트 세그먼트들로 쪼갠다.
 			BigInteger[] prevKey = { roundKeys[i - 1].remainder(new BigInteger("100000000", 16)),
 					roundKeys[i - 1].remainder(new BigInteger("10000000000000000", 16))
 							.divide(new BigInteger("100000000", 16)),
@@ -269,17 +260,17 @@ public class AES {
 							.divide(new BigInteger("10000000000000000", 16)),
 					roundKeys[i - 1].divide(new BigInteger("1000000000000000000000000", 16)), };
 
-			// run schedule core
+			// schedule core 실행
 			t = scheduleCore(t, rconCounter);
 			rconCounter += 1;
 
-			// Calculate partial round key
+			// 부분 라운드 키를 계산한다.
 			BigInteger t0 = t.xor(prevKey[3]);
 			BigInteger t1 = t0.xor(prevKey[2]);
 			BigInteger t2 = t1.xor(prevKey[1]);
 			BigInteger t3 = t2.xor(prevKey[0]);
 
-			// Join round key segments
+			// 라운드 키 세그먼트들을 합친다.
 			t2 = t2.multiply(new BigInteger("100000000", 16));
 			t1 = t1.multiply(new BigInteger("10000000000000000", 16));
 			t0 = t0.multiply(new BigInteger("1000000000000000000000000", 16));
@@ -290,7 +281,7 @@ public class AES {
 	}
 
 	/**
-	 * representation of the input 128-bit block as an array of 8-bit integers.
+	 * 입력값으로 받는 128비트의 블록을 8비트 정수의 배열로 표현한다.
 	 *
 	 * @param block
 	 *            of 128-bit integers
@@ -301,12 +292,12 @@ public class AES {
 		int[] cells = new int[16];
 		String blockBits = block.toString(2);
 
-		// Append leading 0 for full "128-bit" string
+		// 꽉찬 '128비트' 문자열을 만들기 위해 0을 추가한다.
 		while (blockBits.length() < 128) {
 			blockBits = '0' + blockBits;
 		}
 
-		// split 128 to 8 bit cells
+		// 128비트를 8비트의 조각들로 분리한다.
 		for (int i = 0; i < cells.length; i++) {
 			String cellBits = blockBits.substring(8 * i, 8 * (i + 1));
 			cells[i] = Integer.parseInt(cellBits, 2);
@@ -316,8 +307,7 @@ public class AES {
 	}
 
 	/**
-	 * Returns the 128-bit BigInteger representation of the input of an array of
-	 * 8-bit integers.
+	 * 8비트 정수의 배열을 입력값으로 받아 1개의 128비트의 BigInteger로 반환한다.
 	 *
 	 * @param cells
 	 *            that we need to merge
@@ -329,7 +319,7 @@ public class AES {
 		for (int i = 0; i < 16; i++) {
 			String cellBits = Integer.toBinaryString(cells[i]);
 
-			// Append leading 0 for full "8-bit" strings
+			// 꽉찬 '8비트' 문자열을 만들기 위해 0을 추가한다.
 			while (cellBits.length() < 8) {
 				cellBits = '0' + cellBits;
 			}
@@ -351,8 +341,7 @@ public class AES {
 	}
 
 	/**
-	 * substitutes 8-Bit long substrings of the input using the S-Box and returns
-	 * the result.
+	 * 8비트 길이의 substring들을 암호화를 위한 S-box의 입력값으로 넣어 치환하고 치환된 결과값을 반환한다.
 	 *
 	 * @param ciphertext
 	 * @return subtraction Output
@@ -369,8 +358,7 @@ public class AES {
 	}
 
 	/**
-	 * substitutes 8-Bit long substrings of the input using the inverse S-Box for
-	 * decryption and returns the result.
+	 * 8비트 길이의 substring들을 복호화를 위한 Inverse(역) S-box의 입력값으로 넣어 치환하고 치환된 결과값을 반환한다.
 	 *
 	 * @param ciphertext
 	 * @return subtraction Output
@@ -387,8 +375,7 @@ public class AES {
 	}
 
 	/**
-	 * Cell permutation step. Shifts cells within the rows of the input and returns
-	 * the result.
+	 * 암호화를 위해 조각들을 순열시키는 과정이다. 조각들을 row별로 시프트 시켜 결과값을 반환한다.
 	 *
 	 * @param ciphertext
 	 */
@@ -396,25 +383,25 @@ public class AES {
 		int[] cells = splitBlockIntoCells(ciphertext);
 		int[] output = new int[16];
 
-		// do nothing in the first row
+		// 첫째줄은 아무것도 하지않는다.
 		output[0] = cells[0];
 		output[4] = cells[4];
 		output[8] = cells[8];
 		output[12] = cells[12];
 
-		// shift the second row backwards by one cell
+		// 두번째줄은 한 조각씩 뒤로 시프트한다.
 		output[1] = cells[5];
 		output[5] = cells[9];
 		output[9] = cells[13];
 		output[13] = cells[1];
 
-		// shift the third row backwards by two cell
+		// 세번째줄은 두 조각씩 뒤로 시프트한다.
 		output[2] = cells[10];
 		output[6] = cells[14];
 		output[10] = cells[2];
 		output[14] = cells[6];
 
-		// shift the forth row backwards by tree cell
+		// 네번째줄은 세 조각씩 뒤로 시프트한다.
 		output[3] = cells[15];
 		output[7] = cells[3];
 		output[11] = cells[7];
@@ -424,8 +411,7 @@ public class AES {
 	}
 
 	/**
-	 * Cell permutation step for decryption . Shifts cells within the rows of the
-	 * input and returns the result.
+	 * 복호화를 위해 조각들을 순열시키는 과정이다. 조각들을 row별로 시프트 시켜 결과값을 반환한다.
 	 *
 	 * @param ciphertext
 	 */
@@ -433,25 +419,25 @@ public class AES {
 		int[] cells = splitBlockIntoCells(ciphertext);
 		int[] output = new int[16];
 
-		// do nothing in the first row
+		// 첫째줄은 아무것도 하지않는다.
 		output[0] = cells[0];
 		output[4] = cells[4];
 		output[8] = cells[8];
 		output[12] = cells[12];
 
-		// shift the second row forwards by one cell
+		// 두번째줄은 한 조각씩 앞으로 시프트한다.
 		output[1] = cells[13];
 		output[5] = cells[1];
 		output[9] = cells[5];
 		output[13] = cells[9];
 
-		// shift the third row forwards by two cell
+		// 세번째줄은 두 조각씩 앞으로 시프트한다.
 		output[2] = cells[10];
 		output[6] = cells[14];
 		output[10] = cells[2];
 		output[14] = cells[6];
 
-		// shift the forth row forwards by tree cell
+		// 네번째줄은 세 조각씩 앞으로 시프트한다.
 		output[3] = cells[7];
 		output[7] = cells[11];
 		output[11] = cells[15];
@@ -461,8 +447,7 @@ public class AES {
 	}
 
 	/**
-	 * Applies the Rijndael MixColumns to the input and returns the result.
-	 *
+	 * 암호화를 위해 린델 MixColumns을 입력값에 적용하고 결과값을 반환한다.
 	 * @param ciphertext
 	 */
 	public static BigInteger mixColumns(BigInteger ciphertext) {
@@ -482,8 +467,7 @@ public class AES {
 	}
 
 	/**
-	 * Applies the inverse Rijndael MixColumns for decryption to the input and
-	 * returns the result.
+	 * 복호화를 위해 Inverse(역) 린델 MixColumns을 입력값에 적용하고 결과값을 반환한다.
 	 *
 	 * @param ciphertext
 	 */
@@ -504,7 +488,7 @@ public class AES {
 	}
 
 	/**
-	 * Encrypts the plaintext with the key and returns the result
+	 * 평문을 키로 암호화하고 결과값을 반환한다.
 	 *
 	 * @param plainText
 	 *            which we want to encrypt
@@ -515,10 +499,10 @@ public class AES {
 	public static BigInteger encrypt(BigInteger plainText, BigInteger key) {
 		BigInteger[] roundKeys = keyExpansion(key);
 
-		// Initial round
+		// 초기 라운드
 		plainText = addRoundKey(plainText, roundKeys[0]);
 
-		// Main rounds
+		// 메인 라운드
 		for (int i = 1; i < 10; i++) {
 			plainText = subBytes(plainText);
 			plainText = shiftRows(plainText);
@@ -526,7 +510,7 @@ public class AES {
 			plainText = addRoundKey(plainText, roundKeys[i]);
 		}
 
-		// Final round
+		// 최종 라운드
 		plainText = subBytes(plainText);
 		plainText = shiftRows(plainText);
 		plainText = addRoundKey(plainText, roundKeys[10]);
@@ -535,8 +519,7 @@ public class AES {
 	}
 
 	/**
-	 * Decrypts the ciphertext with the key and returns the result
-	 *
+	 * 암호문을 키로 복호화하고 결과값을 반환한다.
 	 * @param cipherText
 	 *            The Encrypted text which we want to decrypt
 	 * @param key
@@ -546,12 +529,12 @@ public class AES {
 
 		BigInteger[] roundKeys = keyExpansion(key);
 
-		// Invert final round
+		// 역 최종 라운드
 		cipherText = addRoundKey(cipherText, roundKeys[10]);
 		cipherText = shiftRowsDec(cipherText);
 		cipherText = subBytesDec(cipherText);
 
-		// Invert main rounds
+		// 역 메인 라운드
 		for (int i = 9; i > 0; i--) {
 			cipherText = addRoundKey(cipherText, roundKeys[i]);
 			cipherText = mixColumnsDec(cipherText);
@@ -559,7 +542,7 @@ public class AES {
 			cipherText = subBytesDec(cipherText);
 		}
 
-		// Invert initial round
+		// 역 초기 라운드
 		cipherText = addRoundKey(cipherText, roundKeys[0]);
 
 		return cipherText;
