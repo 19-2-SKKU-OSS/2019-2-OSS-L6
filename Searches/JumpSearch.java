@@ -13,16 +13,16 @@ public class JumpSearch implements SearchAlgorithm {
     }
 
     /**
-     * Jump Search algorithm implements
+     * J점프 검색 알고리즘 구현
      *
-     * @param array the array contains elements
-     * @param key   to be searched
-     * @return index of {@code key} if found, otherwise <tt>-1</tt>
+     * @param array is 요소를 포함합니다
+     * 검색 할 @param key
+     * {@code 키}의 @return 색인 (발견 된 경우), 그렇지 않으면 <tt> -1 </ tt>
      */
     @Override
     public <T extends Comparable<T>> int find(T[] array, T key) {
-        int length = array.length; /* length of array */
-        int blockSize = (int) Math.sqrt(length); /* block size to be jumped */
+        int length = array.length; /* 배열의 길이 */
+        int blockSize = (int) Math.sqrt(length); /* 점프할 블록의 크기 */
 
         int limit = blockSize;
         while (key.compareTo(array[limit]) > 0 && limit < array.length - 1) {
@@ -30,10 +30,10 @@ public class JumpSearch implements SearchAlgorithm {
         }
 
         for (int i = limit - blockSize; i <= limit; i++) {
-            if (array[i] == key) { /* execute linear search */
+            if (array[i] == key) { /* 선형 검색 실행 */
                 return i;
             }
         }
-        return -1; /* not found */
+        return -1; /* 찾지 못한 경우 */
     }
 }

@@ -1,11 +1,11 @@
 package DynamicProgramming;
 
 /**
- * DynamicProgramming solution for the Egg Dropping Puzzle
+ * Egg Dropping Puzzle을위한 DynamicProgramming 솔루션
  */
 public class EggDropping {
 
-    // min trials with n eggs and m floors 
+    // n 개의 계란과 m 개의 층으로 시험
 
     private static int minTrials(int n, int m) {
 
@@ -13,16 +13,16 @@ public class EggDropping {
         int result, x;
 
         for (int i = 1; i <= n; i++) {
-            eggFloor[i][0] = 0;   // Zero trial for zero floor.
-            eggFloor[i][1] = 1;   // One trial for one floor 
+            eggFloor[i][0] = 0;   // 0층의 0번째시도
+            eggFloor[i][1] = 1;   // 한 층당 1번의 시도 
         }
 
-        // j trials for only 1 egg
+        // 계란 1개에 대해서 j회 시도
 
         for (int j = 1; j <= m; j++)
             eggFloor[1][j] = j;
 
-        // Using bottom-up approach in DP
+        // DP에서 상향식 접근법 사용
 
         for (int i = 2; i <= n; i++) {
             for (int j = 2; j <= m; j++) {
@@ -30,7 +30,7 @@ public class EggDropping {
                 for (x = 1; x <= j; x++) {
                     result = 1 + Math.max(eggFloor[i - 1][x - 1], eggFloor[i][j - x]);
 
-                    // choose min of all values for particular x
+                    // 특정 x에 대한 모든 값의 최소값을 선택하기
                     if (result < eggFloor[i][j])
                         eggFloor[i][j] = result;
                 }
@@ -42,7 +42,7 @@ public class EggDropping {
 
     public static void main(String args[]) {
         int n = 2, m = 4;
-        // result outputs min no. of trials in worst case for n eggs and m floors
+        // 결과 출력 최소 번호 n 개의 계란과 m 층에 대한 최악의 경우 시험
         int result = minTrials(n, m);
         System.out.println(result);
     }

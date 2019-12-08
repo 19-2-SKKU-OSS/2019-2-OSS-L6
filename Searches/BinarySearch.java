@@ -32,10 +32,10 @@ class BinarySearch implements SearchAlgorithm {
 
     /**
      *
-     * @param array is an array where the element should be found
-     * @param key is an element which should be found
-     * @param <T> is any comparable type
-     * @return index of the element
+     * @param array 요소를 찾아야하는 배열입니다.
+     * @param key 는 우리가 찾을 값입니다.
+     * @param <T> 는 비교가능한 어떤 타입을 의미합니다.
+     * @return 요소의 인덱스 입니다.
      */
     @Override
     public  <T extends Comparable<T>> int find(T[] array, T key) {

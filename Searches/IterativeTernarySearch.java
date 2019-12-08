@@ -7,15 +7,15 @@ import java.util.stream.Stream;
 import static java.lang.String.format;
 
 /**
- * A iterative version of a ternary search algorithm
- * This is better way to implement the ternary search, because a recursive version adds some overhead to a stack.
- * But in java the compile can transform the recursive version to iterative implicitly,
- * so there are no much differences between these two algorithms
+ * 삼항 검색 알고리즘의 반복 버전
+ * 재귀 버전은 스택에 약간의 오버 헤드를 추가하기 때문에 삼항 검색을 구현하는 것이 더 좋습니다.
+ * 그러나 자바에서 컴파일은 재귀 버전을 암시 적으로 반복적으로 변환 할 수 있습니다.
+ *이 두 알고리즘 사이에는 큰 차이가 없습니다.
  * <p>
- * Worst-case performance	Θ(log3(N))
- * Best-case performance	O(1)
- * Average performance	Θ(log3(N))
- * Worst-case space complexity	O(1)
+ * 최악의 성능 Θ (log3 (N))
+ * 최고의 성능 O (1)
+ * 평균 성능 Θ (log3 (N))
+ * 최악의 공간 복잡성 O (1)
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @see SearchAlgorithm
@@ -54,7 +54,7 @@ public class IterativeTernarySearch implements SearchAlgorithm {
 
 
     public static void main(String[] args) {
-        //just generate data
+        //단지 데이터이다.
         Random r = new Random();
         int size = 100;
         int maxElement = 100000;
@@ -64,7 +64,7 @@ public class IterativeTernarySearch implements SearchAlgorithm {
                 .toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //찾아야되는 요소들
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         IterativeTernarySearch search = new IterativeTernarySearch();

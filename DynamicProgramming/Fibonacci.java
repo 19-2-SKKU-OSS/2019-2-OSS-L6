@@ -15,8 +15,7 @@ public class Fibonacci {
 
     public static void main(String[] args) {
 
-        // Methods all returning [0, 1, 1, 2, 3, 5, ...] for n = [0, 1, 2, 3, 4, 5, ...]
-        Scanner sc = new Scanner(System.in);
+        // n = [0, 1, 2, 3, 4, 5, ...]에 대해 모두 [0, 1, 1, 2, 3, 5, ...]를 반환하는 메소드        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         
         System.out.println(fibMemo(n));
@@ -25,10 +24,10 @@ public class Fibonacci {
     }
 
     /**
-     * This method finds the nth fibonacci number using memoization technique
+     * 이 방법은 메모 기술을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     * @param n The input n for which we have to determine the fibonacci number
-     *          Outputs the nth fibonacci number
+     * @param n 피보나치 수를 결정해야하는 입력 n 하고
+     *           n 번째 피보나치 수를 출력합니다
      **/
     public static int fibMemo(int n) {
         if (map.containsKey(n)) {
@@ -47,10 +46,10 @@ public class Fibonacci {
     }
 
     /**
-     * This method finds the nth fibonacci number using bottom up
+     * 이 방법은 상향식을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     * @param n The input n for which we have to determine the fibonacci number
-     *          Outputs the nth fibonacci number
+     *  @param n 피보나치 수를 결정해야하는 입력 n 하고
+     *         n 번째 피보나치 수를 출력합니다
      **/
     public static int fibBotUp(int n) {
 
@@ -71,17 +70,17 @@ public class Fibonacci {
 
 
     /**
-     * This method finds the nth fibonacci number using bottom up
+     * 이 방법은 상향식을 사용하여 n 번째 피보나치 수를 찾습니다.
      *
-     * @param n The input n for which we have to determine the fibonacci number
-     *          Outputs the nth fibonacci number
-     *          <p>
-     *          This is optimized version of Fibonacci Program. Without using Hashmap and recursion.
-     *          It saves both memory and time.
-     *          Space Complexity will be O(1)
-     *          Time Complexity will be O(n)
-     *          <p>
-     *          Whereas , the above functions will take O(n) Space.
+     * @ @param n 피보나치 수를 결정해야하는 입력 n 하고
+     *         n 번째 피보나치 수를 출력합니다
+     * 
+     * 이것은 피보나치 프로그램의 최적화 된 버전입니다. 해시 맵과 재귀를 사용하지 않습니다.
+     * 메모리와 시간을 모두 절약합니다.
+     * 공간 복잡도는 O (1)입니다.
+     * 시간 복잡도는 O (n)입니다.
+     * <p>
+     * 위의 함수는 O (n) 공간을 차지합니다.
      * @author Shoaib Rayeen (https://github.com/shoaibrayeen)
      **/
     public static int fibOptimized(int n) {
