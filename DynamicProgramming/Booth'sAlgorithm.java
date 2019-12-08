@@ -1,120 +1,48 @@
 /**
- ** 자바를 이용한 booth 알고리즘 
- 출처 (https://www.sanfoundry.com/java-program-booth-algorithm/)
- **/
- 
-import java.util.Scanner;
- 
-/** Class Booth **/
-public class Booth
-{
-    public static Scanner s = new Scanner(System.in);
-    /** Function to multiply **/
-    public int multiply(int n1, int n2)
-    {
-        int[] m = binary(n1);
-        int[] m1 = binary(-n1);
-        int[] r = binary(n2);        
-        int[] A = new int[9];
-        int[] S = new int[9];
-        int[] P = new int[9];        
-        for (int i = 0; i < 4; i++)
-        {
-            A[i] = m[i];
-            S[i] = m1[i];
-            P[i + 4] = r[i];
-        }
-        display(A, 'A');
-        display(S, 'S');
-        display(P, 'P');        
-        System.out.println();
- 
-        for (int i = 0; i < 4; i++)
-        {
-            if (P[7] == 0 && P[8] == 0);
-                // do nothing            
-            else if (P[7] == 1 && P[8] == 0)
-                add(P, S);                            
-            else if (P[7] == 0 && P[8] == 1)
-                add(P, A);            
-            else if (P[7] == 1 && P[8] == 1);
-                // do nothing
- 
-            rightShift(P);
-            display(P, 'P');
-        }
-        return getDecimal(P);
+ * This file contains an implementation of Booths algorithms which finds the lexicographically
+ * smallest string rotation.
+ */
+package com.williamfiset.algorithms.strings;
+
+public class BoothsAlgorithm {
+
+  // Performs Booths algorithm returning the earliest index of the
+  // lexicographically smallest string rotation. Note that comparisons
+  // are done using ASCII values, so mixing lowercase and uppercase
+  // letters may give you unexpected results, O(n)
+  public static int leastCyclicRotation(String s) {
+    s += s;
+    int[] f = new int[s.length()];
+    java.util.Arrays.fill(f, -1);
+    int k = 0;
+    for (int j = 1; j < s.length(); j++) {
+      char sj = s.charAt(j);
+      int i = f[j - k - 1];
+      while (i != -1 && sj != s.charAt(k + i + 1)) {
+        if (sj < s.charAt(k + i + 1)) k = j - i - 1;
+        i = f[i];
+      }
+      if (sj != s.charAt(k + i + 1)) {
+        if (sj < s.charAt(k)) k = j;
+        f[j - k] = -1;
+      } else f[j - k] = i + 1;
     }
-    /** Function to get Decimal equivalent of P **/
-    public int getDecimal(int[] B)
-    {
-        int p = 0;
-        int t = 1;
-        for (int i = 7; i >= 0; i--, t *= 2)
-            p += (B[i] * t);
-        if (p > 64)
-            p = -(256 - p);
-        return p;        
-    }
-    /** Function to right shift array **/
-    public void rightShift(int[] A)
-    {        
-        for (int i = 8; i >= 1; i--)
-            A[i] = A[i - 1];        
-    }
-    /** Function to add two binary arrays **/
-    public void add(int[] A, int[] B)
-    {
-        int carry = 0;
-        for (int i = 8; i >= 0; i--)
-        {
-            int temp = A[i] + B[i] + carry;
-            A[i] = temp % 2;
-            carry = temp / 2;
-        }        
-    }
-    /** Function to get binary of a number **/
-    public int[] binary(int n)
-    {
-        int[] bin = new int[4];
-        int ctr = 3;
-        int num = n;
-        /** for negative numbers 2 complment **/
-        if (n < 0)
-            num = 16 + n;
-        while (num != 0)
-        {
-            bin[ctr--] = num % 2;
-            num /= 2;
-        }
-        return bin;
-    }
-    /** Function to print array **/
-    public void display(int[] P, char ch)
-    { 
-        System.out.print("\n"+ ch +" : ");
-        for (int i = 0; i < P.length; i++)
-        {
-            if (i == 4)
-                System.out.print(" ");
-            if (i == 8)
-                System.out.print(" ");
-            System.out.print(P[i]);
-        } 
-    }
-    /** Main function **/
-    public static void main (String[] args) 
-    {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Booth Algorithm Test\n");
-        /** Make an object of Booth class **/
-        Booth b = new Booth();
- 
-        /** Accept two integers **/
-        System.out.println("Enter two integer numbers\n");
-        int n1 = scan.nextInt();
-        int n2 = scan.nextInt();
-        int result = b.multiply(n1, n2);
-        System.out.println("\n\nResult : "+ n1 +" * "+ n2 +" = "+ result);                    
-    }
+    return k;
+  }
+
+  public static void main(String[] args) {
+
+    String s = "abcde";
+    int index = leastCyclicRotation(s);
+
+    // Outputs 0 since the string is already in its least rotation
+    System.out.println(index);
+
+    s = "cdeab";
+    index = leastCyclicRotation(s);
+
+    // Outputs 3 since rotating the string 3 times to the left makes
+    // the smallest rotation: "cdeab" -> "deabc" -> "eabcd" -> "abcde"
+    System.out.println(index);
+  }
 }
