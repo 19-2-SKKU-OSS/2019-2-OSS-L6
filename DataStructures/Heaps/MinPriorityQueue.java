@@ -16,7 +16,7 @@ public class MinPriorityQueue {
     private int capacity;
     private int size;
 
-    // calss the constructor and initializes the capacity 
+    // class the constructor and initializes the capacity 
     MinPriorityQueue(int c) {
         this.capacity = c;
         this.size = 0;
