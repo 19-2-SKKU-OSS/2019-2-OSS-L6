@@ -2,6 +2,7 @@ package Maths;
 
 /**
  * Fibonacci: 0 1 1 2 3 5 8 13 21 ...
+ * 피보나치수열을 구합니다
  */
 public class FibonacciNumber {
     public static void main(String[] args) {
@@ -13,10 +14,10 @@ public class FibonacciNumber {
     }
 
     /**
-     * Check if a number is perfect square number
+     * 숫자가 완전 제곱수인지 판단합니다
      *
-     * @param number the number to be checked
-     * @return <tt>true</tt> if {@code number} is perfect square, otherwise <tt>false</tt>
+     * @인자로 받은 수를 체크합니다
+     * @받은 수가 완전 제곱수이면 true를 반환하고 아니면 false를 반환합니다
      */
     public static boolean isPerfectSquare(int number) {
         int sqrt = (int) Math.sqrt(number);
