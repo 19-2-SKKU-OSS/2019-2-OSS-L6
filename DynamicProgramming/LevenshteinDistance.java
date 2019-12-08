@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 /**
  * @author Kshitij VERMA (github.com/kv19971)
- * LEVENSHTEIN DISTANCE dyamic programming implementation to show the difference between two strings (https://en.wikipedia.org/wiki/Levenshtein_distance)
+ * 두 문자열의 차이를 보여주는 LEVENSHTEIN DISTANCE 동적 프로그래밍 구현 (https://en.wikipedia.org/wiki/Levenshtein_distance)
  */
 
 public class LevenshteinDistance {
@@ -45,9 +45,8 @@ public class LevenshteinDistance {
     }
 
     public static void main(String[] args) {
-        String a = ""; // enter your string here
-        String b = ""; // enter your string here
-
+        String a = ""; // 스트링을 입력해주세요.
+        String b = ""; // 스트링을 입력해주세요.
         System.out.print("Levenshtein distance between " + a + " and " + b + " is: ");
         System.out.println(calculate_distance(a, b));
 
