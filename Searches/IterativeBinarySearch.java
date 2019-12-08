@@ -7,15 +7,15 @@ import java.util.stream.Stream;
 import static java.lang.String.format;
 
 /**
- * Binary search is one of the most popular algorithms
- * This class represents iterative version  {@link BinarySearch}
- * Iterative binary search is likely to have lower constant factors because it doesn't involve the overhead of manipulating the call stack.
- * But in java the recursive version can be optimized by the compiler to this version.
+ * 이진 검색은 가장 인기있는 알고리즘 중 하나입니다
+ *이 클래스는 반복 버전 {@link BinarySearch}을 나타냅니다.
+ * 반복 이진 검색은 호출 스택 조작의 오버 헤드를 포함하지 않기 때문에 상수가 더 낮을 수 있습니다.
+ * 그러나 자바에서는 재귀 버전을 컴파일러 가이 버전으로 최적화 할 수 있습니다.
  * <p>
- * Worst-case performance	O(log n)
- * Best-case performance	O(1)
- * Average performance	O(log n)
- * Worst-case space complexity	O(1)
+ * 최악의 성능 O (log n)
+ * 최고의 성능 O (1)
+ * 평균 성능 O (log n)
+ * 최악의 공간 복잡성 O (1)
  *
  * @author Gabriele La Greca : https://github.com/thegabriele97
  * @author Podshivalov Nikita (https://github.com/nikitap492)
