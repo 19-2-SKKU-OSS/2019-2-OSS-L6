@@ -19,13 +19,13 @@ public class FindMaxRecursion {
      */
     public static int max(int[] array, int low, int high) {
         if (low == high) {
-            return array[low]; //or array[high]
+            return array[low]; //혹은 array[high]를 반환해도 됩니다
         }
 
         int mid = (low + high) >>> 1;
 
-        int leftMax = max(array, low, mid); //get max in [low, mid]
-        int rightMax = max(array, mid + 1, high); //get max in [mid+1, high]
+        int leftMax = max(array, low, mid); //[low, mid]중 더 큰 값을 가져옵니다
+        int rightMax = max(array, mid + 1, high); //[mid+1, high]에서 가장 큰 값을 가져옵니다
 
         return leftMax >= rightMax ? leftMax : rightMax;
     }
