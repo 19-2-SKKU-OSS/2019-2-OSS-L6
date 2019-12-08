@@ -16,15 +16,15 @@ public class MinPriorityQueue {
     private int capacity;
     private int size;
 
-    // class the constructor and initializes the capacity 
+    // capacity를 초기화 해주는 생성자
     MinPriorityQueue(int c) {
         this.capacity = c;
         this.size = 0;
         this.heap = new int[c + 1];
     }
 
-    // inserts the key at the end and rearranges it
-    // so that the binary heap is in appropriate order
+    // 키를 삽입하고 끝에 그것을 재정렬 한다.
+    // 이진 힙이 적절한 순서로 되기 위해서
     public void insert(int key) {
         if (this.isFull())
             return;
@@ -41,35 +41,34 @@ public class MinPriorityQueue {
         this.size++;
     }
 
-    // returns the highest priority value
+    // returns 가장 큰 우선순위 값
     public int peek() {
         return this.heap[1];
     }
 
-    // returns boolean value whether the heap is empty or not
+    // returns  힙이 비어있으면 참, 아니면 거짓
     public boolean isEmpty() {
         if (0 == this.size)
             return true;
         return false;
     }
 
-    // returns boolean value whether the heap is full or not
+    // returns 힙이 가득 차면 참, 아니면 거짓
     public boolean isFull() {
         if (this.size == this.capacity)
             return true;
         return false;
     }
 
-    // prints the heap
+    // 힙 출력
     public void print() {
         for (int i = 1; i <= this.capacity; i++)
             System.out.print(this.heap[i] + " ");
         System.out.println();
     }
 
-    // heap sorting can be done by performing
-    // delete function to the number of times of the size of the heap
-    // it returns reverse sort because it is a min priority queue
+    // 힙 정렬은 delete 함수를 힙의 사이즈 번 수행하는 것으로 수행 될 수 있다.
+    // 최소 힙이기 때문에 역 정렬을 반환한다.
     public void heapSort() {
         for (int i = 1; i < this.capacity; i++)
             this.delete();
