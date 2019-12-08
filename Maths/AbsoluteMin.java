@@ -15,10 +15,10 @@ public class AbsoluteMin {
     }
 
     /**
-     * get the value, it's absolute value is min
+     * 값을 가져와서 절댓값의 최솟값을 구합니다
      *
-     * @param numbers contains elements
-     * @return the absolute min value
+     * @인자로 숫자들을 가져옵니다
+     * @절댓값의 최솟값을 반환합니다
      */
     public static int absMin(int[] numbers) {
         int absMinValue = numbers[0];
