@@ -20,7 +20,7 @@ public interface Heap {
     HeapElement getElement() throws EmptyHeapException;
 
     /**
-     * 요소를 힙에 추가한다. 그 다음 끝까지 추가하고 그 위치를 찾을 때까지 넣었다 뺏다 한다.
+     * 요소를 힙에 추가한다. 그 다음 끝까지 추가하고 그 위치를 찾을 때까지 전환한다.
      *
      * @param HeapElement 클래스의 인스턴스 요소
      */
