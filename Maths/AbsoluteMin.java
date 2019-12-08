@@ -3,7 +3,7 @@ package Maths;
 import java.util.Arrays;
 
 /**
- * description:
+ * 설명: absMin([a, b, c ...])
  * <p>
  * absMin([0, 5, 1, 11]) = 0, absMin([3 , -10, -2]) = -2
  * </p>
