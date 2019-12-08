@@ -1,5 +1,6 @@
 /**
- ** Java Program to Implement Booth Algorithm
+ ** 자바를 이용한 booth 알고리즘 
+ 출처 (https://www.sanfoundry.com/java-program-booth-algorithm/)
  **/
  
 import java.util.Scanner;
