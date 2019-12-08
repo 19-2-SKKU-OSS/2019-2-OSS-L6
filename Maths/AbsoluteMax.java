@@ -3,7 +3,7 @@ package Maths;
 import java.util.Arrays;
 
 /**
- * description:
+ * 설명: absMax([a,b,c, ...])
  * <p>
  * absMax([0, 5, 1, 11]) = 11, absMax([3 , -10, -2]) = -10
  * </p>
