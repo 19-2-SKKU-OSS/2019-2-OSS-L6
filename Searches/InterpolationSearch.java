@@ -11,7 +11,7 @@ import static java.lang.String.format;
  * <p>
  * 최악의 시간복잡도  O(n)
  * 최고상황의 시간복잡도	O(1)
- * 평균 성능	O(log(log(n))) 요소들이 균등하게 분포할때, 균등하게 분포되지 않았다면  O(n)
+ * 평균 성능 O(log(log(n))) 요소들이 균등하게 분포할때, 균등하게 분포되지 않았다면  O(n)이다.
  * 최악의 공간복잡도	O(1)
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
@@ -28,29 +28,30 @@ class InterpolationSearch {
         // 두 코너의 인덱스 찾기
         int start = 0, end = (array.length - 1);
 
-        // Since array is sorted, an element present
-        // in array must be in range defined by corner
+        // 배열이 정렬되므로 요소가 존재합니다
+        // 배열에서 모서리로 정의 된 범위에 있어야합니다
         while (start <= end && key >= array[start] && key <= array[end]) {
-            // Probing the position with keeping
-            // uniform distribution in mind.
+            // 유지하면서 위치 조사
+            // 균일 한 분포를 염두에 두십시오
             int pos = start + (((end - start) / (array[end] - array[start])) * (key - array[start]));
 
             // Condition of target found
             if (array[pos] == key)
                 return pos;
 
-            // If key is larger, key is in upper part
+            // 키가 크면 키가 위쪽에 있습니다.
             if (array[pos] < key)
                 start = pos + 1;
 
-                // If key is smaller, x is in lower part
+              
+            // 키가 작 으면 x는 아래쪽에 있습니다.
             else
                 end = pos - 1;
         }
         return -1;
     }
 
-    // Driver method
+    // 드라이버
     public static void main(String[] args) {
         Random r = new Random();
         int size = 100;
@@ -58,7 +59,7 @@ class InterpolationSearch {
         int[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray();
 
 
-        //the element that should be found
+        // 찾아야할 값.
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         InterpolationSearch search = new InterpolationSearch();
