@@ -9,10 +9,10 @@ public class FindMin {
     }
 
     /**
-     * Find the minimum number of an array of numbers.
+     * 배열의 숫자 중에서 가장 작은 숫자를 찾습니다
      *
-     * @param array the array contains element
-     * @return min value
+     * @숫자를 포함하고 있는 배열을 인자로 받습니다
+     * @최솟값을 반환합니다
      */
     public static int findMin(int[] array) {
         int min = array[0];
