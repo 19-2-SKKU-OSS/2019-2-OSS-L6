@@ -55,7 +55,7 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         return -1;
     }
 
-    //Only a main method for test purpose
+    //테스트 목적을위한 주요 방법
     public static void main(String[] args) {
         Random r = new Random();
         int size = 100;
@@ -63,7 +63,7 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //찾아야 할 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         IterativeBinarySearch search = new IterativeBinarySearch();
