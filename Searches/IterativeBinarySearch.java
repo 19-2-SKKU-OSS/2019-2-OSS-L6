@@ -26,11 +26,11 @@ import static java.lang.String.format;
 public final class IterativeBinarySearch implements SearchAlgorithm {
 
     /**
-     * This method implements an iterative version of binary search algorithm
+     * 이 방법은 반복적 인 버전의 이진 검색 알고리즘을 구현합니다.
      *
-     * @param array a sorted array
-     * @param key   the key to search in array
-     * @return the index of key in the array or -1 if not found
+     * @param array 정렬 된 배열
+     * @param key 배열에서 검색 할 키
+     * @ 배열의 ​​키 인덱스를 반환하거나 찾지 못하면 -1을 반환
      */
     @Override
     public <T extends Comparable<T>> int find(T[] array, T key) {
