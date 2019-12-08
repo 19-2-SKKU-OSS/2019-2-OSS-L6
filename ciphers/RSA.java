@@ -74,7 +74,7 @@ public final class RSA {
     }
 
     /**
-     * Generate a new public and private key set.
+     * 새로운 공개키, 비밀키 쌍을 생성합니다.
      *
      * @param bits
      */
