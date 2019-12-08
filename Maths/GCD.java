@@ -1,8 +1,8 @@
 package Maths;
 
 /**
- * This is Euclid's algorithm which is used to find the greatest common denominator
- * Overide function name gcd
+ * 최대공약수를 찾는 유클리드 알고리즘 입니다
+ * 함수 gcd는 overide를 사용하였습니다 
  *
  * @author Oskar Enmalm 3/10/17
  */
