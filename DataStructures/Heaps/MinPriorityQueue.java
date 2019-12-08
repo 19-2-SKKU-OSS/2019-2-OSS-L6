@@ -1,14 +1,12 @@
 package DataStructures.Heaps;
 
 /**
- * Minimum Priority Queue
- * It is a part of heap data structure
- * A heap is a specific tree based data structure
- * in which all the nodes of tree are in a specific order.
- * that is the children are arranged in some
- * respect of their parents, can either be greater
- * or less than the parent. This makes it a min priority queue
- * or max priority queue.
+ * 최소 우선순위 큐
+ * 이것은 힙 자료구조의 한 종류이다
+ * 힙은 특정한 트리 기반의 자료 구조이다.
+ * 모든 트리의 노드들을 특정한 순서로 배열할 수 있다.
+ * 예를 들면 자식 노드가 부모의 노드 보다 크거나 작은 것으로 배열할 수 있다.
+ * 이러한 점이 최대 우선순위 큐나, 최소 우선순위 큐를 만들 수 있게 해준다.
  * <p>
  * <p>
  * Functions: insert, delete, peek, isEmpty, print, heapSort, sink
@@ -18,7 +16,7 @@ public class MinPriorityQueue {
     private int capacity;
     private int size;
 
-    // calss the constructor and initializes the capacity
+    // calss the constructor and initializes the capacity 
     MinPriorityQueue(int c) {
         this.capacity = c;
         this.size = 0;
@@ -77,7 +75,7 @@ public class MinPriorityQueue {
             this.delete();
     }
 
-    // this function reorders the heap after every delete function
+    // 모든 삭제 함수가 끝난 뒤 힙을 재정렬 해주는 함수
     private void sink() {
         int k = 1;
         while (2 * k <= this.size || 2 * k + 1 <= this.size) {
@@ -105,7 +103,7 @@ public class MinPriorityQueue {
         }
     }
 
-    // deletes the highest priority value from the heap
+    // 힙으로부터 가장 큰 우선순위 값을 삭제한다
     public int delete() {
         int min = this.heap[1];
         this.heap[1] = this.heap[this.size];
@@ -116,7 +114,7 @@ public class MinPriorityQueue {
     }
 
     public static void main(String[] args) {
-        // testing
+        // 시험
         MinPriorityQueue q = new MinPriorityQueue(8);
         q.insert(5);
         q.insert(2);
