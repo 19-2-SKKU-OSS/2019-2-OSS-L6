@@ -16,9 +16,9 @@ public class PrimeCheck {
     }
 
     /***
-     * Checks if a number is prime or not
-     * @param n the number
-     * @return {@code true} if {@code n} is prime
+     * 숫자가 소수인지 아닌지를 확인합니다
+     * @인자 n은 숫자입니다
+     * @숫자 n이 소수이면 true, 아니면 false를 반환합니다
      */
     public static boolean isPrime(int n) {
         if (n == 2) {

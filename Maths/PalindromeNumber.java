@@ -9,10 +9,10 @@ public class PalindromeNumber {
     }
 
     /**
-     * Check if {@code n} is palindrome number or not
+     * 숫자 n이 회문인지 아닌지를 판단합니다
      *
-     * @param number the number
-     * @return {@code true} if {@code n} is palindrome number, otherwise {@code false}
+     * @숫자 n을 인자로 받습니다
+     * @n이 회문이면 true를 반환하고 아니면 false를 반환합니다
      */
     public static boolean isPalindrome(int number) {
         if (number < 0) {

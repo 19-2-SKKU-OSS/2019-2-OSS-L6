@@ -13,13 +13,12 @@ public class MedianOfRunningArray {
 
     //Constructor
     public MedianOfRunningArray() {
-        this.p1 = new PriorityQueue<>(Collections.reverseOrder()); //Max Heap
-        this.p2 = new PriorityQueue<>(); //Min Heap
+        this.p1 = new PriorityQueue<>(Collections.reverseOrder()); //최대 Heap
+        this.p2 = new PriorityQueue<>(); //최소 Heap
     }
 
     /* 
-        Inserting lower half of array to max Heap
-        and upper half to min heap
+        배열의 하위 절반을 최대 heap에 삽입하고 나머지 상위는 최소 heap에 삽입합니다
     */
     public void insert(Integer e) {
         p2.add(e);
@@ -28,7 +27,7 @@ public class MedianOfRunningArray {
     }
 
     /*
-        Returns median at any given point
+        해당 포인트의 중앙값을 반환합니다
     */
     public Integer median() {
         if (p1.size() == p2.size())
@@ -38,7 +37,7 @@ public class MedianOfRunningArray {
 
     public static void main(String[] args) {
         /*
-            Testing the median function
+            중앙값 함수를 테스트합니다
         */
 
         MedianOfRunningArray p = new MedianOfRunningArray();

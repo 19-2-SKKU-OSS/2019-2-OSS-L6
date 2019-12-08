@@ -3,14 +3,12 @@ package Maths;
 public class MaxValue {
 
     /**
-     * Returns the greater of two {@code int} values. That is, the
-     * result is the argument closer to the value of
-     * {@link Integer#MAX_VALUE}. If the arguments have the same value,
-     * the result is that same value.
+     * 가장 큰 값을 반환합니다
+     * 인자가 같으면 결과도 같습니다
      *
-     * @param a an argument.
-     * @param b another argument.
-     * @return the larger of {@code a} and {@code b}.
+     * @a를 인자로 받습니다
+     * @b도 인자로 받습니다
+     * @a와 b 중 더 큰 값을 반환합니다
      */
     public static int max(int a, int b) {
         return a >= b ? a : b;

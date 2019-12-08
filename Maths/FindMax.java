@@ -9,10 +9,10 @@ public class FindMax {
     }
 
     /**
-     * find max of array
+     * 배열의 최댓값을 구합니다
      *
-     * @param array the array contains element
-     * @return max value
+     * @인자로 최댓값을 찾을 숫자를 저장한 배열을 갖습니다
+     * @최댓값을 반환합니다
      */
     public static int findMax(int[] array) {
         int max = array[0];

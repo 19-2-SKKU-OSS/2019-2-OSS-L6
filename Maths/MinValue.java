@@ -3,14 +3,12 @@ package Maths;
 public class MinValue {
 
     /**
-     * Returns the smaller of two {@code int} values. That is,
-     * the result the argument closer to the value of
-     * {@link Integer#MIN_VALUE}.  If the arguments have the same
-     * value, the result is that same value.
+     * 가장 작은 값을 반환합니다
+     * 인자가 같다면 같은 결과가 나옵니다
      *
-     * @param a an argument.
-     * @param b another argument.
-     * @return the smaller of {@code a} and {@code b}.
+     * @a를 인자로 받습니다
+     * @b도 인자로 받습니다
+     * @가장 작은 값을 반환합니다
      */
     public static int min(int a, int b) {
         return a <= b ? a : b;

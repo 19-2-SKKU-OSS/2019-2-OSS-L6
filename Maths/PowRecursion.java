@@ -9,12 +9,11 @@ public class PowRecursion {
     }
 
     /**
-     * Returns the value of the first argument raised to the power of the
-     * second argument
-     *
-     * @param a the base.
-     * @param b the exponent.
-     * @return the value {@code a}<sup>{@code b}</sup>.
+     * 첫 번째 수를 밑으로 하고 두 번째 수를 지수로 합니다
+     *다
+     * @인자 a는 밑으로 받습니다
+     * @인자 b는 지수로 받습니다
+     * @a^b를 반환합니다
      */
     public static long pow(int a, int b) {
         if (b == 0) {

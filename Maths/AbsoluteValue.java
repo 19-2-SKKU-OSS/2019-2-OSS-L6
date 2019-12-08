@@ -12,10 +12,10 @@ public class AbsoluteValue {
     }
 
     /**
-     * If value is less than zero, make value positive.
+     * 값이 0보다 작으면, 0보다 크게 만듭니다
      *
-     * @param value a number
-     * @return the absolute value of a number
+     * @인자로 숫자를 받습니다
+     * @절댓값을 반환합니다
      */
     public static int absVal(int value) {
         return value < 0 ? -value : value;

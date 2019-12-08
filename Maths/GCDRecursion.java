@@ -11,11 +11,11 @@ public class GCDRecursion {
     }
 
     /**
-     * get greatest common divisor
+     * 최대공약수를 구합니다
      *
-     * @param a the first number
-     * @param b the second number
-     * @return gcd
+     * @첫 번째 숫자 a가 인자입니다
+     * @두 번째 숫자 b도 인자입니다
+     * @최대공약수(gcd)를 반환합니다
      */
     public static int gcd(int a, int b) {
 
@@ -27,7 +27,7 @@ public class GCDRecursion {
             return Math.abs(a - b);
         }
 
-        if (a % b == 0) {
+        if (a % b == 0) { //나머지가 0이면 약수라는 의미입니다
             return b;
         } else {
             return gcd(b, a % b);

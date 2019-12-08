@@ -7,10 +7,11 @@ public class Factorial {
     }
 
     /**
-     * Calculate factorial
+     * 팩토리얼을 계산합니다
      *
-     * @param n the number
-     * @return the factorial of {@code n}
+     * @인자로 숫자 n을 받습니다
+     * @n의 팩토리얼을 반환합니다
+     * n 팩토리얼은 1*2*3*...*(n-1)*n 입니다 
      */
     public static long factorial(int n) {
         if (n < 0) {
