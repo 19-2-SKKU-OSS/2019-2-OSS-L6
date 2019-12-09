@@ -23,19 +23,19 @@ public class GenericTree {
     private Node root;
     private int size;
 
-    public GenericTree() {     //Constructor
+    public GenericTree() {     //생성자
         Scanner scn = new Scanner(System.in);
         root = create_treeG(null, 0, scn);
     }
 
     private Node create_treeG(Node node, int childindx, Scanner scn) {
-        // display
+        // 출력
         if (node == null) {
             System.out.println("Enter root's data");
         } else {
             System.out.println("Enter data of parent of index " + node.data + " " + childindx);
         }
-        // input
+        // 입력
         node = new Node();
         node.data = scn.nextInt();
         System.out.println("number of children");
@@ -49,9 +49,9 @@ public class GenericTree {
     }
 
     /**
-     * Function to display the generic tree
+     * 일반 트리를 출력하기 위한 함수
      */
-    public void display() {  //Helper function
+    public void display() {  //helper 함수
         display_1(root);
     }
 
@@ -67,9 +67,9 @@ public class GenericTree {
     }
 
     /**
-     * One call store the size directly but if you are asked compute size this function to calculate
-     * size goes as follows
-     *
+     * 
+     * 한번 호출할때는 바로 크기를 저장한다
+     * 하지만 이 함수에게 크기를 계산하도록 요청한다면 다음과 같다
      * @return size
      */
     public int size2call() {
@@ -85,9 +85,9 @@ public class GenericTree {
     }
 
     /**
-     * Function to compute maximum value in the generic tree
+     * 일반 트리에서 최댓값을 구하는 함수
      *
-     * @return maximum value
+     * @return 최댓값
      */
     public int maxcall() {
         int maxi = root.data;
@@ -105,9 +105,9 @@ public class GenericTree {
     }
 
     /**
-     * Function to compute HEIGHT of the generic tree
+     * 일반 트리의 높이를 구하는 함수
      *
-     * @return height
+     * @return 높이
      */
     public int heightcall() {
         return height(root) - 1;
@@ -124,10 +124,10 @@ public class GenericTree {
     }
 
     /**
-     * Function to find whether a number is present in the generic tree or not
+     * 주어진 수가 일반 트리에 있는지 확인해 주는 함수 
      *
-     * @param info number
-     * @return present or not
+     * @param info 수
+     * @return 존재할때 참을 반환, 아니면 거짓을 
      */
     public boolean findcall(int info) {
         return find(root, info);
@@ -145,9 +145,9 @@ public class GenericTree {
 
 
     /**
-     * Function to calculate depth of generic tree
+     * 일반 트리의 깊이를 구하는 함수
      *
-     * @param dep depth
+     * @param dep 깊이
      */
     public void depthcaller(int dep) {
         depth(root, dep);
