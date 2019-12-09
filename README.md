@@ -2,11 +2,20 @@
 # The Algorithms - Java
 
 
+| Related Links  |
+| :----: |
+| [**PAGE**](https://19-2-SKKU-OSS.github.io/2019-2-OSS-L6/) |
+| [**WIKI**](https://github.com/19-2-SKKU-OSS/2019-2-OSS-L6/wiki)    |
+| [**PROJECT**](https://github.com/19-2-SKKU-OSS/2019-2-OSS-L6/)     |
+| [**ISSUE**](https://github.com/19-2-SKKU-OSS/2019-2-OSS-L6/issues) |
+
+
 NOTE: A [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch is made for this repo where we are trying to migrate the existing project to a Java project structure. You can switch to [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch for contributions. Please refer [this issue](https://github.com/TheAlgorithms/Java/issues/474) for more info.
 
 You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/TheAlgorithms/Java)
+
+
 
 
 ### All algorithms implemented in Java (for education)
