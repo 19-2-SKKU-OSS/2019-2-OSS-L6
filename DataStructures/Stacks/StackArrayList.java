@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * This class implements a Stack using an ArrayList.
+ * 이 클래스는 ArrayList를 사용하여 스택을 구현했다.
  * <p>
  * A stack is exactly what it sounds like. An element gets added to the top of
  * the stack and only the element on the top may be removed.
