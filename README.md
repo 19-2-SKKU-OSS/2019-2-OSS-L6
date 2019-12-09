@@ -47,7 +47,7 @@ These implementations are for learning purposes. They may be less efficient than
 5. Pull-request 페이지에서 변경 내용이 올바른 지 확인하고 필요한 항목을을 추가하세요. 그 다음 Pull-request를 보내시면 검토한 후 변경사항이 반영됩니다.
 
 ## Algorithms
-See our [directory](README-ko.md).
+See our [directory](Algorithms.md).
 
 ## Original Project
 - Github :  https://github.com/TheAlgorithms/Java
