@@ -3,8 +3,8 @@ import java.util.ArrayList;
 /**
  * 이 클래스는 ArrayList를 사용하여 스택을 구현했다.
  * <p>
- * A stack is exactly what it sounds like. An element gets added to the top of
- * the stack and only the element on the top may be removed.
+ * 스택이 의미하는 것은 무더기이다. 
+ * 스택 맨 위에 요소가 추가되고 맨 위에있는 요소 만 제거 될 수 있습니다.
  * <p>
  * This is an ArrayList Implementation of a stack, where size is not
  * a problem we can extend the stack as much as we want.
