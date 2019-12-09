@@ -36,22 +36,21 @@ public class StackArrayList {
     }
 
     /**
-     * ArrayList representation of the stack
+     * ArrayList를 사용한 스택 구현
      */
     private ArrayList<Integer> stackList;
 
     /**
-     * Constructor
+     * 생성자
      */
     public StackArrayList() {
         stackList = new ArrayList<>();
     }
 
     /**
-     * Adds value to the end of list which
-     * is the top for stack
+     * 스택의 맨 위에있는 값을 추가한다.
      *
-     * @param value value to be added
+     * @param value 추가될 값
      */
     public void push(int value) {
         stackList.add(value);
