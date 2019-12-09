@@ -82,19 +82,19 @@ public class BinaryTree {
     }
 
     /**
-     * Inserts certain value into the Binary Tree
+     * 이진 트리에 특정 값 삽입하기
      *
-     * @param value Value to be inserted
+     * @param value 삽입될 값
      */
     public void put(int value) {
         Node newNode = new Node(value);
         if (root == null)
             root = newNode;
         else {
-            //This will return the soon to be parent of the value you're inserting
+            //찾고자하는 값의 부모를 반환한다
             Node parent = find(value);
 
-            //This if/else assigns the new node to be either the left or right child of the parent
+            //부모의 데이터와 값을 비교해 왼쪽 자식에 둘지 오른쪽 자식에 둘지 정한다
             if (value < parent.data) {
                 parent.left = newNode;
                 parent.left.parent = parent;
@@ -108,20 +108,20 @@ public class BinaryTree {
     }
 
     /**
-     * Deletes a given value from the Binary Tree
+     * 이진 트리로 부터 주어진 값을 삭제한다
      *
-     * @param value Value to be deleted
-     * @return If the value was deleted
+     * @param value 삭제될 값
+     * @return 값이 삭제되면 참을 반환
      */
     public boolean remove(int value) {
-        //temp is the node to be deleted
+        //temp는 삭제될 노드이다
         Node temp = find(value);
 
-        //If the value doesn't exist
+        //값이 존재하지 않을 경우
         if (temp.data != value)
             return false;
 
-        //No children
+        //자손이 없다
         if (temp.right == null && temp.left == null) {
             if (temp == root)
                 root = null;
