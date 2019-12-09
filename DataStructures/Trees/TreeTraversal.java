@@ -38,12 +38,12 @@ public class TreeTraversal {
 }
 
 /**
- * The Node class which initializes a Node of a tree
- * Consists of all 4 traversal methods: printInOrder, printPostOrder， printPreOrder & printLevelOrder
- * printInOrder: LEFT -> ROOT -> RIGHT
- * printPreOrder: ROOT -> LEFT -> RIGHT
- * printPostOrder: LEFT -> RIGHT -> ROOT
- * printLevelOrder: Prints by level (starting at root), from left to right.
+ * 트리의 노드를 초기화하는 노드 클래스
+ * 모두 4가지 탐사 메소드가 있다: printInOrder, printPostOrder， printPreOrder & printLevelOrder
+ * printInOrder: LEFT -> ROOT -> RIGHT  (왼쪽 자식- > 루트 -> 오른쪽 자식)
+ * printPreOrder: ROOT -> LEFT -> RIGHT  (루트 -> 왼쪽 자식 -> 오른쪽 자식)
+ * printPostOrder: LEFT -> RIGHT -> ROOT  (왼쪽 자식 -> 오른쪽 자식 -> 루트)
+ * printLevelOrder: 루트에서 시작해서 레벨에 따라 왼쪽에서 오른쪽으로  
  */
 class Node {
     Node left, right;
@@ -100,8 +100,8 @@ class Node {
     }
 
     /**
-     * O(n) time algorithm.
-     * Uses O(n) space to store nodes in a queue to aid in traversal.
+     * 시간 복잡도: O(n)
+     * 공간 복잡도: O(n) 
      */
     public void printLevelOrder() {
         LinkedList<Node> queue = new LinkedList<>();
@@ -109,7 +109,7 @@ class Node {
         while (queue.size() > 0) {
             Node head = queue.remove();
             System.out.print(head.data + " ");
-            // Add children of recently-printed node to queue, if they exist.
+            // 최근에 출력된 노드가 자식을 가지고 있는 경우 그 자식을 큐에 넣는다
             if (head.left != null) {
                 queue.add(head.left);
             }
