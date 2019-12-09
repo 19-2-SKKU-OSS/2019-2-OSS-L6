@@ -67,10 +67,10 @@ class LinkedListStack {
     }
 
     /**
-     * Add element at top
+     * 맨위에 있는 요소를 추가한다.
      *
-     * @param x to be added
-     * @return <tt>true</tt> if add successfully
+     * @param x 추가될 값
+     * @return <tt>true</tt> 성공적으로 추가된 경우
      */
     public boolean push(int x) {
         Node newNode = new Node(x);
@@ -81,10 +81,10 @@ class LinkedListStack {
     }
 
     /**
-     * Pop element at top of stack
+     * 스택의 맨위에 있는 값을 pop한다.
      *
-     * @return element at top of stack
-     * @throws NoSuchElementException if stack is empty
+     * @return 스택에서 pop된 값
+     * @throws NoSuchElementException 스택이 비어있다면
      */
     public int pop() {
         if (size == 0) {
@@ -93,7 +93,7 @@ class LinkedListStack {
         Node destroy = head;
         head = head.next;
         int retValue = destroy.data;
-        destroy = null; // clear to let GC do it's work
+        destroy = null; // GC가 동작하도록 destroy를 비어둔다.
         size--;
         return retValue;
     }
