@@ -12,7 +12,7 @@
 | [**ISSUE**](https://github.com/19-2-SKKU-OSS/2019-2-OSS-L6/issues) |
 
 
-NOTE: A [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기존프로젝트를 Java 프로젝트 구조로 migration하려고 하는 branch가 만들어졌습니다. 여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) 브랜치로 기여를 할 수 있습니다. 더 많은 정보가 필요하시다면 [this issue](https://github.com/TheAlgorithms/Java/issues/474)를 참조하세요.
+NOTE: [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기존프로젝트를 Java 프로젝트 구조로 migration하려고 하는 branch가 만들어졌습니다. 여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) 브랜치로 기여를 할 수 있습니다. 더 많은 정보가 필요하시다면 [this issue](https://github.com/TheAlgorithms/Java/issues/474)를 참조하세요.
 
 
 
