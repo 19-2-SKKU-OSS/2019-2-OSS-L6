@@ -1,5 +1,11 @@
 package Datastructures.Graphs;
-
+/**
+ * 크루스칼의 MST(최소 신장 트리) 알고리즘 자바 프로그램
+ * 프림의 알고리즘은 있는데, 크루스칼의 알고리즘이 없는 것을 보고 추가함
+ * 프림의 알고리즘은 정점을 중심으로 추가하는 반면, 크루스칼 알고리즘은 간선을 중심으로 추가함
+ * @author bidulki
+ *
+ */
 public class KruskalMST {
 	public static void Kruskal(int[][] graph, int n, int[][] t) {
 		int edgeCount = 0;
