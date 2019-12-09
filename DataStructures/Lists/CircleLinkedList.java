@@ -11,49 +11,52 @@ public class CircleLinkedList<E> {
         }
     }
 
-    //For better O.O design this should be private allows for better black box design
+    // 더 나은 0.0디자인 을 위해 이것은 더 나은 블랙 박스 디자인을 위해 private으로 허용해야 한다.
     private int size;
-    //this will point to dummy node;
+    // 이것은 더미 노드로 포인팅 할 것이다.
     private Node<E> head;
 
-    //constructer for class.. here we will make a dummy node for circly linked list implementation with reduced error catching as our list will never be empty;
+    // 클래스를 위한 구조체.. 여기에 원형 연결 리스트를 위한 더미 노드를 만들 것이다.
+    // 리스트가 비어있을 경우는 없기 때문에 에러를 잡는 것을 줄인 구현이다.
     public CircleLinkedList() {
-        //creation of the dummy node
+        //더미 노드 제작
         head = new Node<E>(null, head);
         size = 0;
     }
 
-    // getter for the size... needed because size is private.
+    // size가 private여서 필요하다
     public int getSize() {
         return size;
     }
 
-    // for the sake of simplistiy this class will only contain the append function or addLast other add functions can be implemented however this is the basses of them all really.
+    // 단순화를 위해 이 클래스는 append 함수만 포함할 것이다.
+    // 다른 추가 함수를 구현할 수 있지만. 이것이 그 모든 것의 기본이다.
     public void append(E value) {
         if (value == null) {
-            // we do not want to add null elements to the list.
+            // 리스트에 null을 추가하지 않는다.
             throw new NullPointerException("Cannot add null element to the list");
         }
-        //head.next points to the last element;
+        //head.next는 마지막 요소를 가리키고 있다;
         head.next = new Node<E>(value, head);
         size++;
     }
 
     public E remove(int pos) {
         if (pos > size || pos < 0) {
-            //catching errors
+            //에러
             throw new IndexOutOfBoundsException("position cannot be greater than size or negative");
         }
-        //we need to keep track of the element before the element we want to remove we can see why bellow.
+        //요소를 제거하기 전에 요소를 추적할 필요가 있다
         Node<E> before = head;
         for (int i = 1; i <= pos; i++) {
             before = before.next;
         }
         Node<E> destroy = before.next;
         E saved = destroy.value;
-        // assigning the next reference to the the element following the element we want to remove... the last element will be assigned to the head.
+        // 제거할 요소에 이어 다음 요소에 대한 참조를 할당한다.
+        //마지막 요소는 head에 할당 될 것이다.
         before.next = before.next.next;
-        // scrubbing
+        // 청소
         destroy = null;
         size--;
         return saved;
