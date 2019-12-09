@@ -74,18 +74,18 @@ public class StackArrayList {
     }
 
     /**
-     * Checks for empty Stack
+     * 빈 스택을 검사한다.
      *
-     * @return true if stack is empty
+     * @return true 스택이 비어있다면
      */
     public boolean isEmpty() {
         return stackList.isEmpty();
     }
 
     /**
-     * Top element of stack
+     * 스택의 맨위에 있는 요소
      *
-     * @return top element of stack
+     * @return 스택의 맨위에 있는 요소
      */
     public int peek() {
         return stackList.get(stackList.size() - 1);
