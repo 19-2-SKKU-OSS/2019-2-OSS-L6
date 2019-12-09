@@ -12,14 +12,14 @@ public class LevelOrderTraversal {
         }
     }
 
-    // Root of the Binary Tree
+    // 이진 트리의 루트
     Node root;
 
     public LevelOrderTraversal() {
         root = null;
     }
 
-    /* function to print level order traversal of tree*/
+    /* 트리를 레벨 순으로 출력하는 함수(level order traversal)*/
     void printLevelOrder() {
         int h = height(root);
         int i;
@@ -27,21 +27,23 @@ public class LevelOrderTraversal {
             printGivenLevel(root, i);
     }
 
-    /* Compute the "height" of a tree -- the number of
-    nodes along the longest path from the root node
-    down to the farthest leaf node.*/
+    /* 트리의 높이를 게산한다 --
+     * 루트 노드에서 가장 먼 리프 노드까지 
+     * 아래로 내려가는 가장 긴 경로의 노드의 수.
+     
+   */
     int height(Node root) {
         if (root == null)
             return 0;
         else {
             /**
-             * Return the height of larger subtree
+             * 더 큰 서브트리의 높이를 반환한다
              */
             return Math.max(height(root.left), height(root.right)) + 1;
         }
     }
 
-    /* Print nodes at the given level */
+    /* 주어진 레벨에서 노드를 출력 */
     void printGivenLevel(Node root, int level) {
         if (root == null)
             return;
