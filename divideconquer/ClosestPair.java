@@ -1,43 +1,43 @@
 package divideconquer;
 
 /**
- * For a set of points in a coordinates system (10000 maximum),
- * ClosestPair class calculates the two closest points.
- *
- * @author: anonymous
- * @author: Marisa Afuera
+* 좌표 시스템의 포인트 세트 (최대 10000)
+* ClosestPair 클래스는 가장 가까운 두 지점을 계산합니다.
+*
+* @ 저자 : 익명
+* @ 저자 : Marisa Afuera
  */
 
 public final class ClosestPair {
 
 
     /**
-     * Number of points
+     * 포인트의 개수
      */
     int numberPoints = 0;
     /**
-     * Input data, maximum 10000.
+     * 입력할 데이터 최대 100000.
      */
     private Location[] array;
     /**
-     * Minimum point coordinate.
+     * 최소점 좌표.
      */
     Location point1 = null;
     /**
-     * Minimum point coordinate.
+     * 최소점 좌표.
      */
     Location point2 = null;
     /**
-     * Minimum point length.
+     * 최소점 길이.
      */
     private static double minNum = Double.MAX_VALUE;
     /**
-     * secondCount
+     * 두번째 카운트
      */
     private static int secondCount = 0;
 
     /**
-     * Constructor.
+     * 생성자
      */
     ClosestPair(int points) {
         numberPoints = points;
@@ -45,7 +45,7 @@ public final class ClosestPair {
     }
 
     /**
-     * Location class is an auxiliary type to keep points coordinates.
+     * 위치 클래스는 점 좌표를 유지하는 보조 유형입니다.
      */
 
     public static class Location {
