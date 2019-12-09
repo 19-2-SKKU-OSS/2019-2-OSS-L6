@@ -1,6 +1,6 @@
 /**
-* Implementation of a stack using nodes.
-* Unlimited size, no arraylist.
+* 노드를 사용한 스택 구현
+* 무제한의 크기, arraylist를 사용하지 않은
 *
 * @author Kyler Smith, 2017
 */
@@ -9,7 +9,7 @@
 public class NodeStack<Item> {
 
     /**
-    * Entry point for the program.
+    * 프로그램 진입
     */
     public static void main(String[] args) {
         NodeStack<Integer> Stack = new NodeStack<Integer>();
@@ -33,12 +33,12 @@ public class NodeStack<Item> {
     }
 
     /**
-    * Information each node should contain.
-    * @value data : information of the value in the node
-    * @value head : the head of the stack
-    * @value next : the next value from this node
-    * @value previous : the last value from this node
-    * @value size : size of the stack
+    * 각 노드에 포함되어야 하는 정보
+    * @value data : 노드 값 정보
+    * @value head : 스택의 head
+    * @value next : 노드 다음의 값
+    * @value previous : 이 노드로부터 마지막 값
+    * @value size : 스택의 크기
     */
     private Item data;
     private static NodeStack<?> head;
@@ -48,7 +48,7 @@ public class NodeStack<Item> {
 
 
     /**
-    * Constructors for the NodeStack.
+    * NodeStack의 생성자
     */
     public NodeStack() {
 	}
@@ -58,9 +58,9 @@ public class NodeStack<Item> {
     }
 
     /**
-    * Put a value onto the stack.
+    * stack에 값을 넣는다.
     *
-    * @param item : value to be put on the stack.
+    * @param item : 스택에 넣을 값
     */
     public void push(Item item) {
 
@@ -80,9 +80,9 @@ public class NodeStack<Item> {
     }
 
     /**
-    * Value to be taken off the stack.
+    * 스택에서 값 꺼내기
     *
-    * @return item : value that is returned.
+    * @return item : 반환된 값
     */
     public Item pop() {
 
@@ -97,34 +97,34 @@ public class NodeStack<Item> {
     }
 
     /**
-    * Value that is next to be taken off the stack.
+    * 스택에서 다음으로 제거할 값
     *
-    * @return item : the next value that would be popped off the stack.
+    * @return item : 스택에서 팝된 다음 값
     */
     public Item peek() {
         return (Item) NodeStack.head.getData();
     }
 
     /**
-    * If the stack is empty or there is a value in.
+    * 스택에 비어있는지 아닌지 검사
     *
-    * @return boolean : whether or not the stack has anything in it.
+    * @return boolean : 스택이 비어있는지 아닌지
     */
     public boolean isEmpty() {
         return NodeStack.getSize() == 0;
     }
 
     /**
-    * Returns the size of the stack.
+    * Returns 스택의 크기
     *
-    * @return int : number of values in the stack.
+    * @return int : 스택에 있는 값 개수
     */
     public int size() {
         return NodeStack.getSize();
     }
 
     /**
-    * Print the contents of the stack in the following format.
+    * 스택의 내용을 다음 형식으로 출력한다.
     *
     * x <- head (next out)
     * y
