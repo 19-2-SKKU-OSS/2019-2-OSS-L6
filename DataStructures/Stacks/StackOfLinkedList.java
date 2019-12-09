@@ -41,20 +41,20 @@ class Node {
 }
 
 /**
- * A class which implements a stack using a linked list
+ * 연결 리스트를 사용한 스택을 구현한 클래스
  * <p>
- * Contains all the stack methods : push, pop, printStack, isEmpty
+ * 모든 스택 메소드를 포함한다 : push, pop, printStack, isEmpty
  **/
 
 class LinkedListStack {
 
     /**
-     * Top of stack
+     * 스택의 맨 위
      */
     Node head;
 
     /**
-     * Size of stack
+     * 스택의 크기
      */
     private int size;
 
