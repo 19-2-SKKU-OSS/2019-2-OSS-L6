@@ -35,7 +35,7 @@ These implementations are for learning purposes. They may be less efficient than
 
 2. 여러 항목들을 변경하시고 add하세요. 그 다음 -m 옵션으로 어떤 사항을 추가/삭제/변경하셨는지 commit message를 남겨주세요.
 
-    `$ git add Algorithm.java`
+    `$ git add Algorithm.java`  
     `$ git commit -m "add description for Algorithm.java"`
     
 3. fork의 원격 저장소에 토픽 브랜치를 push 하세요.
