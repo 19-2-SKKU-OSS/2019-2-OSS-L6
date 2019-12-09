@@ -12,7 +12,7 @@ public class KruskalMST {
 		int i= 0;
 		int v1, v2;
 		int s1, s2;
-		int[] s = {0,1,2,3,4,5};
+		int[] s = {0,1,2,3,4};
 		while(edgeCount < n-1) {
 			v1 =graph[i][0];
 			v2 = graph[i][1];
@@ -33,13 +33,19 @@ public class KruskalMST {
 	}
 	
 	public static void main(String[] args) {
-	
-		int[][] graph = {{3,4}, {2,3}, {2,4}, {0,1}, {0,2}, {1,2}, {0,5},
-				{0,4}, {4,5}};
-		int[][] t = new int[5][2];
-		Kruskal(graph,6,t);
+		/* 프림 알고리즘의 예시와 같은 예시를 사용
+			2    3
+		     (0)--(1)--(2)
+		     |    / \   |
+		     6| 8/   \5 |7
+		     | /      \ |
+		     (3)-------(4)
+			  9          */
+		int[][] graph = {{0,1}, {1,2}, {1,4}, {0,3}, {2,4}, {1,3}, {3,4}};
+		int[][] t = new int[4][2];
+		Kruskal(graph,5,t);
 		for(int i=0; i< t.length; i++) {
-			System.out.println(t[i][0]+1+" "+ (t[i][1]+1));
+			System.out.println(t[i][0]+" "+ (t[i][1]));
 		}
 		
 	}
