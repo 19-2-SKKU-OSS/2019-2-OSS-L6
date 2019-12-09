@@ -4,7 +4,7 @@ package DataStructures.Stacks;
  * @author Varun Upadhyay (https://github.com/varunu28)
  */
 
-// An implementation of a Stack using a Linked List
+// 연결 리스트를 사용한 스택 구현
 
 class StackOfLinkedList {
 
@@ -28,7 +28,7 @@ class StackOfLinkedList {
     }
 }
 
-// A node class
+// 노드 
 
 class Node {
     public int data;
