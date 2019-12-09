@@ -1,51 +1,51 @@
 package DataStructures.Queues;
 
 /**
- * This implements Queues by using the class Queue.
+ * 이 클래스는 큐 클래스를 사용하여 큐를 구현한 클래스이다.
  * <p>
- * A queue data structure functions the same as a real world queue.
- * The elements that are added first are the first to be removed.
- * New elements are added to the back/rear of the queue.
+ * 큐 자료 구조 함수는 현실의 줄서기 와 같다.
+ * 먼저 추가된 요소가 먼저 제거된다.
+ * 새로운 요소는 큐의 뒤쪽에 추가된다.
  *
  */
 class Queue {
     /**
-     * Default initial capacity.
+     * capacity의 디폴트 초기화
      */
     private static final int DEFAULT_CAPACITY = 10;
 
     /**
-     * Max size of the queue
+     * 큐의 최대 크기
      */
     private int maxSize;
     /**
-     * The array representing the queue
+     * 큐를 나타내는 배열
      */
     private int[] queueArray;
     /**
-     * Front of the queue
+     * 큐의 앞
      */
     private int front;
     /**
-     * Rear of the queue
+     * 큐의 뒤
      */
     private int rear;
     /**
-     * How many items are in the queue
+     * 큐에 들어있는 아이템의 개수
      */
     private int nItems;
 
     /**
-     * init with DEFAULT_CAPACITY
+     * init with DEFAULT_CAPACITY 
      */
     public Queue() {
         this(DEFAULT_CAPACITY);
     }
 
     /**
-     * Constructor
+     * 생성자
      *
-     * @param size Size of the new queue
+     * @param size 새로운 큐의 크기
      */
     public Queue(int size) {
         maxSize = size;
@@ -56,10 +56,10 @@ class Queue {
     }
 
     /**
-     * Inserts an element at the rear of the queue
+     * 큐의 뒤쪽에 새로운 요소 삽입
      *
-     * @param x element to be added
-     * @return True if the element was added successfully
+     * @param x 추가될 요소
+     * @return True 요소 추가 성공시 
      */
     public boolean insert(int x) {
         if (isFull())
@@ -72,9 +72,9 @@ class Queue {
     }
 
     /**
-     * Remove an element from the front of the queue
+     * queue의 앞 요소 삭제
      *
-     * @return the new front of the queue
+     * @return 새로운 큐의 앞 
      */
     public int remove() {
         if (isEmpty()) {
@@ -87,45 +87,45 @@ class Queue {
     }
 
     /**
-     * Checks what's at the front of the queue
+     * 큐 앞에 무엇이 있는지 검사
      *
-     * @return element at the front of the queue
+     * @return 큐 앞의 요소
      */
     public int peekFront() {
         return queueArray[front];
     }
 
     /**
-     * Checks what's at the rear of the queue
+     * queue 뒤에 무엇이 있는지 검사
      *
-     * @return element at the rear of the queue
+     * @return queue 뒤에 요소 
      */
     public int peekRear() {
         return queueArray[rear];
     }
 
     /**
-     * Returns true if the queue is empty
+     * 큐가 비어있을 경우 참 반환
      *
-     * @return true if the queue is empty
+     * @return 큐가 비어있을 경우
      */
     public boolean isEmpty() {
         return nItems == 0;
     }
 
     /**
-     * Returns true if the queue is full
+     * 큐가 가득 찰 경우 참 반환
      *
-     * @return true if the queue is full
+     * @return true 큐가 가득 찰 경우
      */
     public boolean isFull() {
         return nItems == maxSize;
     }
 
     /**
-     * Returns the number of elements in the queue
+     * 큐의 요소 개수를 반환
      *
-     * @return number of elements in the queue
+     * @return 큐의 요소 개수
      */
     public int getSize() {
         return nItems;
@@ -147,15 +147,15 @@ class Queue {
 }
 
 /**
- * This class is the example for the Queue class
+ * 큐 클래스 예시를 위한 클래스
  *
  * @author Unknown
  */
 public class Queues {
     /**
-     * Main method
+     * 메인 메소드
      *
-     * @param args Command line arguments
+     * @param args 커맨드 라인
      */
     public static void main(String[] args) {
         Queue myQueue = new Queue(4);
@@ -165,12 +165,12 @@ public class Queues {
         myQueue.insert(3);
         // [10(front), 2, 5, 3(rear)]
 
-        System.out.println(myQueue.isFull()); // Will print true
+        System.out.println(myQueue.isFull()); // 참 출력할 것이다.
 
-        myQueue.remove(); // Will make 2 the new front, making 10 no longer part of the queue
+        myQueue.remove(); // 2를 새로운 전선으로 만들고, 10을 더 이상 큐에 포함하지 않음
         // [10, 2(front), 5, 3(rear)]
 
-        myQueue.insert(7); // Insert 7 at the rear which will be index 0 because of wrap around
+        myQueue.insert(7); // 반복으로 인해 인덱스가 0이 될 큐의 뒤에 7을 삽입히다.
         // [7(rear), 2(front), 5, 3]
 
         System.out.println(myQueue.peekFront()); // Will print 2
