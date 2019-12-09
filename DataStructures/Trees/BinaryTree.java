@@ -2,7 +2,7 @@ package DataStructures.Trees;
 
 /**
  * 이 클래스는 이진 트리 자료 구조를 만드는 데 사용된다
- * 노드 클래스와 트리클래스 둘다 밑에 설명되있다.
+ * 노드 클래스와 트리 클래스 둘다 밑에 설명되있다.
  */
 
 
@@ -24,19 +24,19 @@ public class BinaryTree {
      *
      */
     class Node {
-        /** Data for the node */
+        /** 노드의 데이터*/
         public int data;
-        /** The Node to the left of this one */
+        /** 이 노드의 왼쪽 자손 */
         public Node left;
-        /** The Node to the right of this one */
+        /** 이 노드의 오른쪽 자손*/
         public Node right;
-        /** The parent of this node */
+        /** 이 노드의 부모 */
         public Node parent;
 
         /**
-         * Constructor of Node
+         * 노드 생성자
          *
-         * @param value Value to put in the node
+         * @param value 노드에 넣을 값
          */
         public Node(int value) {
             data = value;
@@ -47,34 +47,34 @@ public class BinaryTree {
     }
 
 
-    /** The root of the Binary Tree */
+    /** 이진트리의 루트 */
     private Node root;
 
     /**
-     * Constructor
+     * 생성자
      */
     public BinaryTree() {
         root = null;
     }
 
     /**
-     * Method to find a Node with a certain value
+     * 특정한 값으로 노드를 찾는 메소드
      *
-     * @param key Value being looked for
-     * @return The node if it finds it, otherwise returns the parent
+     * @param key 찾고자하는 값
+     * @return 그 노드를 발견할 경우 노드를 반환하고, 아닐 경우 부모를 반환한다
      */
     public Node find(int key) {
         Node current = root;
         while (current != null) {
             if (key < current.data) {
                 if (current.left == null)
-                    return current;    //The key isn't exist, returns the parent
+                    return current;    // 키가 존재하지 않으므로 부모를 반환한다.
                 current = current.left;
             } else if (key > current.data) {
                 if (current.right == null)
                     return current;
                 current = current.right;
-            } else {    // If you find the value return it
+            } else {    // 발견한 값을 
                 return current;
             }
         }
