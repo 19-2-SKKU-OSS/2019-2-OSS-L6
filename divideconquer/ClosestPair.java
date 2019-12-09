@@ -77,73 +77,73 @@ public final class ClosestPair {
 
 
     /**
-     * xPartition function: arrange x-axis.
+     * xPartition 기능 : x 축 정렬.
      *
-     * @param a     (IN Parameter)  array of points <br/>
-     * @param first (IN Parameter)  first point <br/>
-     * @param last  (IN Parameter)  last point <br/>
-     * @return pivot index
+     * @param a (IN Parameter) 포인트 배열 <br/>
+     * @param first (IN Parameter) 첫 번째 지점 <br/>
+     * @param last (IN Parameter) 마지막 지점 <br/>
+     * @return pivot 인덱스
      */
 
     public int xPartition(
             final Location[] a, final int first, final int last) {
 
-        Location pivot = a[last]; // pivot
+        Location pivot = a[last]; // 피벗
         int pIndex = last;
         int i = first - 1;
-        Location temp; // Temporarily store value for position transformation
+        Location temp; // 위치 변환을 위해 값을 임시로 저장
         for (int j = first; j <= last - 1; j++) {
-            if (a[j].x <= pivot.x) { // Less than or less than pivot
+            if (a[j].x <= pivot.x) { // 피벗 이하
                 i++;
-                temp = a[i]; // array[i] <-> array[j]
+                temp = a[i]; // array[i] <-> array[j] 교환
                 a[i] = a[j];
                 a[j] = temp;
             }
         }
         i++;
-        temp = a[i]; // array[pivot] <-> array[i]
+        temp = a[i]; // array[pivot] <-> array[i] 교환
         a[i] = a[pIndex];
         a[pIndex] = temp;
-        return i; // pivot index
+        return i; // 피벗 인덱스
     }
 
     /**
-     * yPartition function: arrange y-axis.
+     * y 파티션 기능 : y 축 정렬.
      *
-     * @param a     (IN Parameter)  array of points <br/>
-     * @param first (IN Parameter)  first point <br/>
-     * @param last  (IN Parameter)  last point <br/>
+     * @param a (IN Parameter) 포인트 배열 <br/>
+     * @param first (IN Parameter) 첫 번째 지점 <br/>
+     * @param last (IN Parameter) 마지막 지점 <br/>
      * @return pivot index
      */
 
     public int yPartition(
             final Location[] a, final int first, final int last) {
 
-        Location pivot = a[last]; // pivot
+        Location pivot = a[last]; // 피벗
         int pIndex = last;
         int i = first - 1;
-        Location temp; // Temporarily store value for position transformation
+        Location temp; // 위치 변환을 위해 값을 임시로 저장
         for (int j = first; j <= last - 1; j++) {
-            if (a[j].y <= pivot.y) { // Less than or less than pivot
+            if (a[j].y <= pivot.y) { // 피벗보다 작은 값
                 i++;
-                temp = a[i]; // array[i] <-> array[j]
+                temp = a[i]; // array[i] <-> array[j] 교환
                 a[i] = a[j];
                 a[j] = temp;
             }
         }
         i++;
-        temp = a[i]; // array[pivot] <-> array[i]
+        temp = a[i]; // array[pivot] <-> array[i] 교환 
         a[i] = a[pIndex];
         a[pIndex] = temp;
         return i; // pivot index
     }
 
     /**
-     * xQuickSort function: //x-axis Quick Sorting.
+     * xQuickSort 함수 : // x 축 빠른 정렬.
      *
-     * @param a     (IN Parameter)  array of points <br/>
-     * @param first (IN Parameter)  first point <br/>
-     * @param last  (IN Parameter)  last point <br/>
+     * @param a (IN Parameter) 포인트 배열 <br/>
+     * @param first (IN Parameter) 첫 번째 지점 <br/>
+     * @param last (IN Parameter) 마지막 지점 <br/>
      */
 
     public void xQuickSort(
@@ -157,11 +157,11 @@ public final class ClosestPair {
     }
 
     /**
-     * yQuickSort function: //y-axis Quick Sorting.
+     * yQuickSort 기능 : // y 축 빠른 정렬.
      *
-     * @param a     (IN Parameter)  array of points <br/>
-     * @param first (IN Parameter)  first point <br/>
-     * @param last  (IN Parameter)  last point <br/>
+     * @param a (IN Parameter) 포인트 배열 <br/>
+     * @param first (IN Parameter) 첫 번째 지점 <br/>
+     * @param last (IN Parameter) 마지막 지점 <br/>
      */
 
     public void yQuickSort(
