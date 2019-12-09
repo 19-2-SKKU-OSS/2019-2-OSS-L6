@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * 스택이 의미하는 것은 무더기이다. 
  * 스택 맨 위에 요소가 추가되고 맨 위에있는 요소 만 제거 될 수 있습니다.
  * <p>
- * This is an ArrayList Implementation of a stack, where size is not
- * a problem we can extend the stack as much as we want.
+ * 이것은 ArrayList을 사용한 stack구현이다.
+ * 우리가 원하는 만큼 스택을 확장할 수 있기 때문에 크기는 문제가 되지 않는다. 
  *
  * @author Unknown
  */
