@@ -28,7 +28,7 @@ public class CursorLinkedList<T> {
 
 
     {
-        // init at loading time
+        // 로딩시에 init
         cursorSpace = new Node[CURSOR_SPACE_SIZE];
         for (int i = 0; i < CURSOR_SPACE_SIZE; i++) {
             cursorSpace[i] = new Node<>(null, i + 1);
@@ -61,8 +61,7 @@ public class CursorLinkedList<T> {
 
 
     /**
-     * @return the logical index of the element within the list , not the actual
-     * index of the [cursorSpace] array
+     * @return 실제 [cursorSpace] 배열의 인덱스가 아닌 리스트에 들어있는 요소의 타당한 인덱스
      */
     public int indexOf(T element) {
 
@@ -82,9 +81,8 @@ public class CursorLinkedList<T> {
 
 
     /**
-     * @param position , the logical index of the element , not the actual one
-     *                 within the [cursorSpace] array .
-     *                 this method should be used to get the index give by indexOf() method.
+     * @param position , 실제 [cursorSpace] 배열의 인덱스가 아닌 리스트에 들어있는 요소의 타당한 인덱스
+     *                 이 메소드는 indexof()메소드로 부터 밭은 인덱스를 사용해야 한다.
      * @return
      */
 
@@ -126,13 +124,13 @@ public class CursorLinkedList<T> {
 
         Objects.requireNonNull(element);
 
-        // case element is in the head
+        // case 요소는 head에 있다.
         T temp_element = cursorSpace[head].element;
         int temp_next = cursorSpace[head].next;
         if (temp_element.equals(element)) {
             free(head);
             head = temp_next;
-        } else { // otherwise cases
+        } else { // 다른 
 
             int prev_index = head;
             int current_index = cursorSpace[prev_index].next;
@@ -191,24 +189,25 @@ public class CursorLinkedList<T> {
     }
 
     /**
-     * @return the index of the next available node
+     * @return 다음으로 사용가능한 노드의 인덱스
      */
     private int alloc() {
 
 
-        //1- get the index at which the os is pointing
+        //1- os가 가리키는 인덱스를 받는다
         int availableNodeIndex = cursorSpace[os].next;
 
         if (availableNodeIndex == 0) {
             throw new OutOfMemoryError();
         }
 
-        //2- make the os point to the next of the  @var{availableNodeIndex}
+        //2- os가 @var{availableNodeIndex}의 다음을 가리키도록 만든다
         int availableNext = cursorSpace[availableNodeIndex].next;
         cursorSpace[os].next = availableNext;
 
         // this to indicate an end of the list , helpful at testing since any err
-        // would throw an outOfBoundException
+        // 이것은 리스트에 마지막을 가리킨다, 에러가 생기면 outOfBoundException을 던질 것이다.
+        // 테스트시 유용하다.
         cursorSpace[availableNodeIndex].next = -1;
 
         return availableNodeIndex;
