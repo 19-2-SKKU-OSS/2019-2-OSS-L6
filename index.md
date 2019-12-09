@@ -82,11 +82,11 @@ layout: default
 
 | Week | Activity contents | 
 |:-----|:------------------|
-|  10  | OpenSource Project Investigation   | 
-|  11  | OS Project "The Algorithms" Choice | 
-|  12  | Individual Part Distribution & Schedule Fix | 
-|  13  | Individual Code Translation & Explanation Add |
-|  14  | Merge to Master Branch |
+|  10  | OpenSource Project Investigation | 
+|  11  | OpenSource Project "The Algorithms" Selection | 
+|  12  | Individual Part Distribution & Schedule Fix <br> Selected Project & Community Investigation | 
+|  13  | Individual Code Translation & Explanation Add <br> Individual Algorithm Addition |
+|  14  | Merge to Master Branch <br> Wiki & Static Page Works |
 |  15  | Project Presentation Prepare |
 
 * * *
