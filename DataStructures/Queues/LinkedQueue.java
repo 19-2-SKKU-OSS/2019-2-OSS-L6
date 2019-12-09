@@ -22,17 +22,17 @@ public class LinkedQueue {
     }
 
     /**
-     * Front of Queue
+     * Queue의 앞
      */
     private Node front;
 
     /**
-     * Rear of Queue
+     * Queue의 뒤
      */
     private Node rear;
 
     /**
-     * Size of Queue
+     * Queue의 크기
      */
     private int size;
 
@@ -44,32 +44,32 @@ public class LinkedQueue {
     }
 
     /**
-     * Check if queue is empty
+     * queue가 비어있는지 체크
      *
-     * @return <tt>true</tt> if queue is empty, otherwise <tt>false</tt>
+     * @return <tt>true</tt> queue가 비어있다면, 아닌경우 <tt>false</tt>
      */
     public boolean isEmpty() {
         return size == 0;
     }
 
     /**
-     * Add element to rear of queue
+     * queue의 뒤에 요소를 추가
      *
-     * @param data insert value
-     * @return <tt>true</tt> if add successfully
+     * @param data 추가할 값
+     * @return <tt>true</tt> 추가 성공시
      */
     public boolean enqueue(int data) {
         Node newNode = new Node(data);
         rear.next = newNode;
-        rear = newNode; /* make rear point at last node */
+        rear = newNode; /* rear이 마지막 노드를 가리키도록 한다 */
         size++;
         return true;
     }
 
     /**
-     * Remove element at the front of queue
+     * queue의 앞에 있는 요소 삭제
      *
-     * @return element at the front of queue
+     * @return queue의 앞에 있는 요소
      */
     public int dequeue() {
         if (isEmpty()) {
@@ -78,7 +78,7 @@ public class LinkedQueue {
         Node destroy = front.next;
         int retValue = destroy.data;
         front.next = front.next.next;
-        destroy = null; /* clear let GC do it's work */
+        destroy = null; /* GC가 작동하도록 destroy를 비어준다 */
         size--;
 
         if (isEmpty()) {
@@ -89,9 +89,9 @@ public class LinkedQueue {
     }
 
     /**
-     * Peek element at the front of queue without removing
+     * 삭제하지 않고 queue 앞에 있는 요소 검색
      *
-     * @return element at the front
+     * @return 앞에 있는 요소
      */
     public int peekFront() {
         if (isEmpty()) {
@@ -101,9 +101,9 @@ public class LinkedQueue {
     }
 
     /**
-     * Peek element at the rear of queue without removing
+     * 제거하지 않고 queue의 뒤에 있는 요소 검색
      *
-     * @return element at the front
+     * @return 앞에 있는 요소
      */
     public int peekRear() {
         if (isEmpty()) {
@@ -113,16 +113,16 @@ public class LinkedQueue {
     }
 
     /**
-     * Return size of queue
+     * queue의 크기를 반환한다
      *
-     * @return size of queue
+     * @return queue의 크기
      */
     public int size() {
         return size;
     }
 
     /**
-     * Clear all nodes in queue
+     * queue에 있는 모든 노드 비우기
      */
     public void clear() {
         while (!isEmpty()) {
