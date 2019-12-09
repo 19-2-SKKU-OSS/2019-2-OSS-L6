@@ -1,16 +1,15 @@
 package DataStructures.Trees;
 
 /**
- * This entire class is used to build a Binary Tree data structure.
- * There is the Node Class and the Tree Class, both explained below.
+ * 이 클래스는 이진 트리 자료 구조를 만드는 데 사용된다
+ * 노드 클래스와 트리클래스 둘다 밑에 설명되있다.
  */
 
 
 /**
- * A binary tree is a data structure in which an element
- * has two successors(children). The left child is usually
- * smaller than the parent, and the right child is usually
- * bigger.
+ * 이진 트리는 두 자손을 갖는 자료 구조이다.
+ * 보통 왼쪽 자손이 오른쪽 자손보다 더 작다.
+ * 
  *
  * @author Unknown
  *
@@ -18,9 +17,8 @@ package DataStructures.Trees;
 public class BinaryTree {
 
     /**
-     * This class implements the nodes that will go on the Binary Tree.
-     * They consist of the data in them, the node to the left, the node
-     * to the right, and the parent from which they came from.
+     * 이 클래스는 이진 트리로 이동할 노드를 구현합니다
+     * 이진 트리는 데이터, 왼쪽 노드, 오른족 노드 및 부모로 구성 됩니다.
      *
      * @author Unknown
      *
