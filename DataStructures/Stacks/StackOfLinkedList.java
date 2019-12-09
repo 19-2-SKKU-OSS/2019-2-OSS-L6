@@ -99,10 +99,10 @@ class LinkedListStack {
     }
 
     /**
-     * Peek element at top of stack
+     * 스택의 맨위에 있는 값 검색
      *
-     * @return element at top of stack
-     * @throws NoSuchElementException if stack is empty
+     * @return 스택에 맨위에 있는 요소
+     * @throws NoSuchElementException 스택이 비어있을 경우
      */
     public int peek() {
         if (size == 0) {
@@ -123,18 +123,18 @@ class LinkedListStack {
     }
 
     /**
-     * Check if stack is empty
+     * 스택이 비어있는 지 검사한다.
      *
-     * @return <tt>true</tt> if stack is empty, otherwise <tt>false</tt>
+     * @return <tt>true</tt> 스택이 비어있다면, 아닌경우<tt>false</tt>
      */
     public boolean isEmpty() {
         return size == 0;
     }
 
     /**
-     * Return size of stack
+     * 스택의 크기를 반환한다.
      *
-     * @return size of stack
+     * @return 스택의 크기
      */
     public int getSize() {
         return size;
