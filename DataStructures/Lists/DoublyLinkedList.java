@@ -1,31 +1,30 @@
 package DataStructures.Lists;
 
 /**
- * This class implements a DoublyLinkedList. This is done using the classes
- * LinkedList and Link.
+ * 이 클래스는 이중 연결 리스트를 구현한 것이다.
+ * 이 클래스는 LinkedList 과 Link 클래스를 사용한다.
  * <p>
- * A linked list is similar to an array, it holds values. However,
- * links in a linked list do not have indexes. With a linked list
- * you do not need to predetermine it's size as it grows and shrinks
- * as it is edited. This is an example of a double ended, doubly
- * linked list. Each link references the next link and the previous
- * one.
+ * 연결 리스트는 값을 가진다는 점에서 배열과 비슷하다.
+ * 그러나 연결 리스트는 인덱스를 가지지 않는다.
+ * 연결 리스트는 추가 되거나 삭제될때 그것의 크기를 미리 알 수 없다.
+ * 이것은 이중 연결 리스트의 예시이다. 
+ * 각각의 링크는 다음 링크와 전의 링크를 참조한다.
  *
  * @author Unknown
  */
 
 public class DoublyLinkedList {
     /**
-     * Head refers to the front of the list
+     * Head는 리스트의 앞을 나타낸다.
      */
     private Link head;
     /**
-     * Tail refers to the back of the list
+     * Tail는 리스트의 뒤를 나타낸다.
      */
     private Link tail;
 
     /**
-     * Default Constructor
+     * 디폴트 
      */
     public DoublyLinkedList() {
         head = null;
@@ -33,10 +32,10 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Constructs a list containing the elements of the array
+     * 배열의 요소를 지닌 리스트 만들기
      *
-     * @param array the array whose elements are to be placed into this list
-     * @throws NullPointerException if the specified collection is null
+     * @param array 리스트로 대체될 값을 가진 배열
+     * @throws NullPointerException 배열의 값이 null일 경우
      */
     public DoublyLinkedList(int[] array) {
         if (array == null) throw new NullPointerException();
@@ -46,12 +45,12 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Insert an element at the head
+     * head에 요소 삽입
      *
-     * @param x Element to be inserted
+     * @param x 삽입될 요소
      */
     public void insertHead(int x) {
-        Link newLink = new Link(x); // Create a new link with a value attached to it
+        Link newLink = new Link(x); // 값이 연결된 새로운 링크 생성
         if (isEmpty()) // Set the first element added to be the tail
             tail = newLink;
         else
@@ -61,14 +60,14 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Insert an element at the tail
+     * tail에 요소 삽입
      *
-     * @param x Element to be inserted
+     * @param x 삽입될 요소
      */
     public void insertTail(int x) {
         Link newLink = new Link(x);
         newLink.next = null; // currentTail(tail)     newlink -->
-        if (isEmpty()) {        // Check if there are no elements in list then it adds first element
+        if (isEmpty()) {        // 리스트가 비어있을 경우 첫 요소를 추가한다. 
             tail = newLink;
             head = tail;
         } else {
@@ -79,23 +78,23 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Delete the element at the head
+     * head에 있는 요소 삭제
      *
-     * @return The new head
+     * @return 새로운 head
      */
     public Link deleteHead() {
         Link temp = head;
         head = head.next; // oldHead <--> 2ndElement(head)
-        head.previous = null; // oldHead --> 2ndElement(head) nothing pointing at old head so will be removed
+        head.previous = null; // oldHead --> 2ndElement(head) 아무것도 가리키지 않는 head를 삭제한다.
         if (head == null)
             tail = null;
         return temp;
     }
 
     /**
-     * Delete the element at the tail
+     * tail에 있는 요소 삭제
      *
-     * @return The new tail
+     * @return 새로운 tail
      */
     public Link deleteTail() {
         Link temp = tail;
@@ -108,18 +107,18 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Delete the element from somewhere in the list
+     * 리스트 어딘가에 있는 요소를 삭제
      *
-     * @param x element to be deleted
-     * @return Link deleted
+     * @param x 삭제할 요소
+     * @return 삭제된 링크
      */
     public void delete(int x) {
         Link current = head;
 
-        while (current.value != x) {// Find the position to delete
+        while (current.value != x) {// 삭제할 곳을 찾는다.
             if (current != tail) {
                 current = current.next;
-            } else {// If we reach the tail and the element is still not found
+            } else {// 요소를 발견하지 못한 경우 던지는 에러 코드
                 throw new RuntimeException("The element to be deleted does not exist!");
             }
         }
@@ -137,14 +136,14 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Inserts element and reorders
+     * 요소를 삽입하고 다시 정렬
      *
-     * @param x Element to be added
+     * @param x 추가될 요소
      */
     public void insertOrdered(int x) {
         Link newLink = new Link(x);
         Link current = head;
-        while (current != null && x > current.value) // Find the position to insert
+        while (current != null && x > current.value) // 삽입할 위치 확인
             current = current.next;
 
         if (current == head)
@@ -162,18 +161,18 @@ public class DoublyLinkedList {
     }
 
     /**
-     * Returns true if list is empty
+     * 리스트가 비어있다면 참을 반환한다.
      *
-     * @return true if list is empty
+     * @return 리스트가 비어있다면 참
      */
     public boolean isEmpty() {
         return (head == null);
     }
 
     /**
-     * Prints contents of the list
+     * 리스트의 내용을 출력한다.
      */
-    public void display() { // Prints contents of the list
+    public void display() { 
         Link current = head;
         while (current != null) {
             current.displayLink();
@@ -184,45 +183,44 @@ public class DoublyLinkedList {
 }
 
 /**
- * This class is used to implement the nodes of the
- * linked list.
+ * 이 클래스는 링크된 목록의 노드를 구현하는 데 사용된다.
  *
  * @author Unknown
  */
 class Link {
     /**
-     * Value of node
+     * 노드의 값
      */
     public int value;
     /**
-     * This points to the link in front of the new link
+     * 새로운 링크의 앞의 링크를 가리킨다.
      */
     public Link next;
     /**
-     * This points to the link behind the new link
+     * 새로운 링크의 뒤의 링크를 가리킨다.
      */
     public Link previous;
 
     /**
-     * Constructor
+     * 생성자
      *
-     * @param value Value of node
+     * @param value 노드의 값
      */
     public Link(int value) {
         this.value = value;
     }
 
     /**
-     * Displays the node
+     * 노드들을 출력한다.
      */
     public void displayLink() {
         System.out.print(value + " ");
     }
 
     /**
-     * Main Method
+     * 메인 메소드
      *
-     * @param args Command line arguments
+     * @param args 커멘드 라인
      */
     public static void main(String args[]) {
         DoublyLinkedList myList = new DoublyLinkedList();
