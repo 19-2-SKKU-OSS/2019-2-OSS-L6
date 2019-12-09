@@ -38,7 +38,7 @@ layout: default
 # Project Activity Content
 
 ## _Team Activity Contents_
-1. 원본 프로젝트에 만들어져 있는 알고리즘의 코드를 리뷰하거나 각 알고리즘의 주석 번역을 통해 국내 사용자들에게 도움을 준다.
+1. 원본 프로젝트에 만들어져 있는 알고리즘의 코드를 리뷰하고, 각 알고리즘의 주석을 번역하여 국내 사용자들에게 도움을 준다.
 2. 구체적인 알고리즘의 설명이 빠져있는 부분에 설명을 추가하여 사용자들의 이해를 돕는다.
 3. 이미 구현되어 있는 알고리즘을 리팩토링하여 가독성과 코드의 사용 편리성을 높인다.
 4. 동일한 자료구조나 알고리즘을 다른 방식으로 더 좋게 구현한다.
@@ -61,7 +61,7 @@ layout: default
 * Contents
    * 알고리즘에 대한 기본적인 설명이 누락된 경우, 기본적인 설명 추가
    * Dynaminc Programing & Search 파트 주석 번역
-   * Dynamic Programing 파트에 Lexicographically minimal string rotation 의 booth 알고리즘, Manacher 알고리즘을 새로 추가
+   * Dynamic Programing 파트에 Booth 알고리즘, Manacher 알고리즘 새로 추가
    * Wiki 목차 및 페이지 생성, 구조 정렬
    * Wiki에 개인 활동내용을 추가
 
@@ -73,7 +73,7 @@ layout: default
 
 ### PARK-JI-HUN
 * Contents
-   * Sorts에는 여러가지 정렬 알고리즘이 있는데, 코드 상단에 정렬 알고리즘에 대한 설명과 시간복잡도를 추가하고 코드에 대한 설명을 주석으로 달았다.
+   * Sorts 파트의 정렬 알고리즘 대한 설명과 시간복잡도를 추가 및 코드에 설명 주석 추가
    * Sorts 파트에 TimSort, IntroSort 알고리즘 추가
    * Others 파트의 실생활에 사용하는 다양한 알고리즘에 대한 설명과 주석 추가
 
