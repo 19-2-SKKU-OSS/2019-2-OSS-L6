@@ -126,7 +126,7 @@ public class BinaryTree {
             if (temp == root)
                 root = null;
 
-                //This if/else assign null either the left or right child of the parent
+                //부모의 데이터와 값을 비교해 왼쪽 자식에 null로 할당할지, 오른쪽 자식에 null로 할당할지 정한다
             else if (temp.parent.data < temp.data)
                 temp.parent.right = null;
             else
@@ -134,15 +134,15 @@ public class BinaryTree {
             return true;
         }
 
-        //Two children
+        //자손이 둘인 경우
         else if (temp.left != null && temp.right != null) {
             Node successor = findSuccessor(temp);
 
-            //The left tree of temp is made the left tree of the successor
+            //temp의 왼쪽 트리는 자손의 왼쪽 트리가 된다
             successor.left = temp.left;
             successor.left.parent = successor;
 
-            //If the successor has a right child, the child's grandparent is it's new parent
+            //만약 자손에게 오른쪽 자손이 있을 경우 그 자손의 부모의 부모가 새로운 부모가 된다
             if (successor.right != null && successor.parent != temp) {
                 successor.right.parent = successor.parent;
                 successor.parent.left = successor.right;
@@ -155,11 +155,11 @@ public class BinaryTree {
                 return true;
             }
 
-            //If you're not deleting the root
+            //만약 루트를 삭제하지 않는다면
             else {
                 successor.parent = temp.parent;
 
-                //This if/else assigns the new node to be either the left or right child of the parent
+                //부모의 데이터와 값을 비교해 왼쪽 자식에 둘지 오른쪽 자식에 둘지 정한다
                 if (temp.parent.data < temp.data)
                     temp.parent.right = successor;
                 else
@@ -167,9 +167,9 @@ public class BinaryTree {
                 return true;
             }
         }
-        //One child
+        //자손이 하나인 경우
         else {
-            //If it has a right child
+            //그것이 오른쪽 자손일 경우
             if (temp.right != null) {
                 if (temp == root) {
                     root = temp.right;
@@ -185,7 +185,7 @@ public class BinaryTree {
                     temp.parent.right = temp.right;
                 return true;
             }
-            //If it has a left child
+            //왼쪽 자손인 경우
             else {
                 if (temp == root) {
                     root = temp.left;
@@ -194,7 +194,7 @@ public class BinaryTree {
 
                 temp.left.parent = temp.parent;
 
-                //Assigns temp to left or right side
+                //temp를 오른쪽이나 왼쪽 자손에 
                 if (temp.data < temp.parent.data)
                     temp.parent.left = temp.left;
                 else
