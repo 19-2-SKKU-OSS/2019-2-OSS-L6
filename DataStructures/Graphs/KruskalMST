@@ -3,35 +3,40 @@ package Datastructures.Graphs;
  * 크루스칼의 MST(최소 신장 트리) 알고리즘 자바 프로그램
  * 프림의 알고리즘은 있는데, 크루스칼의 알고리즘이 없는 것을 보고 추가함
  * 프림의 알고리즘은 정점을 중심으로 추가하는 반면, 크루스칼 알고리즘은 간선을 중심으로 추가함
+ * 정렬된 간선을 입력받는다 가중치가 작은 간선을 먼저 고려한다
+ * 새로운 간선을 추가할 때 사이클 생기는 지 판단 -> 사이클 안 만들면 간선 추가
+ * 간선 n-1개 추가 완료시 MST 완성
  * @author bidulki
- *
  */
 public class KruskalMST {
-	public static void Kruskal(int[][] graph, int n, int[][] t) {
-		int edgeCount = 0;
-		int i= 0;
-		int v1, v2;
-		int s1, s2;
-		int[] s = {0,1,2,3,4};
-		while(edgeCount < n-1) {
-			v1 =graph[i][0];
-			v2 = graph[i][1];
-			s1 = s[v1];
-			s2 = s[v2];
+	public static void Kruskal(int[][] graph, int[][] t, int[] s, int n) {
+	
+		int edge_num = 0; //t에 들어 있는 간선 개수
+		int i= 0; //graph의 인덱스 i번째 가중치를 갖는 간선을 뜻함
+		int v1, v2; // 간선의 두 정점
+		int s1, s2; // 서브트리 확인용 변수
+		
+		while(edge_num < n-1) {  //MST는 n-1개의 간선을 갖는다
+			v1 =graph[i][0]; v2 = graph[i][1]; // i번째 가중치를 갖는 간선의 정점 2개
+			s1 = s[v1]; s2 = s[v2]; // 정점이 속하는 서브트리 
 			
-			if(s1 != s2) {
+			// 서브트리를 비교해서 사이클 생기는 지 판단
+			if(s1 != s2) {  //서브트리 다른 경우
 				for(int j=0; j<s.length; j++) {
 					if(s[j]==s2)
-						s[j] = s1;
+						s[j] = s1;  // s2 서브트리를 s1 서브트리로 병합
 				}
-				t[edgeCount][0] = v1;
-				t[edgeCount][1] = v2;
-				edgeCount++;
+				
+				// t에 간선 추가
+				t[edge_num][0] = v1;
+				t[edge_num][1] = v2;
+				edge_num++;
 			}
+			// 다음 간선
 			i++;
 		}
 	}
-	
+	// 메인 메소드
 	public static void main(String[] args) {
 		/* 프림 알고리즘의 예시와 같은 예시를 사용
 			2    3
@@ -41,12 +46,19 @@ public class KruskalMST {
 		     | /      \ |
 		     (3)-------(4)
 			  9          */
+			  
+		// 미리 정렬된 데이터를 테스트 케이스로 한다
+		// {0.1}의 경우 정점 0과 정점 1을 잇는 간선으로 가중치가 제일 작아서 맨 앞에 있음
 		int[][] graph = {{0,1}, {1,2}, {1,4}, {0,3}, {2,4}, {1,3}, {3,4}};
-		int[][] t = new int[4][2];
-		Kruskal(graph,5,t);
+		int[][] t = new int[4][2]; //MST를 담을 배열
+		int[] s = {0,1,2,3,4}; // 서브트리 체크를 위한 배열
+		
+		Kruskal(graph,t,s,5); //알고리즘 실행
+		
+		//MST에 들어있는 간선들 출력
 		for(int i=0; i< t.length; i++) {
 			System.out.println(t[i][0]+" "+ (t[i][1]));
 		}
 		
 	}
-	
+}
