@@ -5,14 +5,14 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
- * A generic tree is a tree which can have as many children as it can be
- * It might be possible that every node present is directly connected to
- * root node.
+ * 일반 트리는 가능한 한 많은 자손을 가질 수있는 트리이다.
+ * 이것은 심지어 존재하는 모든 노드가 루트 노드에 직접 연결되었을 수 있습니다.
+ *
  * <p>
- * In this code
- * Every function has two copies: one function is helper function which can be called from
- * main and from that function a private function is called which will do the actual work.
- * I have done this, while calling from main one have to give minimum parameters.
+ * 이 코드에서
+ * 모든 함수에는 두 개의 사본이 있다: 하나의 함수는 기본에서 호출 할 수있는 helper 함수이고 
+ * 해당 함수에서 실제 작업을 수행하는 private 함수가 호출됩니다.
+ * 나는 이 작업을 메인을 호출할 때 최소한의 매개변수를 갖도록 수행하였다.
  */
 public class GenericTree {
     private class Node {
