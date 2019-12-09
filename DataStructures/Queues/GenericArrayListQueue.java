@@ -3,34 +3,34 @@ package DataStructures.Queues;
 import java.util.ArrayList;
 
 /**
- * This class implements a GenericArrayListQueue.
+ * 이 클래스는 일반화 컬렉션(array, list, queue)을 구현한 것이다.
  * <p>
- * A GenericArrayListQueue data structure functions the same as any specific-typed queue.
- * The GenericArrayListQueue holds elemets of types to-be-specified at runtime.
- * The elements that are added first are the first to be removed (FIFO)
- * New elements are added to the back/rear of the queue.
+ * 일반화 컬렉션(ArrayList queue) 함수들은 어떠한 타입의 queue와 동일하다.
+ * 일반화 컬렉션(ArrayList queue) 는 런타임에서는 자료형이 구체적으로 명시된 요소를 갖는다.
+ * 요소들은 FIFO(First in first out)방식으로 추가된다.
+ * 새로운 요소들은 queue의 rear에 추가된다.
  *
  */
 public class GenericArrayListQueue<T> {
     /**
-     * The generic ArrayList for the queue
-     * T is the generic element
+     * queue를 위한 ArrayList 일반화 컬렉션
+     * T는 일반화 요소이다.
      */
     ArrayList<T> _queue = new ArrayList<T>();
 
     /**
-     * Checks if the queue has elements (not empty)
+     * queue가 비어있지 않은지 체크한다.
      *
-     * @return True if the queue has elements. False otherwise.
+     * @return True queue가 값을 가지는 경우, False 아닌경우.
      */
     private boolean hasElements() {
         return !_queue.isEmpty();
     }
 
     /**
-     * Checks what's at the front of the queue
+     * queue의 앞에 무엇이 있는지 체크한다.
      *
-     * @return If queue is not empty, element at the front of the queue. Otherwise, null
+     * @return queue가 비어있지 않은 경우, queue앞에 있는 요소. 아닌경우 null
      */
     public T peek() {
         T result = null;
@@ -39,19 +39,19 @@ public class GenericArrayListQueue<T> {
     }
 
     /**
-     * Inserts an element of type T to the queue.
+     * queue의 T 타입의 요소를 삽입
      *
-     * @param element of type T to be added
-     * @return True if the element was added successfully
+     * @param T element 추가될 T 타입의 요소
+     * @return True 요소 추가가 성공한 경우
      */
     public boolean add(T element) {
         return _queue.add(element);
     }
 
     /**
-     * Retrieve what's at the front of the queue
+     * queue앞에 있는 것 검색
      *
-     * @return If queue is not empty, element retrieved. Otherwise, null
+     * @return queue가 비어있지 않은 경우, queue앞에 있는 요소. 아닌경우 null
      */
     public T poll() {
         T result = null;
@@ -60,9 +60,9 @@ public class GenericArrayListQueue<T> {
     }
 
     /**
-     * Main method
+     * 메인 메소드
      *
-     * @param args Command line arguments
+     * @param args 커맨드 라인
      */
     public static void main(String[] args) {
         GenericArrayListQueue<Integer> queue = new GenericArrayListQueue<Integer>();
