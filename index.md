@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 # Team Info
 
 ## _Team Leader_
@@ -49,13 +48,16 @@ layout: default
 
 ### PYO-SE-SEUNG
 * Contents
-   * ciper 파트에 원본 프로젝트에 없었던 DES 암호화 알고리즘 새로 추가
+   * Cipher 파트에 원본 프로젝트에 없었던 DES 암호화 알고리즘 새로 추가
    * Conversion & Cipher 파트 코드 리뷰 및 주석 추가와 번역
    * 각 암호화 알고리즘의 이해를 돕는 마크다운 설명 문서 추가
    * 정적페이지 제작
 
 ### YOU-JAE-MIN
 * Contents
+   * Math & Misc 파트의 주석 번역
+   * Math 파트의 수학적 개념에 대한 설명과 주석 추가
+   * README.md 편집
 
 ### LEE-DAE-HEE
 * Contents
@@ -69,8 +71,8 @@ layout: default
 * Contents
    * Datastructure 파트의 잘못된 주석 수정과 번역
    * Datastructure 파트에 Kruskal 알고리즘 새로 추가
-   * Wiki 작업을 함
-
+   * Wiki 내용 추가 
+   
 ### PARK-JI-HUN
 * Contents
    * Sorts 파트의 정렬 알고리즘 대한 설명과 시간복잡도를 추가 및 코드에 설명 주석 추가
