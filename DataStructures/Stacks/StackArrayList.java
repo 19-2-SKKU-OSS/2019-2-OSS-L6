@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class StackArrayList {
 
     /**
-     * Main method
+     * 메인 메소드
      *
      * @param args Command line arguments
      */
@@ -57,16 +57,15 @@ public class StackArrayList {
     }
 
     /**
-     * Pops last element of list which is indeed
-     * the top for Stack
+     * 스택의 맨위에 있는 마지막 요소를 pop한다.
      *
      * @return Element popped
      */
     public int pop() {
 
-        if (!isEmpty()) { // checks for an empty Stack
+        if (!isEmpty()) { // 빈 스택을 체크한다.
             int popValue = stackList.get(stackList.size() - 1);
-            stackList.remove(stackList.size() - 1);  // removes the poped element from the list
+            stackList.remove(stackList.size() - 1);  // 리스트로 부터 pop된 요소 제거한다.
             return popValue;
         }
 
