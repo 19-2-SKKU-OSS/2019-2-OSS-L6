@@ -4,21 +4,21 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// Class for a tree node
+// 트리 노드 클래스
 class TreeNode {
-    // Members
+    // 멤버 변수들
     int key;
     TreeNode left, right;
 
-    // Constructor
+    // 생성자
     public TreeNode(int key) {
         this.key = key;
         left = right = null;
     }
 }
 
-// A class to represent a queue item. The queue is used to do Level
-// order traversal. Every Queue item contains node and horizontal
+// 큐의 아이템을 나타내는 클래스. 큐는 레벨순 검색을 하기위해 사용(level order traversal queue를 참고)
+// 모든 큐의 아이템들은 노드와 horizontal을 멤버 변수로 가지고 있다
 // distance of node from root
 class QItem {
     TreeNode node;
@@ -30,11 +30,11 @@ class QItem {
     }
 }
 
-// Class for a Binary Tree
+// 이진 트리 클래스
 class Tree {
     TreeNode root;
 
-    // Constructors
+    // 생성자
     public Tree() {
         root = null;
     }
@@ -43,35 +43,35 @@ class Tree {
         root = n;
     }
 
-    // This method prints nodes in top view of binary tree
+    // 이 메소드는 이진 트리의 노드들을 top view로 출력한다
     public void printTopView() {
-        // base case
+        // 추가 안된 트리의 경우
         if (root == null) {
             return;
         }
 
-        // Creates an empty hashset
+        // 빈 해쉬집합을 만든다
         HashSet<Integer> set = new HashSet<>();
 
-        // Create a queue and add root to it
+        // 큐를 만든 뒤 루트를 큐에 넣는다 
         Queue<QItem> Q = new LinkedList<QItem>();
         Q.add(new QItem(root, 0)); // Horizontal distance of root is 0
 
-        // Standard BFS or level order traversal loop
+        // 너비 우선 탐색(BFS) or 레벨 순회(level order traversal) 
         while (!Q.isEmpty()) {
-            // Remove the front item and get its details
+            // 앞의 정보를 삭제한 뒤 멤버 변수의 값을 얻는다
             QItem qi = Q.remove();
             int hd = qi.hd;
             TreeNode n = qi.node;
 
-            // If this is the first node at its horizontal distance,
-            // then this node is in top view
+            // 이것이 수평 거리의 첫번째 노드인 경우,
+            // 이 노드를 top view 로 한다
             if (!set.contains(hd)) {
                 set.add(hd);
                 System.out.print(n.key + " ");
             }
 
-            // Enqueue left and right children of current node
+            // 현재 노드의 왼쪽 자식과 오른쪽 자식을 큐에 넣는다
             if (n.left != null)
                 Q.add(new QItem(n.left, hd - 1));
             if (n.right != null)
@@ -80,10 +80,10 @@ class Tree {
     }
 }
 
-// Driver class to test above methods
+// 위의 메소드들을 테스트하기 위한 클래스
 public class PrintTopViewofTree {
     public static void main(String[] args) {
-        /* Create following Binary Tree
+        /* 위의 이진 트리를 만들어라
              1
            /  \
           2    3
