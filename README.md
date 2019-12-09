@@ -1,6 +1,8 @@
 # 2019-2-OSS-L6
 # The Algorithms - Java
 
+![java](https://user-images.githubusercontent.com/50112565/70425133-f92a7980-1ab3-11ea-85b9-23d5dd68d49e.png)
+
 
 | Related Links  |
 | :----: |
@@ -10,7 +12,7 @@
 | [**ISSUE**](https://github.com/19-2-SKKU-OSS/2019-2-OSS-L6/issues) |
 
 
-NOTE: A [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch is made for this repo where we are trying to migrate the existing project to a Java project structure. You can switch to [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch for contributions. Please refer [this issue](https://github.com/TheAlgorithms/Java/issues/474) for more info.
+NOTE: A [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기존프로젝트를 Java 프로젝트 구조로 migration하려고 하는 branch가 만들어졌습니다. 여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) 브랜치로 기여를 할 수 있습니다. 더 많은 정보가 필요하시다면 [this issue](https://github.com/TheAlgorithms/Java/issues/474)를 참조하세요.
 
 You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.
 
@@ -19,7 +21,7 @@ You can play around (run and edit) the Algorithms or contribute to them using Gi
 
 
 ### All algorithms implemented in Java (for education)
-These implementations are for learning purposes. They may be less efficient than the implementations in the Java standard library.
+우리 프로젝트는 많은 사람들의 학습을 목적으로 합니다. 따라서 Java 표준 라이브러리 보다는 효율성이 떨어질 수 있습니다.
 
 ## Contribution Guidelines
 우리는 Contribution을 환영합니다! 
