@@ -54,11 +54,12 @@ public final class ClosestPair {
         double y = 0;
 
         /**
-         * @param xpar (IN Parameter)  x coordinate <br/>
-         * @param ypar (IN Parameter)  y coordinate <br/>
+         * @param xpar (IN Parameter) x 좌표 <br/>
+         * @param ypar (IN Parameter) y 좌표 <br/>
+
          */
 
-        Location(final double xpar, final double ypar) { //Save x, y coordinates
+        Location(final double xpar, final double ypar) { //x,y 좌표 저장
             this.x = xpar;
             this.y = ypar;
         }
@@ -66,7 +67,7 @@ public final class ClosestPair {
     }
 
     public Location[] createLocation(int numberValues) {
-        return new Location[numberValues];
+        return new Location[numberValues]; //위치 
 
     }
 
