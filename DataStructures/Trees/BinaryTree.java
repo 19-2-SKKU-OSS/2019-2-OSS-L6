@@ -205,11 +205,11 @@ public class BinaryTree {
     }
 
     /**
-     * This method finds the Successor to the Node given.
-     * Move right once and go left down the tree as far as you can
-     *
-     * @param n Node that you want to find the Successor of
-     * @return The Successor of the node
+     * 주어진 노드의 자손을 찾는 메소드이다
+     * 오른쪽 자손으로 한번 간 다음   
+     * 될 수 있는한 게속 왼쪽 자손으로 내려간다 
+     * @param n 자손을 찾고 싶은 노드
+     * @return 그 노드의 자손을 반환한다
      */
     public Node findSuccessor(Node n) {
         if (n.right == null)
@@ -224,18 +224,18 @@ public class BinaryTree {
     }
 
     /**
-     * Returns the root of the Binary Tree
+     * 이진 트리의 루트를 반환한다
      *
-     * @return the root of the Binary Tree
+     * @return 이진 트리의 루트를 반환한다
      */
     public Node getRoot() {
         return root;
     }
 
     /**
-     * Prints leftChild - root - rightChild
+     * 다음 순서로 출력    왼쪽 자손 - 루트 - 오른쪽 자손
      *
-     * @param localRoot The local root of the binary tree
+     * @param localRoot 이진트리의 지역 루트
      */
     public void inOrder(Node localRoot) {
         if (localRoot != null) {
@@ -246,9 +246,9 @@ public class BinaryTree {
     }
 
     /**
-     * Prints root - leftChild - rightChild
+     * 다음 순서로 출력     루트 - 왼쪽 자손 - 오른쪽 자손
      *
-     * @param localRoot The local root of the binary tree
+     * @param localRoot 이진 트리의 지역 루트
      */
     public void preOrder(Node localRoot) {
         if (localRoot != null) {
@@ -259,9 +259,9 @@ public class BinaryTree {
     }
 
     /**
-     * Prints rightChild - leftChild - root
+     * 다음 순서로 출력     오른쪽 자손 - 왼쪽 자손 - 루트
      *
-     * @param localRoot The local root of the binary tree
+     * @param localRoot 이진트리의 왼쪽 루트
      */
     public void postOrder(Node localRoot) {
         if (localRoot != null) {
