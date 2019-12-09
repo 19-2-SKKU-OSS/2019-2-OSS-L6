@@ -14,10 +14,6 @@
 
 NOTE: A [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기존프로젝트를 Java 프로젝트 구조로 migration하려고 하는 branch가 만들어졌습니다. 여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) 브랜치로 기여를 할 수 있습니다. 더 많은 정보가 필요하시다면 [this issue](https://github.com/TheAlgorithms/Java/issues/474)를 참조하세요.
 
-You can play around (run and edit) the Algorithms or contribute to them using Gitpod.io a free online dev environment with a single click. No need to worry about the Dev enviroment.
-
-
-
 
 
 ### All algorithms implemented in Java (for education)
