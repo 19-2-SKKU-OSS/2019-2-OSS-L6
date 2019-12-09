@@ -12,9 +12,9 @@ public class DecimalToAnyUsingStack {
     }
 
     /**
-     * Convert decimal number to another radix
+     * 십진수를 다른 기수로 변환
      *
-     * @param number the number to be converted
+     * @param number 변환할 수
      * @param radix the radix
      * @return another radix
      * @throws ArithmeticException if <tt>number</tt> or <tt>radius</tt> is invalid
