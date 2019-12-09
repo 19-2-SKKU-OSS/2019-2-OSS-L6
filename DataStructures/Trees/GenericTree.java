@@ -164,7 +164,7 @@ public class GenericTree {
     }
 
     /**
-     * Function to print generic tree in pre-order
+     * 일반 트리를 pre-order로 출력하는 함수
      */
     public void preordercall() {
         preorder(root);
@@ -178,7 +178,7 @@ public class GenericTree {
     }
 
     /**
-     * Function to print generic tree in post-order
+     * 일반 트리를 post-order로 출력하는 함수
      */
     public void postordercall() {
         postorder(root);
@@ -192,7 +192,7 @@ public class GenericTree {
     }
 
     /**
-     * Function to print generic tree in level-order
+     * 일반 트리를 level-order로 출력하는 함수
      */
     public void levelorder() {
         LinkedList<Node> q = new LinkedList<>();
@@ -210,7 +210,7 @@ public class GenericTree {
     }
 
     /**
-     * Function to remove all leaves of generic tree
+     * 일반 트리의 리프를 모두 제거하는 함수
      */
     public void removeleavescall() {
         removeleaves(root);
