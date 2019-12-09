@@ -3,14 +3,14 @@ package DataStructures.Stacks;
 import java.util.Stack;
 
 /**
- * The nested brackets problem is a problem that determines if a sequence of
- * brackets are properly nested. A sequence of brackets s is considered properly
- * nested if any of the following conditions are true: - s is empty - s has the
- * form (U) or [U] or {U} where U is a properly nested string - s has the form
- * VW where V and W are properly nested strings For example, the string
- * "()()[()]" is properly nested but "[(()]" is not. The function called
- * is_balanced takes as input a string S which is a sequence of brackets and
- * returns true if S is nested and false otherwise.
+ * 중첩 괄호 문제는 다음의 순서를 결정하는 문제입니다.
+ * 대괄호가 올바르게 중첩되어 있습니다. 일련의 괄호가 올바르게 간주됩니다
+ * 다음 조건 중 하나라도 해당되면 중첩됩니다.-s가 비어 있음
+ * -s에 형식 (U) 또는 [U] 또는 {U} 여기서 U는 올바르게 중첩 된 문자열입니다. -s 형식
+ * V와 W가 올바르게 중첩 된 문자열입니다
+ * "() () [()]"은 올바르게 중첩되어 있지만 "[(()]"은 그렇지 않습니다. 
+ * is_balanced는 일련의 대괄호 인 문자열 S를 입력으로 사용합니다.
+ * S가 중첩되어 있으면 true를, 그렇지 않으면 false를 반환합니다.
  *
  * @author akshay sharma
  * @author <a href="https://github.com/khalil2535">khalil2535<a>
@@ -19,7 +19,7 @@ import java.util.Stack;
 class BalancedBrackets {
 
     /**
-     * Check if {@code leftBracket} and {@code rightBracket} is paired or not
+     * {@code leftBracket} 와 {@code rightBracket} 쌍인지 아닌지 검사한다.
      *
      * @param leftBracket   left bracket
      * @param rightBracket right bracket
