@@ -1,10 +1,10 @@
-# 알고리즘 - 자바
+# 알고리즘 - Java
 
-## 이 [개발브런치](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었다. 기여도를 위해 개발 지사로 전환할 수 있다. 자세한 내용은 이 문제를 참조하십시오. 컨트리뷰션을 위해 [개발브런치](https://github.com/TheAlgorithms/Java/tree/Development)로 전환할 수 있다. 자세한 내용은 [이 이슈](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
+## 이 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
 
 ### 자바로 구현된 모든 알고리즘들 (교육용)
 
-이것들은 단지 교육을 위한 것이다. 표준 자바 라이브러리에는 성능상의 이유로 더 나은 것들이 구현되어있다
+교육용 알고리즘 입니다. 표준 자바 라이브러리에는 더 효율적인 알고리즘이 있습니다. 단순히 교육용이므로, 속도와 성능이 떨어질 수 있습니다.  
 
 ## 정렬 알고리즘
 
