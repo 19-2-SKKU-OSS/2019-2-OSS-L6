@@ -1,5 +1,7 @@
 # 알고리즘 - Java
 
+## 해당 프로젝트에서 사용된 정렬들에 대한 한글 설명입니다
+
 이 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
 
 ### 자바로 구현된 모든 알고리즘들 (교육용)
@@ -74,25 +76,25 @@ __속성__
 * 최고의 성능    O(n^2)
 * 평균    O(n^2)
 
-###### 눈으로 보고 싶다면 [action][selection-toptal]
+###### 눈으로 보고 싶다면 [참조][selection-toptal]
   
-### Shell(쉘 정렬)
+### 쉘 정렬
 ![alt text][shell-image]
 
-From [Wikipedia][shell-wiki]:  쉘 정렬은 멀리 떨어져 있는 항목의 교환을 허용하는 삽입 종류의 일반화이다. 그 아이디어는 모든 n번째 요소가 정렬된 목록을 제공한다는 것을 고려하여 어느 곳에서든지 시작하도록 요소의 목록을 배열하는 것이다. 이러한 목록은 h-sorted로 알려져 있다. 마찬가지로, 각각 개별적으로 정렬된 h 인터리브 목록으로 간주될 수 있다.
+참조 [Wikipedia][shell-wiki]:  쉘 정렬은 멀리 떨어져 있는 항목의 교환하며 정렬합니다. 핵심 아이디어는 모든 n번째 요소가 정렬된 목록을 제공한다는 것을 고려하여 어느 곳에서든지 시작하도록 요소의 목록을 배열하는 것입니다. 이러한 목록은 h-sorted로 알려져 있습니다.
 
 __속성__
 * 최악의 성능 O(nlog2 2n)
 * 최고의 성능 O(n log n)
-* 평균 사례의 성능은 갭 시퀀스에 따라 다르다
+* 평균 사례의 성능은 시퀀스의 차이에 따라 다릅니다
 
-###### View the algorithm in [action][shell-toptal]
+###### 눈으로 보고 싶다면 [참조][shell-toptal]
   
-### 시간 복잡성 그래프
+### 시간 복잡도 그래프
 
-정렬 알고리즘의 복잡성 비교 (버블 정렬, 삽입 정렬, 선택 정렬)
+정렬 알고리즘의 복잡도 비교 (버블 정렬, 삽입 정렬, 선택 정렬)
 
-[복잡성 그래프](https://github.com/prateekiiest/Python/blob/master/sorts/sortinggraphs.png)
+[복잡도 그래프](https://github.com/prateekiiest/Python/blob/master/sorts/sortinggraphs.png)
 
 ----------------------------------------------------------------------------------
 
