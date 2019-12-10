@@ -48,7 +48,7 @@ layout: default
 
 ### PYO-SE-SEUNG
 * Contents
-   * Cipher 파트에 원본 프로젝트에 없었던 DES 암호화 알고리즘 새로 추가
+   * Cipher 파트에 DES 암호화 알고리즘 새로 추가
    * Conversion & Cipher 파트 코드 리뷰 및 주석 추가와 번역
    * 각 암호화 알고리즘의 이해를 돕는 마크다운 설명 문서 추가
    * 정적페이지 제작
