@@ -2,7 +2,8 @@
 
 ## 해당 프로젝트에서 사용된 정렬에 대한 한글 설명입니다
 
-해당 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 누구나 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
+해당 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다.   
+누구나 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하세요.
 
 ### 자바로 구현된 모든 알고리즘들 (교육용)
 
@@ -109,18 +110,19 @@ __속성__
 * 최악의 성능    O(n)
 * 최고의 성능    O(1)
 * 평균    O(n)
-* 최악의 경우 공간 복잡성    O(1) iterative
+* 최악의 경우 공간 복잡    O(1) iterative
   
-### Binary (이진 탐색)
+### 이진 탐색
 ![alt text][binary-image]
 
-From [Wikipedia][binary-wiki]: 이진 탐색, (also known as half-interval search or logarithmic search), 은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘이다. 목표값을 배열의 중간 요소와 비교한다; 만약 목표값이 동일하지 않으면, 목표물의 절반이 제거되고 검색이 성공할 때까지 나머지 절반에서 이 과정을 반복한다.
+출처 [Wikipedia][binary-wiki]: 이진 탐색(로그 탐색이라고도 불림)은 정렬된 배열 내에서 목표값의 위치를 찾는 검색 알고리즘입니다.  
+배열의 중간 요소와 목표값을 비교해서 만약 동일하지 않으면, 탐색할 배열의 절반을 제거하고 검색이 완료될 때까지 나머지 절반에서 이 과정을 반복합니다.
 
 __속성__
 * 최악의 성능    O(log n)
 * 최고의 성능    O(1)
 * 평균    O(log n)
-* 최악의 경우 공간 복잡성    O(1) 
+* 최악의 경우 공간 복잡도    O(1) 
   
 
 [bubble-toptal]: https://www.toptal.com/developers/sorting-algorithms/bubble-sort
