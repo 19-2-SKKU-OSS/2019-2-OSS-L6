@@ -8,13 +8,13 @@ import java.util.StringTokenizer;
 
 public class MinimizingLateness {
 
-    private static class Schedule { // Schedule class
-        int t = 0; // Time required for the operation to be performed
-        int d = 0; // Time the job should be completed
-        int s = 0; // Start time of the task
-        int f = 0; // End time of the operation
+    private static class Schedule { // Schedule 클래스
+        int t = 0; // 작업 수행에 필요한 시간
+        int d = 0; // 작업이 완료될 시간
+        int s = 0; // 작업의 시작 시간
+        int f = 0; // 작업이 끝나는 시간
 
-        public Schedule(int t, int d) {
+        public Schedule(int t, int d) { //초기 설정
             this.t = t;
             this.d = d;
         }
