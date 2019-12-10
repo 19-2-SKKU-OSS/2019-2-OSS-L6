@@ -1,8 +1,8 @@
 # 알고리즘 - Java
 
-## 해당 프로젝트에서 사용된 정렬들에 대한 한글 설명입니다
+## 해당 프로젝트에서 사용된 정렬에 대한 한글 설명입니다
 
-이 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
+해당 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 누구나 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
 
 ### 자바로 구현된 모든 알고리즘들 (교육용)
 
@@ -100,11 +100,10 @@ __속성__
 
 ## 검색 알고리즘
 
-### Linear (선형 탐색)
+### 선형 탐색
 ![alt text][linear-image]
 
-From [Wikipedia][linear-wiki]: 선형 탐색 또는 순차 탐색은 리스트 내에서 목표값을 찾는 방법이다. 일치 항목이 발견되거나 모든 요소가 탐색될 때까지 목록의 각 요소에 대해 목표값을 순차적으로 검사한다.
-  선형 검색은 최악의 선형 시간으로 실행되며 최대 n개의 비교에서 이루어진다. 여기서 n은 리스트의 길이다.
+참조 [Wikipedia][linear-wiki]: 선형 탐색 또는 순차 탐색은 리스트 내에서 목표값을 찾는 방법입니다. 항목이 일치하거나 모든 요소가 탐색될 때까지 목록의 각 요소에 대해 목표값을 순차적으로 비교합니다. 선형 탐색은 최악의 경우 O(n)으로 실행되며 최대 n개의 비교를 합니다. 여기서 n은 리스트의 길이입니다.
 
 __속성__
 * 최악의 성능    O(n)
