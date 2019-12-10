@@ -63,7 +63,7 @@ __속성__
 * 최고의 성능    O(n log n) or O(n) with three-way partition
 * 평균    O(n log n)
 
-여기서 시간 복잡도만 본다면 병합 정렬보다 최악의 경우에 성능이 O(n^2)으로 성능이 안 좋아 보일수도 있습니다. 하지만 실제로 속도를 따져보면 퀵 정렬이 더 빠른 경우가 많은데, 그 이유는 퀵 정렬이 **Cache-friendly** 하기 때문입니다. cache-friendly에 대해서 궁금하시다면 다음 링크를 참조하시기 바랍니다. [링크](https://stackoverflow.com/questions/16699247/what-is-a-cache-friendly-code).  
+여기서 시간 복잡도만 본다면 병합 정렬보다 최악의 경우에 성능이 O(n^2)으로 성능이 안 좋아 보일수도 있습니다. 하지만 실제로 속도를 따져보면 퀵 정렬이 더 빠른 경우가 많은데, 그 이유는 퀵 정렬이 **Cache-friendly** 하기 때문입니다. Cache-friendly에 대해서 궁금하시다면 다음 [링크](https://stackoverflow.com/questions/16699247/what-is-a-cache-friendly-code)를 참조하시기 바랍니다.  
 
 ###### 눈으로 보고 싶다면 [참조][quick-toptal]
   
