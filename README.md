@@ -13,13 +13,14 @@
 
 
 NOTE: [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기존프로젝트를 Java 프로젝트 구조로 migration하려고 하는 branch가 만들어졌습니다.  
-여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch로 기여를 할 수 있습니다.  
+여러분은 [Development](https://github.com/TheAlgorithms/Java/tree/Development) branch로 기여를 할 수 있습니다.
 더 많은 정보가 필요하시다면 [Origin Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참조하세요.  
 
 
 
 ### All algorithms implemented in Java (for education)
 우리 프로젝트는 많은 사람들의 학습을 목적으로 합니다. 따라서 Java 표준 라이브러리 보다는 효율성이 떨어질 수 있습니다.
+기존 프로젝트에 여러 알고리즘을 추가하였습니다. 궁금하시다면 fork해 보세요!
 
 ## Contribution Guidelines
 우리는 Contribution을 환영합니다! 
