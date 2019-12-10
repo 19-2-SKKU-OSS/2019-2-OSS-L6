@@ -50,16 +50,16 @@ __속성__
 
 ###### 눈으로 보고 싶다면 [참조][merge-toptal]
 
-### Quick(퀵 정렬)
+### 퀵 정렬
 ![alt text][quick-image]
 
-From [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용된다. 1959 년 영국 컴퓨터 과학자 토니 호아 (Tony Hoare)가 개발하고 1961 년에 출판 한 이 알고리즘은 여전히 ​​일반적으로 사용되는 정렬 알고리즘이다.
+참조 [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용됩니다. 1959 년 영국 컴퓨터 과학자 토니 호아 (Tony Hoare)가 개발하고 1961 년에 출판 한 이 알고리즘은 여전히 ​​일반적으로 사용되는 정렬 알고리즘입니다. 
 __속성__
 * 최악의 성능    O(n^2)
 * 최고의 성능    O(n log n) or O(n) with three-way partition
 * 평균    O(n log n)
 
-###### View the algorithm in [action][quick-toptal]
+###### 눈으로 보고 싶다면 [참조][quick-toptal]
 
 ### Selection(선택 정렬)
 ![alt text][selection-image]
