@@ -95,5 +95,5 @@ layout: default
 
 #  Team image
 
-![Team_Image](팀이미지파일)
+![Team_Image](./assets/images/team_image.jpg)
 
