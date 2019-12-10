@@ -21,7 +21,7 @@ __속성__
 * 평균 성능    O(n^2)
 
 ###### 눈으로 보고 싶다면 [참조][bubble-toptal]
-
+  
 
 
 ### 삽입 정렬
@@ -35,7 +35,7 @@ __속성__
 * 평균     O(n^2)
 
 ###### 눈으로 보고 싶다면 [참조][insertion-toptal]
-
+  
 
 ### 병합 정렬
 ![alt text][merge-image]
@@ -49,7 +49,7 @@ __속성__
 
 
 ###### 눈으로 보고 싶다면 [참조][merge-toptal]
-
+  
 ### 퀵 정렬
 ![alt text][quick-image]
 
@@ -63,7 +63,7 @@ __속성__
 여기서 시간 복잡도만 본다면 병합 정렬보다 최악의 경우에 성능이 O(n^2)으로 성능이 안 좋아 보일수도 있습니다. 하지만 실제로 속도를 따져보면 퀵 정렬이 더 빠른 경우가 많은데, 그 이유는 퀵 정렬이 **Cache-friendly** 하기 때문입니다. cache-friendly에 대해서 궁금하시다면 다음 링크를 참조하시기 바랍니다. [링크](https://stackoverflow.com/questions/16699247/what-is-a-cache-friendly-code).  
 
 ###### 눈으로 보고 싶다면 [참조][quick-toptal]
-
+  
 ### Selection(선택 정렬)
 ![alt text][selection-image]
 
@@ -75,7 +75,7 @@ __속성__
 * 평균    O(n^2)
 
 ###### View the algorithm in [action][selection-toptal]
-
+  
 ### Shell(쉘 정렬)
 ![alt text][shell-image]
 
@@ -87,7 +87,7 @@ __속성__
 * 평균 사례의 성능은 갭 시퀀스에 따라 다르다
 
 ###### View the algorithm in [action][shell-toptal]
-
+  
 ### 시간 복잡성 그래프
 
 정렬 알고리즘의 복잡성 비교 (버블 정렬, 삽입 정렬, 선택 정렬)
@@ -109,7 +109,7 @@ __속성__
 * 최고의 성능    O(1)
 * 평균    O(n)
 * 최악의 경우 공간 복잡성    O(1) iterative
-
+  
 ### Binary (이진 탐색)
 ![alt text][binary-image]
 
@@ -120,7 +120,7 @@ __속성__
 * 최고의 성능    O(1)
 * 평균    O(log n)
 * 최악의 경우 공간 복잡성    O(1) 
-
+  
 
 [bubble-toptal]: https://www.toptal.com/developers/sorting-algorithms/bubble-sort
 [bubble-wiki]: https://en.wikipedia.org/wiki/Bubble_sort
