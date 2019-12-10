@@ -49,7 +49,7 @@ NOTE: [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기�
   
   
 ## Algorithms
-See our [directory](Algorithms.md).
+[Directory](Algorithms.md). 를 참조하세요!
   
 ## Original Project
 - Github :  https://github.com/TheAlgorithms/Java
