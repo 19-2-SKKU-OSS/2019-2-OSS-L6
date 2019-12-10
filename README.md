@@ -1,4 +1,4 @@
-# 2019-2-OSS-L6
+# 2019-2-OSS-L6  // SKKU
 # The Algorithms - Java
 
 ![java](https://user-images.githubusercontent.com/50112565/70425133-f92a7980-1ab3-11ea-85b9-23d5dd68d49e.png)
@@ -49,7 +49,7 @@ NOTE: [Development](https://github.com/TheAlgorithms/Java/tree/Development) 기�
   
   
 ## Algorithms
-[Directory](Algorithms.md). 를 참조하세요!
+[Directory](Algorithms.md)를 참조하세요!
   
 ## Original Project
 - Github :  https://github.com/TheAlgorithms/Java
