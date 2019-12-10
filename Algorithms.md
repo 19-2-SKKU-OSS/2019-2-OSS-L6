@@ -1,6 +1,6 @@
 # 알고리즘 - Java
 
-## 이 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
+이 [Branch](https://github.com/TheAlgorithms/Java/tree/Development)는 기존 프로젝트를 Java 프로젝트 구조로 재개발하기 위해 작성되었습니다. 개인 branch로 기여를 할 수 있습니다. 자세한 내용은 [Issue](https://github.com/TheAlgorithms/Java/issues/474)를 참고하십시오.
 
 ### 자바로 구현된 모든 알고리즘들 (교육용)
 
@@ -53,11 +53,14 @@ __속성__
 ### 퀵 정렬
 ![alt text][quick-image]
 
-참조 [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용됩니다. 1959 년 영국 컴퓨터 과학자 토니 호아 (Tony Hoare)가 개발하고 1961 년에 출판 한 이 알고리즘은 여전히 ​​일반적으로 사용되는 정렬 알고리즘입니다. 
+참조 [Wikipedia][quick-wiki]: 퀵 정렬(가끔 partition-exchange sort 라고도 불림)은 효율적인 정렬 알고리즘으로, 랜덤 액세스 파일 또는 배열의 요소를 순서대로 배치하기위한 체계적인 방법으로 사용됩니다. 1959 년 영국 컴퓨터 과학자 토니 호아 (Tony Hoare)가 개발하고 1961 년에 출판 한 이 알고리즘은 여전히 ​​ 일반적으로 사용되는 정렬 알고리즘입니다. 
+
 __속성__
 * 최악의 성능    O(n^2)
 * 최고의 성능    O(n log n) or O(n) with three-way partition
 * 평균    O(n log n)
+
+여기서 시간 복잡도만 본다면 병합 정렬보다 최악의 경우에 성능이 O(n^2)으로 성능이 안 좋아 보일수도 있습니다. 하지만 실제로 속도를 따져보면 퀵 정렬이 더 빠른 경우가 많은데, 그 이유는 퀵 정렬이 **Cache-friendly** 하기 때문입니다. cache-friendly에 대해서 궁금하시다면 다음 링크를 참조하시기 바랍니다. [링크](https://stackoverflow.com/questions/16699247/what-is-a-cache-friendly-code).  
 
 ###### 눈으로 보고 싶다면 [참조][quick-toptal]
 
